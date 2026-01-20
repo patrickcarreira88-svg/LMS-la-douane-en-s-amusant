@@ -1,0 +1,1692 @@
+{
+  "exercices": [
+    {
+      "id": "101BT_ex_001",
+      "type": "qcm",
+      "titre": "[EX 1] QCM: Définition Marchandise Commerciale",
+      "description": "5 questions QCM simples sur définition marchandise",
+      "order": 1,
+      "points": 10,
+      "bloomLevel": "remember",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "Quelle est la définition d'une marchandise commerciale selon les critères douaniers suisses?",
+        "options": [
+          "Un bien acheté par un touriste en vacances",
+          "Un bien destiné à la revente en quantité importante avec intention commerciale",
+          "Un effet personnel d'un voyageur en transit",
+          "Un bien confisqué à la frontière pour infraction"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Une marchandise commerciale se caractérise par: (1) une quantité importante, (2) une intention de revente, (3) un usage professionnel. Ces trois critères doivent être réunis."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_002",
+      "type": "qcm",
+      "titre": "[EX 2] QCM: Les 5 Étapes du Processus",
+      "description": "5 questions QCM sur étapes dédouanement",
+      "order": 2,
+      "points": 10,
+      "bloomLevel": "remember",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "Quel est l'ordre correct des 5 étapes du processus de dédouanement?",
+        "options": [
+          "Déclaration → Présentation → Contrôle → Taxation → Libération",
+          "Présentation → Déclaration → Contrôle → Taxation → Libération",
+          "Présentation → Contrôle → Déclaration → Libération → Taxation",
+          "Taxation → Présentation → Déclaration → Contrôle → Libération"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Les 5 étapes dans l'ordre correct sont: 1) Présentation de la marchandise, 2) Déclaration des détails, 3) Contrôle par la douane, 4) Taxation (droits et TVA), 5) Libération de la marchandise."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_003",
+      "type": "true_false",
+      "titre": "[EX 3] Vrai/Faux: Personnel vs Commercial (10 items)",
+      "description": "10 affirmations à valider",
+      "order": 3,
+      "points": 10,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "statement": "5 kg de café pour un commerce est une marchandise commerciale",
+            "answer": true
+          },
+          {
+            "statement": "2 tablettes de chocolat pour un touriste est un trafic touristique",
+            "answer": true
+          },
+          {
+            "statement": "Un costume personnel est soumis aux droits douaniers",
+            "answer": false
+          },
+          {
+            "statement": "Une quantité importante est le seul critère pour une marchandise commerciale",
+            "answer": false
+          },
+          {
+            "statement": "L'intention de revente détermine si c'est commercial",
+            "answer": true
+          },
+          {
+            "statement": "Un effet personnel peut devenir marchandise s'il y a quantité",
+            "answer": true
+          },
+          {
+            "statement": "Le trafic touristique a des règles spéciales à la frontière suisse",
+            "answer": true
+          },
+          {
+            "statement": "La TVA s'applique à tous les biens sans exception",
+            "answer": false
+          },
+          {
+            "statement": "L'usage professionnel est un critère clé du commercial",
+            "answer": true
+          },
+          {
+            "statement": "Un voyageur peut importer 100 montres sans déclaration",
+            "answer": false
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_004",
+      "type": "drag_drop",
+      "titre": "[EX 4] Drag-Drop: Ordonner les 5 Étapes",
+      "description": "Remettre étapes dans le bon ordre",
+      "order": 4,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "id": "step1",
+            "label": "Présentation de la marchandise au bureau de douane",
+            "correctPosition": 0
+          },
+          {
+            "id": "step2",
+            "label": "Déclaration complète des informations",
+            "correctPosition": 1
+          },
+          {
+            "id": "step3",
+            "label": "Contrôle des documents et vérification physique",
+            "correctPosition": 2
+          },
+          {
+            "id": "step4",
+            "label": "Taxation (calcul droits et TVA)",
+            "correctPosition": 3
+          },
+          {
+            "id": "step5",
+            "label": "Libération et enlèvement de la marchandise",
+            "correctPosition": 4
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_006",
+      "type": "qcm",
+      "titre": "[EX 6] QCM Post-Vidéo: Marchandises Commerciales",
+      "description": "3 questions après vidéo marchandises",
+      "order": 1,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "Selon la vidéo, combien de critères caractérisent une marchandise commerciale?",
+        "options": [
+          "Un seul: la quantité",
+          "Deux: la quantité et l'intention de revente",
+          "Trois: la quantité, l'intention de revente, et l'usage professionnel",
+          "Quatre: quantité, revente, profession, et origine"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Les trois critères mentionnés dans la vidéo sont: (1) une quantité importante, (2) une intention de revente, (3) un usage professionnel. Tous trois doivent être présents."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_007",
+      "type": "matching",
+      "titre": "[EX 7] Matching: Situation ↔ Statut",
+      "description": "Associer situations concrètes aux statuts (personnel/touristique/commercial)",
+      "order": 2,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "pairs": [
+        {
+          "id": "pair_1",
+          "situation": "Un touriste avec 500g de chocolat suisse pour ramener",
+          "status": "stat2"
+        },
+        {
+          "id": "pair_2",
+          "situation": "Un commerçant avec 200 kg de café pour vendre",
+          "status": "stat3"
+        },
+        {
+          "id": "pair_3",
+          "situation": "Un voyageur avec ses vêtements personnels",
+          "status": "stat1"
+        }
+      ],
+      "statuses": [
+        {
+          "id": "stat1",
+          "name": "Personnel",
+          "color": "#4CAF50"
+        },
+        {
+          "id": "stat2",
+          "name": "Touristique",
+          "color": "#2196F3"
+        },
+        {
+          "id": "stat3",
+          "name": "Commercial",
+          "color": "#FF9800"
+        }
+      ],
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_008",
+      "type": "qcm",
+      "titre": "[EX 8] QCM Post-Vidéo: Processus Dédouanement",
+      "description": "3 questions après vidéo processus",
+      "order": 3,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "À quelle étape la douane calcule-t-elle les droits de douane et la TVA?",
+        "options": [
+          "À la présentation",
+          "À la déclaration",
+          "À la taxation",
+          "À la libération"
+        ],
+        "correctAnswer": 2,
+        "explanation": "L'étape 4 (Taxation) est où la douane calcule les droits de douane et la taxe sur la valeur ajoutée (TVA) applicables selon le tarif douanier et la valeur déclarée."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_009",
+      "type": "drag_drop",
+      "titre": "[EX 9] Timeline Interactive: Placer Actions aux Étapes",
+      "description": "8 micro-actions à placer aux 5 étapes (certaines étapes en ont plusieurs)",
+      "order": 4,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "timeline": [
+          {
+            "stepName": "Présentation",
+            "correctActions": [
+              "Dépôt physique de la marchandise",
+              "Identification du contenu"
+            ]
+          },
+          {
+            "stepName": "Déclaration",
+            "correctActions": [
+              "Remplissage du formulaire",
+              "Fourniture de documents"
+            ]
+          },
+          {
+            "stepName": "Contrôle",
+            "correctActions": [
+              "Vérification des documents",
+              "Inspection physique optionnelle"
+            ]
+          },
+          {
+            "stepName": "Taxation",
+            "correctActions": [
+              "Calcul des droits",
+              "Calcul de la TVA"
+            ]
+          },
+          {
+            "stepName": "Libération",
+            "correctActions": [
+              "Approbation douanière",
+              "Enlèvement de la marchandise"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "act1",
+            "label": "Dépôt physique de la marchandise"
+          },
+          {
+            "id": "act2",
+            "label": "Remplissage du formulaire"
+          },
+          {
+            "id": "act3",
+            "label": "Vérification des documents"
+          },
+          {
+            "id": "act4",
+            "label": "Inspection physique optionnelle"
+          },
+          {
+            "id": "act5",
+            "label": "Calcul des droits"
+          },
+          {
+            "id": "act6",
+            "label": "Calcul de la TVA"
+          },
+          {
+            "id": "act7",
+            "label": "Approbation douanière"
+          },
+          {
+            "id": "act8",
+            "label": "Enlèvement de la marchandise"
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_010",
+      "type": "qcm_multiple_response",
+      "titre": "[EX 10] Mini-Quiz Synthèse (4 questions mélangées)",
+      "description": "Mix QCM/VF sur flux complet 101.AB",
+      "order": 5,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "Lesquelles de ces affirmations sont correctes? (plusieurs réponses possibles)",
+        "options": [
+          {
+            "label": "Un effet personnel n'est jamais soumis à droits",
+            "correct": false
+          },
+          {
+            "label": "La présentation est toujours la première étape",
+            "correct": true
+          },
+          {
+            "label": "La TVA s'applique sur la valeur en douane",
+            "correct": true
+          },
+          {
+            "label": "Le contrôle physique est obligatoire pour 100% des envois",
+            "correct": false
+          }
+        ],
+        "correctAnswers": [
+          1,
+          2
+        ],
+        "explanation": "La présentation est toujours la 1ère étape et la TVA s'applique à la valeur en douane. Cependant, les effets personnels peuvent être taxés selon leur nature, et le contrôle physique est aléatoire."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_011",
+      "type": "qcm_scenario",
+      "titre": "[EX 11] Scénarios Courts: Touriste à Frontière (3 cas)",
+      "description": "3 scénarios courts + choix statut (personnel/touristique/commercial)",
+      "order": 1,
+      "points": 75,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "5 min",
+      "scenario": {
+        "title": "🛫 Scénario: Classement Douanier selon Marchandises",
+        "description": "Vous travaillez à la douane et devez classifier des marchandises selon leur statut douanier (Personnel, Touristique, Commercial).",
+        "background_color": "#e3f2fd",
+        "icon": "🛫"
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Une touriste française revient de vacances en Suisse avec 1 kg de chocolat Lindt, 3 montres suisses et des vêtements. Quel est le statut ?",
+          "type": "single",
+          "options": [
+            {
+              "id": "opt1",
+              "text": "Personnel",
+              "correct": false,
+              "explanation": "Quantité limitée, mais pas seulement pour consommation personnelle (3 montres)."
+            },
+            {
+              "id": "opt2",
+              "text": "Touristique",
+              "correct": true,
+              "explanation": "Biens en quantité limitée pour consommation personnelle lors d'un voyage. C'est du trafic touristique."
+            },
+            {
+              "id": "opt3",
+              "text": "Commercial",
+              "correct": false,
+              "explanation": "Non, il n'y a pas intention de revente professionnelle."
+            }
+          ],
+          "points": 25
+        },
+        {
+          "id": "q2",
+          "question": "Un commerçant génois importe 500 kg de fromage pour sa fromagerie. Quel est le statut ?",
+          "type": "single",
+          "options": [
+            {
+              "id": "opt1",
+              "text": "Personnel",
+              "correct": false,
+              "explanation": "Quantité beaucoup trop importante pour être personnelle."
+            },
+            {
+              "id": "opt2",
+              "text": "Touristique",
+              "correct": false,
+              "explanation": "Non, quantité trop importante et contexte professionnel."
+            },
+            {
+              "id": "opt3",
+              "text": "Commercial",
+              "correct": true,
+              "explanation": "Quantité importante (500kg), intention claire de revente, usage professionnel."
+            }
+          ],
+          "points": 25
+        },
+        {
+          "id": "q3",
+          "question": "Un homme en déplacement professionnel importe son ordinateur portable et son téléphone. Quel est le statut ?",
+          "type": "single",
+          "options": [
+            {
+              "id": "opt1",
+              "text": "Personnel",
+              "correct": true,
+              "explanation": "Effets personnels d'un voyageur en déplacement, pas pour revente. Outils de travail personnels."
+            },
+            {
+              "id": "opt2",
+              "text": "Touristique",
+              "correct": false,
+              "explanation": "Pas du tourisme, mais outils professionnels personnels."
+            },
+            {
+              "id": "opt3",
+              "text": "Commercial",
+              "correct": false,
+              "explanation": "Non, ce sont des effets personnels, pas une importation pour revente."
+            }
+          ],
+          "points": 25
+        }
+      ],
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_012",
+      "type": "text_gaps",
+      "titre": "[EX 12] Tableau à Trous: 6 Lignes (Quantité + Intention + Statut)",
+      "description": "Compléter tableau avec critères marchandise",
+      "order": 2,
+      "points": 15,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "3 min",
+      "content": {
+        "rows": [
+          {
+            "id": "row1",
+            "quantite": "2 kg de café",
+            "intention": "Consommation personnelle",
+            "statut": "Personnel",
+            "correctAnswers": {
+              "quantite": "2 kg",
+              "intention": "personnelle",
+              "statut": "Personnel"
+            }
+          },
+          {
+            "id": "row2",
+            "quantite": "500 kg de café",
+            "intention": "Revente en commerce",
+            "statut": "Commercial",
+            "correctAnswers": {
+              "quantite": "500 kg",
+              "intention": "revente",
+              "statut": "Commercial"
+            }
+          },
+          {
+            "id": "row3",
+            "quantite": "50 montres",
+            "intention": "Cadeaux pour amis",
+            "statut": "Touristique",
+            "correctAnswers": {
+              "quantite": "50",
+              "intention": "personnels",
+              "statut": "Touristique"
+            }
+          },
+          {
+            "id": "row4",
+            "quantite": "1 valise",
+            "intention": "Transport effet personnel",
+            "statut": "Personnel",
+            "correctAnswers": {
+              "quantite": "1",
+              "intention": "personnelle",
+              "statut": "Personnel"
+            }
+          },
+          {
+            "id": "row5",
+            "quantite": "10 cartons de vêtements",
+            "intention": "Revente en magasin",
+            "statut": "Commercial",
+            "correctAnswers": {
+              "quantite": "10",
+              "intention": "revente",
+              "statut": "Commercial"
+            }
+          },
+          {
+            "id": "row6",
+            "quantite": "100 g de miel",
+            "intention": "Souvenir de voyage",
+            "statut": "Touristique",
+            "correctAnswers": {
+              "quantite": "100 g",
+              "intention": "souvenir",
+              "statut": "Touristique"
+            }
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_013",
+      "type": "drag_drop_image",
+      "titre": "[EX 13] Drag-Drop Images: Associer Charges aux Trafics",
+      "description": "6 images (palette, colis, bagages, etc.) → drag vers Personal/Tourist/Commercial",
+      "order": 3,
+      "points": 15,
+      "bloomLevel": "apply",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "id": "img1",
+            "imageUrl": "[palette de café]",
+            "label": "Palette de café 200kg",
+            "correctBucket": "commercial"
+          },
+          {
+            "id": "img2",
+            "imageUrl": "[valise]",
+            "label": "Valise de vêtements personnels",
+            "correctBucket": "personal"
+          },
+          {
+            "id": "img3",
+            "imageUrl": "[sac cadeaux]",
+            "label": "Sac avec cadeaux souvenirs",
+            "correctBucket": "tourist"
+          },
+          {
+            "id": "img4",
+            "imageUrl": "[cartons montres]",
+            "label": "10 cartons de montres",
+            "correctBucket": "commercial"
+          },
+          {
+            "id": "img5",
+            "imageUrl": "[bagages]",
+            "label": "Bagages de voyageur",
+            "correctBucket": "personal"
+          },
+          {
+            "id": "img6",
+            "imageUrl": "[chocolats]",
+            "label": "2 kg chocolats suisses",
+            "correctBucket": "tourist"
+          }
+        ],
+        "buckets": [
+          {
+            "id": "personal",
+            "label": "Personnel"
+          },
+          {
+            "id": "tourist",
+            "label": "Touristique"
+          },
+          {
+            "id": "commercial",
+            "label": "Commercial"
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_014",
+      "type": "true_false",
+      "titre": "[EX 14] Vrai/Faux Contextualisé: Seuils & Indices (8 items)",
+      "description": "8 énoncés sur seuils typiques / indices commerce",
+      "order": 4,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "statement": "100 kg est considéré comme une quantité importante pour du café",
+            "answer": true
+          },
+          {
+            "statement": "Un touriste peut importer 1000 montres sans être considéré commercial",
+            "answer": false
+          },
+          {
+            "statement": "La profession du déclarant est un indice du statut de la marchandise",
+            "answer": true
+          },
+          {
+            "statement": "5 kg de riz pour un commerçant est forcément commercial",
+            "answer": false
+          },
+          {
+            "statement": "Les biens d'occasion peuvent être commerciaux",
+            "answer": true
+          },
+          {
+            "statement": "L'emballage en cartons et palettes suggère un usage commercial",
+            "answer": true
+          },
+          {
+            "statement": "Un effet personnel ne peut jamais être taxé à la douane suisse",
+            "answer": false
+          },
+          {
+            "statement": "La préparation du bien pour la vente est un indice commercial",
+            "answer": true
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_015",
+      "type": "flashcard",
+      "titre": "[EX 15] Flashcards: Vocab Rapide (5 cartes)",
+      "description": "Recto: terme | Verso: définition + exemple",
+      "order": 5,
+      "points": 15,
+      "bloomLevel": "remember",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "front": "Trafic touristique",
+            "back": "Biens en quantité limitée importés par un touriste pour usage personnel. Exemple: 1kg de chocolat suisse ramené par une touriste.",
+            "difficulty": "easy"
+          },
+          {
+            "id": "card2",
+            "front": "Effet personnel",
+            "back": "Biens appartenant à une personne pour son usage ou ses besoins. Exemple: vêtements, chaussures, articles de toilette.",
+            "difficulty": "easy"
+          },
+          {
+            "id": "card3",
+            "front": "Marchandise commerciale",
+            "back": "Bien destiné à la revente en quantité importante avec intention professionnelle. Exemple: 500kg de café pour un commerçant.",
+            "difficulty": "medium"
+          },
+          {
+            "id": "card4",
+            "front": "Valeur en douane",
+            "back": "Valeur sur laquelle la douane calcule les droits et la TVA. Généralement la valeur facturée + frais de transport.",
+            "difficulty": "medium"
+          },
+          {
+            "id": "card5",
+            "front": "Tarif douanier",
+            "back": "Code et taux appliqué pour déterminer les droits de douane. Dépend de la nature et de l'origine du produit.",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_016",
+      "type": "narrative_qcm",
+      "titre": "[EX 16] Cas Narratif: Import Simple + QCM Étapes",
+      "description": "Narratif cas import + questions 'quelle étape?' tous les 30s",
+      "order": 1,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "narrative": "Lundi matin, un importateur bernois arrive au poste frontière de Chiasso avec un camion contenant 150 kg de café colombien. Il dépose le camion au lieu de présentation des marchandises et attend. Après 30 minutes, un agent douanier se présente et demande les documents. L'importateur remet la commande d'achat, la facture, et un certificat d'origine. L'agent remplit alors le formulaire de déclaration et demande à l'importateur de confirmer les détails: pays d'origine, valeur en douane, poids net. Une fois les données enregistrées, l'agent se rend au camion pour inspecter physiquement quelques sacs. Tout semble conforme. L'agent calcule alors les droits de douane (15%) et la TVA (7.7%) sur la valeur déclarée. L'importateur reçoit la facture douanière et peut enfin enlever sa marchandise.",
+        "questions": [
+          {
+            "moment": "Après dépôt du camion au poste frontière",
+            "question": "À quelle étape sommes-nous?",
+            "options": [
+              "Présentation",
+              "Déclaration",
+              "Contrôle",
+              "Taxation",
+              "Libération"
+            ],
+            "correctAnswer": 0
+          },
+          {
+            "moment": "Après présentation des documents et enregistrement des détails",
+            "question": "À quelle étape sommes-nous maintenant?",
+            "options": [
+              "Présentation",
+              "Déclaration",
+              "Contrôle",
+              "Taxation",
+              "Libération"
+            ],
+            "correctAnswer": 1
+          },
+          {
+            "moment": "L'agent inspecte physiquement les sacs",
+            "question": "À quelle étape sommes-nous?",
+            "options": [
+              "Présentation",
+              "Déclaration",
+              "Contrôle",
+              "Taxation",
+              "Libération"
+            ],
+            "correctAnswer": 2
+          },
+          {
+            "moment": "L'agent calcule les droits et la TVA",
+            "question": "À quelle étape sommes-nous?",
+            "options": [
+              "Présentation",
+              "Déclaration",
+              "Contrôle",
+              "Taxation",
+              "Libération"
+            ],
+            "correctAnswer": 3
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_017",
+      "type": "drag_drop",
+      "titre": "[EX 17] Séquençage Documents: Ordonner (Commande, Facture, Déclaration...)",
+      "description": "8 documents à drag dans le bon ordre d'apparition",
+      "order": 2,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "id": "doc1",
+            "label": "Commande d'achat",
+            "correctPosition": 0
+          },
+          {
+            "id": "doc2",
+            "label": "Facture commerciale",
+            "correctPosition": 1
+          },
+          {
+            "id": "doc3",
+            "label": "Certificat d'origine",
+            "correctPosition": 2
+          },
+          {
+            "id": "doc4",
+            "label": "Déclaration douanière (formulaire)",
+            "correctPosition": 3
+          },
+          {
+            "id": "doc5",
+            "label": "Rapport d'inspection douanière",
+            "correctPosition": 4
+          },
+          {
+            "id": "doc6",
+            "label": "Note de calcul des droits",
+            "correctPosition": 5
+          },
+          {
+            "id": "doc7",
+            "label": "Facture douanière (droits + TVA)",
+            "correctPosition": 6
+          },
+          {
+            "id": "doc8",
+            "label": "Autorisation d'enlèvement",
+            "correctPosition": 7
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_018",
+      "type": "qcm_decision",
+      "titre": "[EX 18] QCM Décisionnel: Que faire à chaque étape? (3 questions)",
+      "description": "'À cette étape, l'agent doit...' | 3 réponses",
+      "order": 3,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "questions": [
+          {
+            "context": "À l'étape de présentation, l'importateur arrive avec un camion de marchandises",
+            "question": "Que doit faire l'agent douanier?",
+            "options": [
+              "Ouvrir immédiatement les colis pour inspecter",
+              "Vérifier l'identité du déclarant et enregistrer la présentation",
+              "Calculer directement les droits douaniers",
+              "Laisser l'importateur enlever les marchandises"
+            ],
+            "correctAnswer": 1,
+            "explanation": "À la présentation, l'agent doit vérifier l'identité et enregistrer la présentation officielle de la marchandise. Les étapes suivantes (déclaration, contrôle, taxation) viennent après."
+          },
+          {
+            "context": "Le formulaire de déclaration est rempli avec tous les détails",
+            "question": "Que doit faire l'agent à l'étape de déclaration?",
+            "options": [
+              "Saisir les données dans le système douanier",
+              "Ouvrir tous les colis pour inspection visuelle",
+              "Émettre immédiatement la facture douanière",
+              "Permettre l'enlèvement sans vérification"
+            ],
+            "correctAnswer": 0,
+            "explanation": "À la déclaration, l'agent enregistre les données complètes (nature, quantité, valeur, origine) dans le système. L'inspection et la taxation suivent après."
+          },
+          {
+            "context": "La déclaration est enregistrée et validée",
+            "question": "Que doit faire l'agent à l'étape de contrôle?",
+            "options": [
+              "Faire confiance aveuglément aux déclarations",
+              "Vérifier physiquement si nécessaire et examiner les documents",
+              "Augmenter automatiquement la valeur déclarée",
+              "Refuser le dédouanement sans raison"
+            ],
+            "correctAnswer": 1,
+            "explanation": "À l'étape de contrôle, l'agent vérifie les documents (facture, certificat d'origine) et peut inspecter physiquement une partie des marchandises pour s'assurer de la conformité."
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_019",
+      "type": "matching",
+      "titre": "[EX 19] Matching: Étape ↔ Sortie Attendue",
+      "description": "Relier Présentation/Déclaration/... aux outputs (document remis, décision prise...)",
+      "order": 4,
+      "points": 20,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "pairs": [
+        {
+          "id": "pair_1",
+          "situation": "Présentation",
+          "status": "output3"
+        },
+        {
+          "id": "pair_2",
+          "situation": "Déclaration",
+          "status": "output2"
+        },
+        {
+          "id": "pair_3",
+          "situation": "Contrôle",
+          "status": "output4"
+        },
+        {
+          "id": "pair_4",
+          "situation": "Taxation",
+          "status": "output1"
+        },
+        {
+          "id": "pair_5",
+          "situation": "Libération",
+          "status": "output5"
+        }
+      ],
+      "statuses": [
+        {
+          "id": "output1",
+          "name": "Calcul des droits et de la TVA",
+          "color": "#FF9800"
+        },
+        {
+          "id": "output2",
+          "name": "Inscription au système douanier",
+          "color": "#2196F3"
+        },
+        {
+          "id": "output3",
+          "name": "Enregistrement de la présence",
+          "color": "#4CAF50"
+        },
+        {
+          "id": "output4",
+          "name": "Vérification de conformité",
+          "color": "#9C27B0"
+        },
+        {
+          "id": "output5",
+          "name": "Autorisation d'enlèvement",
+          "color": "#F44336"
+        }
+      ],
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_020",
+      "type": "short_answer",
+      "titre": "[EX 20] Question Ouverte Courte: Identifier Risques",
+      "description": "'Où se situent principaux risques dans ce cas?' (pour journal)",
+      "order": 5,
+      "points": 20,
+      "bloomLevel": "analyze",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "question": "En reprenant le cas du café colombien (Ex 16), identifiez les 2-3 principaux points de risque/contrôle pour l'agent douanier et expliquez pourquoi.",
+        "expectedKeywords": [
+          "valeur",
+          "origine",
+          "certificat",
+          "qualité",
+          "quantité",
+          "fraude",
+          "falsification",
+          "inspection"
+        ],
+        "exampleAnswer": "Risques principaux: (1) Vérification de la valeur déclarée - risque de sous-évaluation pour réduire les droits, (2) Authentification du certificat d'origine - risque de faux certificat, (3) Vérification de la quantité exacte - risque de poids inexact. L'agent doit donc: inspecter les sacs pour vérifier le poids net, examiner le certificat d'origine pour détecter les contrefaçons, comparer la valeur avec les prix du marché.",
+        "rubric": "Réponse complète (15-20pts): 2-3 risques identifiés + justification. Réponse partielle (10-15pts): 1-2 risques avec explication. Réponse incomplète (5-10pts): risques énoncés sans justification."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_021",
+      "type": "qcm",
+      "titre": "[EX 21] QCM: Champs Obligatoires Déclaration (5 questions)",
+      "description": "'Lesquels sont obligatoires?' | liste 8 champs | cocher X",
+      "order": 1,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "Lesquels de ces champs sont OBLIGATOIRES dans une déclaration douanière suisse?",
+        "options": [
+          {
+            "label": "Nom et adresse du déclarant",
+            "correct": true
+          },
+          {
+            "label": "Couleur des colis",
+            "correct": false
+          },
+          {
+            "label": "Pays d'origine de la marchandise",
+            "correct": true
+          },
+          {
+            "label": "Prénom du contrôleur douanier",
+            "correct": false
+          },
+          {
+            "label": "Valeur en douane (CIF)",
+            "correct": true
+          },
+          {
+            "label": "Marque de la marchandise",
+            "correct": false
+          },
+          {
+            "label": "Poids net en kg",
+            "correct": true
+          },
+          {
+            "label": "Numéro de téléphone du transitaire",
+            "correct": false
+          }
+        ],
+        "correctAnswers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "explanation": "Les champs obligatoires pour une déclaration sont: identité du déclarant, pays d'origine, valeur en douane (base fiscale), et poids exact. Les autres informations (couleur, nom contrôleur, marque, téléphone) ne sont pas obligatoires."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_022",
+      "type": "text_gaps",
+      "titre": "[EX 22] Texte à Trous: Compléter Déclaration Simplifiée",
+      "description": "6-8 trous à remplir (importateur, marchandise, quantité, valeur...)",
+      "order": 2,
+      "points": 15,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "text": "DÉCLARATION SIMPLIFIÉE DE DÉDOUANEMENT\nDéclarant: [TROU-1: Jean Martin, importateur]\nAdresse: [TROU-2: Rue du Marché 15, 2000 Neuchâtel]\nPays d'origine: [TROU-3: Colombie]\nDescription marchandise: [TROU-4: Café en grains]\nPoids net: [TROU-5: 150 kg]\nValeur en douane: [TROU-6: CHF 1500]\nMonnaie: [TROU-7: Francs suisses]\nCertificat d'origine: [TROU-8: Oui, joint au dossier]",
+        "blanks": [
+          {
+            "id": "blank1",
+            "correctAnswer": "Jean Martin, importateur ou nom/titre déclarant"
+          },
+          {
+            "id": "blank2",
+            "correctAnswer": "Rue du Marché 15, 2000 Neuchâtel ou adresse complète"
+          },
+          {
+            "id": "blank3",
+            "correctAnswer": "Colombie ou pays exact"
+          },
+          {
+            "id": "blank4",
+            "correctAnswer": "Café en grains ou Café arabica"
+          },
+          {
+            "id": "blank5",
+            "correctAnswer": "150 ou 150 kg"
+          },
+          {
+            "id": "blank6",
+            "correctAnswer": "1500 ou CHF 1500"
+          },
+          {
+            "id": "blank7",
+            "correctAnswer": "CHF ou Francs suisses"
+          },
+          {
+            "id": "blank8",
+            "correctAnswer": "Oui ou présent"
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_023",
+      "type": "matching",
+      "titre": "[EX 23] Matching: Champ ↔ Définition",
+      "description": "Associer 'Pays d'origine', 'Valeur en douane', etc. → définitions",
+      "order": 3,
+      "points": 15,
+      "bloomLevel": "remember",
+      "difficulty": 1,
+      "duree": "2 min",
+      "pairs": [
+        {
+          "id": "pair_1",
+          "situation": "Pays d'origine",
+          "status": "def1"
+        },
+        {
+          "id": "pair_2",
+          "situation": "Valeur en douane (CIF)",
+          "status": "def2"
+        },
+        {
+          "id": "pair_3",
+          "situation": "Tarif douanier",
+          "status": "def3"
+        },
+        {
+          "id": "pair_4",
+          "situation": "Poids net",
+          "status": "def4"
+        },
+        {
+          "id": "pair_5",
+          "situation": "Certificat d'origine",
+          "status": "def5"
+        },
+        {
+          "id": "pair_6",
+          "situation": "Facture commerciale",
+          "status": "def6"
+        },
+        {
+          "id": "pair_7",
+          "situation": "Régime douanier",
+          "status": "def7"
+        },
+        {
+          "id": "pair_8",
+          "situation": "Déclarant",
+          "status": "def8"
+        },
+        {
+          "id": "pair_9",
+          "situation": "Incoterm",
+          "status": "def9"
+        },
+        {
+          "id": "pair_10",
+          "situation": "TVA",
+          "status": "def10"
+        }
+      ],
+      "statuses": [
+        {
+          "id": "def1",
+          "name": "Pays où la marchandise a été produite",
+          "color": "#4CAF50"
+        },
+        {
+          "id": "def2",
+          "name": "Valeur facturée + assurance + fret jusqu'à frontière suisse",
+          "color": "#2196F3"
+        },
+        {
+          "id": "def3",
+          "name": "Code et taux de droit appliqué (ex: 10%)",
+          "color": "#FF9800"
+        },
+        {
+          "id": "def4",
+          "name": "Quantité de marchandise sans emballage",
+          "color": "#9C27B0"
+        },
+        {
+          "id": "def5",
+          "name": "Document officiel attestant l'origine",
+          "color": "#F44336"
+        },
+        {
+          "id": "def6",
+          "name": "Justification commerciale (prix unitaire, total)",
+          "color": "#00BCD4"
+        },
+        {
+          "id": "def7",
+          "name": "Type de traitement douanier (dédouanement, transit)",
+          "color": "#673AB7"
+        },
+        {
+          "id": "def8",
+          "name": "Personne responsable de la déclaration",
+          "color": "#3F51B5"
+        },
+        {
+          "id": "def9",
+          "name": "Condition commerciale (FOB, CIF, DAP...)",
+          "color": "#009688"
+        },
+        {
+          "id": "def10",
+          "name": "Impôt calculé sur valeur en douane en Suisse",
+          "color": "#E91E63"
+        }
+      ],
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_024",
+      "type": "true_false",
+      "titre": "[EX 24] Vrai/Faux: Erreurs Fréquentes (8 items)",
+      "description": "'Provenance = Origine?' | 'Valeur facturée = Valeur douane?' etc.",
+      "order": 4,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "statement": "La provenance et l'origine sont identiques",
+            "answer": false
+          },
+          {
+            "statement": "La valeur facturée est toujours égale à la valeur en douane",
+            "answer": false
+          },
+          {
+            "statement": "La TVA s'applique sur la valeur CIF",
+            "answer": true
+          },
+          {
+            "statement": "Un certificat d'origine peut être contrefait",
+            "answer": true
+          },
+          {
+            "statement": "Le poids brut inclut l'emballage",
+            "answer": true
+          },
+          {
+            "statement": "L'Incoterm n'a aucune importance pour la douane",
+            "answer": false
+          },
+          {
+            "statement": "Un déclarant peut être une personne physique ou morale",
+            "answer": true
+          },
+          {
+            "statement": "Les frais de transport doivent être déclarés dans la valeur douane",
+            "answer": true
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_025",
+      "type": "hotspot",
+      "titre": "[EX 25] Identification Visuelle: Cliquer 4 Champs-Clés sur Image Déclaration",
+      "description": "Image déclaration floutée, cliquer zones importantes (importateur, produit, quantité, valeur)",
+      "order": 5,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "imageUrl": "[image d'un formulaire douanier avec zones clés floutées]",
+        "hotspots": [
+          {
+            "id": "hotspot1",
+            "label": "Nom déclarant",
+            "correctCoordinates": {
+              "x": 50,
+              "y": 30
+            }
+          },
+          {
+            "id": "hotspot2",
+            "label": "Description marchandise",
+            "correctCoordinates": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          {
+            "id": "hotspot3",
+            "label": "Poids net",
+            "correctCoordinates": {
+              "x": 50,
+              "y": 70
+            }
+          },
+          {
+            "id": "hotspot4",
+            "label": "Valeur en douane",
+            "correctCoordinates": {
+              "x": 50,
+              "y": 90
+            }
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_026",
+      "type": "scenario_qcm",
+      "titre": "[EX 26] Scénario 1: Import Multi-Produits + QCM Ordre Actions",
+      "description": "5 produits différents | 'Quel est l'ordre des actions?'",
+      "order": 1,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "narrative": "Un importateur suisse reçoit un conteneur avec 5 produits différents: 200 kg de café, 500 montres, 100 vêtements, 50 kg de chocolat, 20 cartons d'électronique. Chaque produit a un code tarifaire différent et des taux de droits variables.",
+        "question": "Quel est l'ordre correct pour traiter cette déclaration?",
+        "options": [
+          "Tout déclarer ensemble avec une valeur totale, puis contrôler",
+          "Déclarer séparément chaque produit avec son tarif, quantité et valeur spécifiques, puis contrôler par catégorie",
+          "Ignorer les petites quantités et ne déclarer que les gros volumes",
+          "Mélanger tous les produits pour réduire les droits"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Chaque produit doit être déclaré séparément avec son propre code tarifaire, sa quantité exacte et sa valeur. Cela permet à la douane de calculer correctement les droits spécifiques à chaque catégorie de marchandise."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_027",
+      "type": "scenario_qcm",
+      "titre": "[EX 27] Scénario 2: Documents Incomplets + QCM Réaction Douane",
+      "description": "Cas où déclaration incomplète | 'Que fait la douane?' (refus/complément/taxation prov.)",
+      "order": 2,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "narrative": "Un importateur présente un envoi de 1000 kg de tissu colombien. La facture commerciale indique une valeur totale, mais aucun détail sur les prix unitaires. Le poids est 1000 kg, mais pas de distinction entre poids brut et net. Le certificat d'origine est présent mais pas signé.",
+        "question": "Que doit faire la douane face à ces documents incomplets?",
+        "options": [
+          "Refuser catégoriquement le dédouanement",
+          "Demander les informations manquantes et les corrections avant de poursuivre",
+          "Appliquer une taxation provisoire et attendre clarification",
+          "Laisser passer sans attendre car c'est trop compliqué"
+        ],
+        "correctAnswer": 1,
+        "explanation": "La douane doit demander clarification et documents complémentaires. Cela permet de vérifier la valeur déclarée, de calculer correctement les droits, et de valider l'origine. Une fois les documents complétés et validés, le dédouanement peut se poursuivre."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_028",
+      "type": "drag_drop_matching",
+      "titre": "[EX 28] Drag-Drop: Associer Problème ↔ Étape Impactée",
+      "description": "6 problèmes → drag vers étape (présentation/déclaration/contrôle/taxation/libération)",
+      "order": 3,
+      "points": 20,
+      "bloomLevel": "analyze",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "id": "prob1",
+            "label": "Camion arrive sans documents",
+            "correctTarget": "presentation"
+          },
+          {
+            "id": "prob2",
+            "label": "Valeur facturée semblait suspecte (trop basse)",
+            "correctTarget": "declaration"
+          },
+          {
+            "id": "prob3",
+            "label": "Inspection révèle 20% de colis endommagés",
+            "correctTarget": "control"
+          },
+          {
+            "id": "prob4",
+            "label": "Calcul des droits incorrect (erreur taux TVA)",
+            "correctTarget": "taxation"
+          },
+          {
+            "id": "prob5",
+            "label": "Paiement des droits rejeté",
+            "correctTarget": "liberation"
+          },
+          {
+            "id": "prob6",
+            "label": "Certificat d'origine non valide",
+            "correctTarget": "declaration"
+          }
+        ],
+        "targets": [
+          {
+            "id": "presentation",
+            "label": "Présentation"
+          },
+          {
+            "id": "declaration",
+            "label": "Déclaration"
+          },
+          {
+            "id": "control",
+            "label": "Contrôle"
+          },
+          {
+            "id": "taxation",
+            "label": "Taxation"
+          },
+          {
+            "id": "liberation",
+            "label": "Libération"
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_029",
+      "type": "qcm_multiple_response",
+      "titre": "[EX 29] QCM Multi-Réponses: Infos Supplémentaires à Demander",
+      "description": "Cas avec lacune | cocher toutes infos nécessaires (3-4 correctes sur 8)",
+      "order": 4,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "context": "Un importateur déclare 500 montres suisses, valeur totale CHF 50'000. Le dossier semble incomplet.",
+        "question": "Lesquelles de ces informations supplémentaires la douane doit-elle demander?",
+        "options": [
+          {
+            "label": "Prix unitaire des montres",
+            "correct": true
+          },
+          {
+            "label": "Marque et modèle exact",
+            "correct": false
+          },
+          {
+            "label": "Lieu et date d'achat",
+            "correct": true
+          },
+          {
+            "label": "Couleur de l'emballage",
+            "correct": false
+          },
+          {
+            "label": "Détail: droits et complications éventuelles",
+            "correct": true
+          },
+          {
+            "label": "Noms des ouvriers qui les ont produites",
+            "correct": false
+          },
+          {
+            "label": "Certificat d'authenticité pour chaque montre",
+            "correct": true
+          },
+          {
+            "label": "Avis personnels de l'importateur sur le produit",
+            "correct": false
+          }
+        ],
+        "correctAnswers": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "explanation": "Informations essentielles: prix unitaire (calcul droits), lieu et date d'achat (vérification), certificats d'authenticité (produits contrefaits). Les infos personnelles ou cosmétiques (couleur, noms ouvriers, avis) ne sont pas pertinentes."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_030",
+      "type": "qcm",
+      "titre": "[EX 30] Mini-Quiz (6 questions) Mélange Scénarios 1 & 2",
+      "description": "QCM rapide récapitulatif sur 2 cas vus",
+      "order": 5,
+      "points": 20,
+      "bloomLevel": "apply",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "question": "Dans le scénario du tissu colombien incomplet, le certificat d'origine manquait une signature. Quel est l'impact?",
+        "options": [
+          "Aucun impact, la signature n'est pas importante",
+          "Impact majeur: impossibilité de vérifier l'origine déclarée",
+          "Impact mineur: juste une formalité administrative",
+          "Cela signifie qu'il y a fraude certaine"
+        ],
+        "correctAnswer": 1,
+        "explanation": "La signature du certificat d'origine est une authentification essentielle. Sans elle, on ne peut pas confirmer que le produit vient vraiment de Colombie, ce qui risque d'exposer à des produits contrefaits ou à des fraudes."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_031",
+      "type": "qcm",
+      "titre": "[EX 31] QCM Révision: 10 Items Mélangés (101AB + 101BT)",
+      "description": "Mix marchandises/processus/documents",
+      "order": 1,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "question": "La valeur en douane (CIF) inclut:",
+        "options": [
+          "Seulement le prix facturé",
+          "Prix facturé + transport jusqu'à frontière suisse + assurance",
+          "Prix facturé + tous les coûts jusqu'à destination finale",
+          "Seulement le transport"
+        ],
+        "correctAnswer": 1,
+        "explanation": "CIF = Cost, Insurance, Freight (Coût, Assurance, Fret). C'est la valeur sur laquelle la douane calcule les droits et la TVA en Suisse."
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_032",
+      "type": "true_false",
+      "titre": "[EX 32] Vrai/Faux Récapitulatif: 10 Affirmations",
+      "description": "Mix définitions/étapes/documents/erreurs",
+      "order": 2,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "items": [
+          {
+            "statement": "Un effet personnel peut avoir des droits douaniers",
+            "answer": true
+          },
+          {
+            "statement": "Le contrôle douanier est obligatoire pour 100% des envois",
+            "answer": false
+          },
+          {
+            "statement": "La TVA en Suisse est 7.7%",
+            "answer": true
+          },
+          {
+            "statement": "Un certificat d'origine faux est facilement détectable",
+            "answer": false
+          },
+          {
+            "statement": "Les 5 étapes doivent se faire dans l'ordre prescrit",
+            "answer": true
+          },
+          {
+            "statement": "La valeur facturée = valeur en douane toujours",
+            "answer": false
+          },
+          {
+            "statement": "L'emballage fait partie du poids net",
+            "answer": false
+          },
+          {
+            "statement": "Un importateur peut oublier la déclaration si la quantité est petite",
+            "answer": false
+          },
+          {
+            "statement": "Le tarif douanier dépend du code produit",
+            "answer": true
+          },
+          {
+            "statement": "La taxation est l'avant-dernière étape du processus",
+            "answer": true
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_033",
+      "type": "drag_drop",
+      "titre": "[EX 33] Drag-Drop: Reconstruire Schéma Global (3 colonnes)",
+      "description": "Col 1: Marchandises | Col 2: Processus | Col 3: Documents | drag items",
+      "order": 3,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 2,
+      "duree": "2 min",
+      "content": {
+        "columns": [
+          {
+            "id": "col1",
+            "label": "Marchandises",
+            "items": [
+              "Personnel",
+              "Touristique",
+              "Commercial"
+            ]
+          },
+          {
+            "id": "col2",
+            "label": "Processus",
+            "items": [
+              "Présentation",
+              "Déclaration",
+              "Contrôle",
+              "Taxation",
+              "Libération"
+            ]
+          },
+          {
+            "id": "col3",
+            "label": "Documents",
+            "items": [
+              "Facture commerciale",
+              "Certificat d'origine",
+              "Déclaration douanière",
+              "Rapport d'inspection",
+              "Facture douanière"
+            ]
+          }
+        ],
+        "draggables": [
+          {
+            "id": "drag1",
+            "label": "Commande d'achat",
+            "correctColumn": "col3"
+          },
+          {
+            "id": "drag2",
+            "label": "Quantité importante",
+            "correctColumn": "col1"
+          },
+          {
+            "id": "drag3",
+            "label": "Inspection physique",
+            "correctColumn": "col2"
+          },
+          {
+            "id": "drag4",
+            "label": "Intention de revente",
+            "correctColumn": "col1"
+          },
+          {
+            "id": "drag5",
+            "label": "Calcul droits",
+            "correctColumn": "col2"
+          },
+          {
+            "id": "drag6",
+            "label": "Autorisation d'enlèvement",
+            "correctColumn": "col3"
+          }
+        ]
+      },
+      "status": "complete"
+    },
+    {
+      "id": "101BT_ex_034",
+      "type": "flashcard",
+      "titre": "[EX 34] Flashcards: Erreurs Fréquentes (6 cartes)",
+      "description": "Recto: erreur courante | Verso: correction",
+      "order": 4,
+      "points": 15,
+      "bloomLevel": "understand",
+      "difficulty": 1,
+      "duree": "2 min",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "front": "❌ Erreur: Déclarer la provenance au lieu de l'origine",
+            "back": "✅ Correction: L'origine = pays de fabrication. La provenance = dernier pays d'expédition. Exemple: café de Colombie envoyé via Pays-Bas = origine Colombie.",
+            "difficulty": "hard"
+          },
+          {
+            "id": "card2",
+            "front": "❌ Erreur: Utiliser le poids brut pour la taxation",
+            "back": "✅ Correction: La douane utilise le poids net (sans emballage). Le poids brut inclut l'emballage et les matériaux de transport.",
+            "difficulty": "medium"
+          },
+          {
+            "id": "card3",
+            "front": "❌ Erreur: Sous-déclarer la valeur pour réduire droits",
+            "back": "✅ Correction: C'est de la fraude douanière. La douane compare avec prix de marché. Risque: pénalités, surcharges, poursuites judiciaires.",
+            "difficulty": "hard"
+          },
+          {
+            "id": "card4",
+            "front": "❌ Erreur: Sauter l'étape de contrôle si tout semble OK",
+            "back": "✅ Correction: Le contrôle est obligatoire (aléatoire ou ciblé). Permet de détecter contrefaçons et fraudes. Douane le décide.",
+            "difficulty": "medium"
+          },
+          {
+            "id": "card5",
+            "front": "❌ Erreur: Confondre Incoterm avec tarif douanier",
+            "back": "✅ Correction: Incoterm = condition commerciale (FOB, CIF, DAP...). Tarif douanier = code + taux de droit. Les deux sont importants mais différents.",
+            "difficulty": "hard"
+          },
+          {
+            "id": "card6",
+            "front": "❌ Erreur: Oublier que TVA s'ajoute aux droits",
+            "back": "✅ Correction: Formule = (Valeur en douane × Taux droit) + TVA. TVA calculée sur (valeur en douane + droits). Total = douane + TVA.",
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "status": "complete"
+    }
+  ]
+}

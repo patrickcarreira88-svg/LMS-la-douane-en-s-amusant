@@ -1,0 +1,1610 @@
+/**
+ * 📚 DONNÉES EMBARQUÉES - Mode Local
+ * 
+ * Ce fichier contient toutes les données de chapitres/étapes/exercices
+ * en format JavaScript pour permettre l'utilisation sans serveur.
+ * 
+ * Généré automatiquement par build.js - NE PAS MODIFIER MANUELLEMENT
+ * Pour modifier le contenu, utilisez admin.html avec le serveur.
+ */
+
+const CHAPITRES_DATA = {
+  "chapitres": [
+    {
+      "id": "ch00",
+      "numero": 0,
+      "titre": "Apprendre à Apprendre - Techniques d'Efficacité Cognitive",
+      "description": "Maîtrise 6 techniques scientifiques d'apprentissage pour optimiser ta rétention, ta concentration et ta performance aux examens douaniers. Applicable immédiatement à tes révisions du Brevet Fédéral.",
+      "couleur": "#667eea",
+      "emoji": "🧠",
+      "progression": 0,
+      "niveau": "N1",
+      "duree": "60-75 min",
+      "difficulty": 2,
+      "bloomLevels": ["Remember", "Understand", "Apply"],
+      "competencies": ["101.AA - Autodidaxie et auto-apprentissage", "101.AE - Gestion du stress et concentration"],
+      "objectifs": [
+        "Comprendre la psychologie cognitive derrière l'apprentissage efficace",
+        "Appliquer 3 techniques élémentaires (Pomodoro, Mémorisation Spatiale, Elaboration)",
+        "Maîtriser 3 techniques avancées (Spaced Rep, Interleaving, Feynman)",
+        "Augmenter ta rétention des concepts douaniers de 40%+",
+        "Réduire ton temps de révision en optimisant tes séances",
+        "Gérer le stress d'examen par des stratégies cognitives"
+      ],
+      "etapes": [
+        {
+          "id": "ch00_step2",
+          "numero": 1,
+          "type": "consult",
+          "titre": "Pré-test : Tes Habitudes d'Apprentissage Actuelles",
+          "duree": "3 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "title": "📝 Auto-évaluation de tes habitudes actuelles",
+            "introduction": "Avant de commencer, évalue honnêtement tes habitudes d'apprentissage actuelles. Note mentalement de 1 (pas du tout) à 5 (complètement) pour chaque affirmation :",
+            "sections": [
+              {
+                "heading": "Questions d'auto-évaluation",
+                "text": "**1. Je révise mes notes régulièrement (spaced repetition)**\nNote: ___/5\n\n**2. Je fais des pauses régulières pendant mes séances (Pomodoro)**\nNote: ___/5\n\n**3. Je comprends les concepts avant de les mémoriser**\nNote: ___/5\n\n**4. Je peux expliquer ce que j'ai appris à quelqu'un d'autre**\nNote: ___/5\n\n**5. Je mélange différents sujets dans mes révisions**\nNote: ___/5\n\n**6. Je suis confiant(e) dans ma capacité à mémoriser les tarifs douaniers**\nNote: ___/5"
+              }
+            ],
+            "keyTakeaway": "💡 **Note importante :** Tes réponses actuelles te servent de base de référence. À la fin du chapitre, tu referais ce test mental et verras tes progrès ! 🚀"
+          }
+        },
+        {
+          "id": "ch00_step3",
+          "numero": 2,
+          "type": "consult",
+          "titre": "Partie 1 : Fondamentaux de l'Apprentissage (Techniques Élémentaires)",
+          "duree": "5 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "title": "Les 3 Techniques Essentielles pour Débuter",
+            "sections": [
+              {
+                "heading": "🧠 Technique 1 : LA MÉTHODE POMODORO (Gestion du Temps)",
+                "text": "**Qu'est-ce que c'est ?**\nLa Technique Pomodoro est une stratégie simple : tu révises 25 minutes intensément, puis tu fais une pause de 5 minutes. Après 4 cycles, tu fais une longue pause de 15-30 minutes.\n\n**Pourquoi ça marche ?**\n- Le cerveau humain se concentre efficacement que 25-30 min max avant fatigue cognitive\n- Les pauses permettent à ton cerveau de consolidater les souvenirs en mémoire long-terme\n- La structure réduit l'anxiété (tu sais que c'est 'seulement' 25 min)\n\n**Score d'efficacité scientifique : 8.5/10**"
+              },
+              {
+                "heading": "🗺️ Technique 2 : MÉMORISATION SPATIALE (Palais Mental)",
+                "text": "**Qu'est-ce que c'est ?**\nLe Palais Mental (Method of Loci) est une ancienne technique mémoire grecque : tu visualises un lieu familier (ta maison) et tu places mentalement les concepts à des endroits précis.\n\n**Score d'efficacité scientifique : 8.8/10** (utilisé par champions mémorisation)"
+              },
+              {
+                "heading": "✍️ Technique 3 : ELABORATION ACTIVE (Explication en Détail)",
+                "text": "**Qu'est-ce que c'est ?**\nLe concept d'Elaboration = tu vas dans **les détails** et **les explications** du concept, pas juste la définition basique.\n\n**Score d'efficacité scientifique : 8.3/10**"
+              }
+            ],
+            "keyTakeaway": "💡 **À retenir :** Pomodoro = structure du temps | Palais Mental = visualisation mémoire | Elaboration = profondeur de compréhension."
+          }
+        },
+        {
+          "id": "ch00_step4",
+          "numero": 3,
+          "type": "consult",
+          "titre": "Vidéo : Les 3 Techniques en Action",
+          "duree": "5 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "videoTitle": "Démo Live des 3 Techniques",
+            "videoUrl": "assets/videos/learning-tech-part1.mp4",
+            "duration": "4:30"
+          }
+        },
+        {
+          "id": "ch00_step5",
+          "numero": 4,
+          "type": "consult",
+          "titre": "Infographie : Les 3 Techniques",
+          "duree": "2 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "title": "Comparaison Visuelle",
+            "imageUrl": "assets/infographics/learning-tech-part1-comparison.png"
+          }
+        },
+        {
+          "id": "ch00_step6",
+          "numero": 5,
+          "type": "consult",
+          "titre": "Flashcards : Les 3 Techniques - 5 Cartes Flip",
+          "duree": "5 min",
+          "exercices": [
+            {
+              "id": "ch00_ex2",
+              "type": "flashcards",
+              "titre": "Flashcards Techniques Élémentaires",
+              "content": {
+                "instruction": "Teste-toi avant de voir la réponse.",
+                "cards": [
+                  {"cardId": "fc-001", "frontText": "🍅 Intervalle optimal Pomodoro ?", "backText": "25 min étude + 5 min pause. Après 4 cycles → 15-30 min pause.", "difficulty": "Easy", "bloomLevel": "Remember"},
+                  {"cardId": "fc-002", "frontText": "🏛️ Palais Mental basé sur ?", "backText": "Mémoire spatiale + associations visuelles. 150% mieux que texte.", "difficulty": "Easy", "bloomLevel": "Understand"},
+                  {"cardId": "fc-003", "frontText": "✏️ 5 questions Elaboration ?", "backText": "Qu'est-ce / Pourquoi / Quand / Cas / Contre-exemple", "difficulty": "Medium", "bloomLevel": "Apply"},
+                  {"cardId": "fc-004", "frontText": "💡 Palais Mental pour fraude ?", "backText": "Place chaque type dans une pièce. Revisite avant révision.", "difficulty": "Hard", "bloomLevel": "Apply"},
+                  {"cardId": "fc-005", "frontText": "🎯 Pomodoro + Elaboration 60min ?", "backText": "25min chapitre + 5min pause + 25min élabore + 5min pause.", "difficulty": "Hard", "bloomLevel": "Apply"}
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch00_step7",
+          "numero": 6,
+          "type": "consult",
+          "titre": "Partie 2 : Techniques Avancées",
+          "duree": "6 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "title": "Les 3 Techniques Avancées : Rétention Scientifique",
+            "sections": [
+              {
+                "heading": "🔄 Technique 4 : SPACED REPETITION (SM2)",
+                "text": "Révise le même concept à intervalles croissants : 1j, 3j, 7j, 14j, 30j.\n\n**Score : 9.5/10** (Le meilleur scientifiquement prouvé)"
+              },
+              {
+                "heading": "🎲 Technique 5 : INTERLEAVING (Mélange)",
+                "text": "Mélange les thèmes au lieu de réviser bloc par bloc.\n\n**Score : 8.9/10** (Mieux pour exams variés)"
+              },
+              {
+                "heading": "🎓 Technique 6 : FEYNMAN (Explication Simple)",
+                "text": "Explique le concept à voix haute comme à un enfant.\n\n**Score : 9.2/10** (Exceptionnel pour compréhension)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ch00_step8",
+          "numero": 7,
+          "type": "consult",
+          "titre": "Vidéo : Techniques Avancées",
+          "duree": "6 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "videoTitle": "Démo des Techniques Avancées",
+            "videoUrl": "assets/videos/learning-tech-part2.mp4",
+            "duration": "5:45"
+          }
+        },
+        {
+          "id": "ch00_step9",
+          "numero": 8,
+          "type": "consult",
+          "titre": "Infographie : Calendrier SM2",
+          "duree": "2 min",
+          "exercices": [],
+          "completed": false,
+          "content": {
+            "title": "Calendrier Spaced Rep",
+            "imageUrl": "assets/infographics/learning-tech-part2-advanced.png"
+          }
+        },
+        {
+          "id": "ch00_step10",
+          "numero": 9,
+          "type": "consult",
+          "titre": "Flashcards : Techniques Avancées",
+          "duree": "5 min",
+          "exercices": [
+            {
+              "id": "ch00_ex3",
+              "type": "flashcards",
+              "titre": "Flashcards Techniques Avancées",
+              "content": {
+                "instruction": "5 flashcards avancées.",
+                "cards": [
+                  {"cardId": "fc-adv-001", "frontText": "🔄 Courbe Ebbinghaus combattue par ?", "backText": "Spaced Rep. Oubli 70% en 24h → révise juste avant d'oublier.", "difficulty": "Medium", "bloomLevel": "Understand"},
+                  {"cardId": "fc-adv-002", "frontText": "🎲 Meilleur pendant apprentissage vs exams ?", "backText": "Blocking meilleur pendant. Interleaving meilleur aux exams (50% transfer).", "difficulty": "Hard", "bloomLevel": "Understand"},
+                  {"cardId": "fc-adv-003", "frontText": "🎓 4 étapes Feynman ?", "backText": "1) Choisis concept | 2) Explique à haute voix | 3) Identify gaps | 4) Comble gaps.", "difficulty": "Easy", "bloomLevel": "Remember"},
+                  {"cardId": "fc-adv-004", "frontText": "💡 Spaced Rep + Interleaving ensemble ?", "backText": "Jour 1: Apprends. Jour 2: Quiz aléatoire. Jour 3: Révise. Jour 5: Quiz aléatoire.", "difficulty": "Hard", "bloomLevel": "Apply"},
+                  {"cardId": "fc-adv-005", "frontText": "🚀 Feynman + Elaboration + Spaced Rep ?", "backText": "Compréhension + détails + mémoire long-terme = apprentissage OPTIMAL.", "difficulty": "Hard", "bloomLevel": "Apply"}
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "ch00_step11",
+          "numero": 10,
+          "type": "score",
+          "titre": "Quiz Final : Maîtrise des 6 Techniques",
+          "duree": "10 min",
+          "exercices": [
+            {
+              "id": "ch00_ex4",
+              "type": "qcm",
+              "titre": "Quiz Final Maîtrise 6 Techniques",
+              "content": {
+                "quizType": "scenario-based",
+                "instruction": "6 scénarios. Trouve la meilleure technique.",
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "questionId": "q-fin-001",
+                    "question": "Tu révises 38 chapitres en 6 semaines, stressé. Technique PRIORITAIRE ?",
+                    "type": "multiple-choice",
+                    "answers": [
+                      {"text": "Pomodoro : structure psychologiquement rassurante", "correct": true, "explanation": "✓ Pomodoro réduit l'anxiété. Priorité 1."},
+                      {"text": "Spaced Rep seule", "correct": false, "explanation": "❌ Bon pour long-terme, pas pour stress immédiat."},
+                      {"text": "Feynman uniquement", "correct": false, "explanation": "❌ Aide compréhension, pas stress."},
+                      {"text": "Interleaving", "correct": false, "explanation": "❌ Pour discrimination, pas stress."}
+                    ],
+                    "points": 10
+                  },
+                  {
+                    "questionId": "q-fin-002",
+                    "question": "Mémoriser 50 tarifs douaniers. Plan en 3 étapes ?",
+                    "type": "multiple-choice",
+                    "answers": [
+                      {"text": "Palais Mental → Spaced Rep → Interleaving", "correct": true, "explanation": "✓ Optimal. Visuel → long-terme → discrimination."},
+                      {"text": "Seulement Palais Mental", "correct": false, "explanation": "❌ Sans Spaced Rep, pas rétention long-terme."},
+                      {"text": "Bloc par bloc", "correct": false, "explanation": "❌ Blocking réduit transfer aux exams."},
+                      {"text": "Par-cœur", "correct": false, "explanation": "❌ 70% oubli en 24h."}
+                    ],
+                    "points": 10
+                  },
+                  {
+                    "questionId": "q-fin-003",
+                    "question": "Jour de l'exam, question complexe fraude. Technique EN DIRECT ?",
+                    "type": "multiple-choice",
+                    "answers": [
+                      {"text": "Feynman simplifié", "correct": true, "explanation": "✓ Force à penser profondément et simplement."},
+                      {"text": "Palais Mental", "correct": false, "explanation": "❌ Trop tard pour créer mémoire."},
+                      {"text": "Pomodoro pause", "correct": false, "explanation": "❌ Pas le temps à l'exam."},
+                      {"text": "Elaboration", "correct": false, "explanation": "❌ Bonne avant exam, pas pendant."}
+                    ],
+                    "points": 10
+                  },
+                  {
+                    "questionId": "q-fin-004",
+                    "question": "Blocking lors révisions, bloques à l'exam. Vraie raison ?",
+                    "type": "multiple-choice",
+                    "answers": [
+                      {"text": "Blocking = reconnaissance patterns. Solution = Interleaving.", "correct": true, "explanation": "✓ Exams mélangent patterns. Interleaving = transfer parfait."},
+                      {"text": "Pas assez étudié", "correct": false, "explanation": "❌ Quantité pas le problème. Qualité l'est."},
+                      {"text": "Pas Spaced Rep", "correct": false, "explanation": "❌ Spaced Rep aide rétention, pas discrimination."},
+                      {"text": "QCM exams différents", "correct": false, "explanation": "❌ C'est le problème qu'Interleaving résout."}
+                    ],
+                    "points": 15
+                  },
+                  {
+                    "questionId": "q-fin-005",
+                    "question": "Plan chronologique 8 semaines. Ordonne les 6 techniques.",
+                    "type": "ordering",
+                    "instruction": "Ordonne l'utilisation optimale:",
+                    "items": [
+                      {"text": "Sem 1-2 : Pomodoro + Elaboration", "order": 1},
+                      {"text": "Sem 2-3 : Palais Mental listes", "order": 2},
+                      {"text": "Sem 3-7 : Spaced Rep + Interleaving", "order": 3},
+                      {"text": "Sem 7-8 : Feynman cas complexes", "order": 4},
+                      {"text": "Veille exam : Quiz Interleaving", "order": 5}
+                    ],
+                    "points": 20,
+                    "feedback": "✓ Progression logique : structure → mémoire → rétention+discrimination → compréhension → confidence."
+                  },
+                  {
+                    "questionId": "q-fin-006",
+                    "question": "Réussi 78% au Brevet. Technique LA PLUS utilisée ?",
+                    "type": "multiple-choice",
+                    "answers": [
+                      {"text": "Spaced Rep : rétention long-terme garantie", "correct": true, "explanation": "✓ 91% rétention après 1 an. Ton 78% le prouve."},
+                      {"text": "Pomodoro seul", "correct": false, "explanation": "❌ Temps management, pas rétention."},
+                      {"text": "Feynman seul", "correct": false, "explanation": "❌ Sans Spaced Rep, pas long-terme."},
+                      {"text": "Les 6 combinées", "correct": false, "explanation": "❌ Un score élevé = technique dominante = Spaced Rep."}
+                    ],
+                    "points": 15
+                  }
+                ],
+                "totalPoints": 80,
+                "feedback": {
+                  "passing": "🎉 Excellent ! Maîtrise des 6 techniques. Prêt(e) pour Brevet !",
+                  "failing": "📝 Reviens sur flashcards. Concepts clés pour ta réussite."
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "badge": {
+        "id": "badge_ch00",
+        "titre": "Maître de l'Apprentissage",
+        "emoji": "🧠",
+        "description": "Tu as maîtrisé les 6 techniques d'apprentissage scientifiques !"
+      }
+    },
+    {
+      "id": "ch1",
+      "numero": 1,
+      "titre": "Introduction à la Douane",
+      "description": "Découvrez les bases de l'organisation douanière suisse",
+      "couleur": "#E0AAFF",
+      "emoji": "🎯",
+      "progression": 0,
+      "objectifs": [
+        "Comprendre l'organisation douanière suisse (structurelle et contextuelle)",
+        "Identifier les trois domaines d'action douanière (commerce, sécurité, fiscalité)",
+        "Décrire les rôles et responsabilités des agents douaniers",
+        "Appliquer les concepts de base à des cas réels"
+      ],
+      "etapes": [
+        {
+          "id": "ch1_step1",
+          "numero": 1,
+          "titre": "Histoire de la Douane suisse",
+          "type": "exercise_group",
+          "duree": "3 min",
+          "contenu": "Découvrez les origines et l'évolution de la douane suisse",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch1_ex_001",
+              "type": "video",
+              "titre": "[EX 1] Vidéo: Histoire de la Douane suisse",
+              "description": "Regardez la vidéo pour comprendre l'histoire de la douane",
+              "content": {
+                "videoType": "youtube",
+                "url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+                "description": "Première vidéo YouTube - Me at the zoo (1ere video YouTube de l'histoire)"
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch1_step2",
+          "numero": 2,
+          "titre": "Organisation actuelle",
+          "type": "exercise_group",
+          "duree": "5 min",
+          "contenu": "Testez vos connaissances sur l'organisation de la douane",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch1_ex_002",
+              "type": "qcm",
+              "titre": "[EX 2] QCM: Nombre de cantons",
+              "description": "Question sur le nombre de cantons en Suisse",
+              "content": {
+                "question": "Combien de cantons compte la Suisse?",
+                "options": [
+                  {
+                    "label": "24 cantons",
+                    "correct": false
+                  },
+                  {
+                    "label": "26 cantons",
+                    "correct": true
+                  },
+                  {
+                    "label": "28 cantons",
+                    "correct": false
+                  },
+                  {
+                    "label": "30 cantons",
+                    "correct": false
+                  }
+                ],
+                "correctAnswer": 1,
+                "explanation": "La Suisse compte 26 cantons depuis 1975. Le 26ème canton, le Jura, a été créé en 1978."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "ch1_video1",
+          "numero": 3,
+          "titre": "Qu'est-ce qu'une marchandise commerciale?",
+          "type": "exercise_group",
+          "duree": "35 sec",
+          "contenu": "Découvrez la définition et les caractéristiques d'une marchandise commerciale",
+          "completed": false,
+          "points": 10,
+          "videoId": "video_101_marchandises",
+          "videoPath": "/assets/videos/101ab",
+          "exercices": [
+            {
+              "id": "ch1_ex_003",
+              "type": "video",
+              "titre": "[EX 3] Vidéo: Qu'est-ce qu'une marchandise commerciale?",
+              "description": "Regardez la vidéo pour comprendre la différence entre marchandises commerciales et biens personnels",
+              "content": {
+                "videoType": "local",
+                "url": "assets/videos/Marchandise_Commerciale_-_35s.mp4",
+                "description": "Regardez la vidéo pour comprendre la différence entre marchandises commerciales et biens personnels"
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch1_video2",
+          "numero": 4,
+          "titre": "Les 5 étapes du processus de dédouanement",
+          "type": "exercise_group",
+          "duree": "55 sec",
+          "contenu": "Découvrez les 5 étapes essentielles du dédouanement en Suisse",
+          "completed": false,
+          "points": 10,
+          "videoId": "video_101_processus",
+          "videoPath": "/assets/videos/101ab",
+          "exercices": [
+            {
+              "id": "ch1_ex_004",
+              "type": "video",
+              "titre": "[EX 4] Vidéo: Les 5 étapes du processus de dédouanement",
+              "description": "Regardez la vidéo pour comprendre le flux complet du dédouanement à l'importation suisse",
+              "content": {
+                "videoType": "local",
+                "url": "assets/videos/Dédouanement_Suisse_Expliqué.mp4",
+                "description": "Regardez la vidéo pour comprendre le flux complet du dédouanement à l'importation suisse"
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch1_step3",
+          "numero": 5,
+          "titre": "Rôles et responsabilités",
+          "type": "exercise_group",
+          "duree": "7 min",
+          "contenu": "Texte explicatif sur les missions de la douane",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch1_ex_005",
+              "type": "lecture",
+              "titre": "[EX 5] Lecture: Les missions de la douane suisse",
+              "description": "Lire le texte explicatif sur les missions",
+              "content": {
+                "text": "La douane suisse remplit plusieurs missions essentielles:\n\n1. FISCALE: Perception des droits et taxes sur les marchandises importées\n\n2. PROTECTION: Lutte contre la contrebande et le trafic illicite\n\n3. SECURITE: Contrôle des marchandises dangereuses et prohibées\n\n4. STATISTIQUE: Collecte de données sur le commerce international\n\n5. ECONOMIQUE: Facilitation du commerce légitime\n\nCes missions font de la douane un acteur clé dans la gestion des frontières suisses."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch1_step4",
+          "numero": 6,
+          "titre": "Les 3 domaines douaniers",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "Mémorisez les 3 domaines principaux",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch1_ex_006",
+              "type": "flashcards",
+              "titre": "[EX 6] Flashcards: Les 3 domaines douaniers",
+              "description": "Mémoriser avec les cartes flashcard",
+              "content": {
+                "cards": [
+                  {
+                    "id": "card1",
+                    "recto": "Quel est le domaine FISCAL de la douane?",
+                    "verso": "La perception des droits de douane et des taxes sur les marchandises importées"
+                  },
+                  {
+                    "id": "card2",
+                    "recto": "Quel est le domaine de PROTECTION?",
+                    "verso": "La lutte contre la contrebande, le trafic et la fraude douanière"
+                  },
+                  {
+                    "id": "card3",
+                    "recto": "Quel est le domaine de SECURITE?",
+                    "verso": "Le contrôle des marchandises dangereuses et prohibées pour protéger la population"
+                  }
+                ]
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch1_step5",
+          "numero": 8,
+          "titre": "Quiz: Maîtrise les bases?",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "Quiz final du chapitre 1",
+          "completed": false,
+          "points": 20,
+          "exercices": [
+            {
+              "id": "ch1_ex_007",
+              "type": "quiz",
+              "titre": "[EX 7] Quiz: Introduction à la Douane",
+              "description": "Répondez aux 3 questions pour valider ce chapitre",
+              "content": {
+                "questions": [
+                  {
+                    "id": "q1",
+                    "question": "La douane suisse dépend de quel département?",
+                    "options": [
+                      "Département de la Justice",
+                      "Département des Finances",
+                      "Département de l'Intérieur",
+                      "Département de la Défense"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "La douane suisse est sous l'autorité du Département fédéral des finances (DFF)."
+                  },
+                  {
+                    "id": "q2",
+                    "question": "Quel est le rôle PRINCIPAL de la douane?",
+                    "options": [
+                      "Collecter les taxes et protéger les frontières",
+                      "Gérer les prisons",
+                      "Émettre les passeports",
+                      "Gérer les aéroports"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "La douane a pour mission principale de collecter les droits et taxes, et de protéger les frontières suisses."
+                  },
+                  {
+                    "id": "q3",
+                    "question": "En quelle année la Suisse a-t-elle créé le 26ème canton?",
+                    "options": [
+                      "1975",
+                      "1978",
+                      "1980",
+                      "1985"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Le Jura, 26ème canton de la Suisse, a été créé en 1978 par la scission d'une partie du canton de Berne."
+                  }
+                ],
+                "scoreMin": 2
+              },
+              "points": 20
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        }
+      ],
+      "badge": {
+        "id": "badge_ch1",
+        "titre": "Apprenti Douanier",
+        "emoji": "🎓",
+        "description": "Vous avez complété le chapitre 1!"
+      },
+      "niveau": "N1"
+    },
+    {
+      "id": "101BT",
+      "numero": 2,
+      "titre": "Marchandises & Processus: Mise en Pratique",
+      "description": "Appliquer les fondamentaux douaniers à des cas concrets. Identification marchandises, flux processus, documents déclaration.",
+      "couleur": "#FF6B9D",
+      "emoji": "📋",
+      "progression": 0,
+      "externalDataFile": "data/data101-BT.json",
+      "objectifs": [
+        "Identifier correctement le statut des marchandises (commercial/personnel/touristique)",
+        "Appliquer les 5 étapes du processus à un import réel",
+        "Remplir les données clés d'une déclaration douanière",
+        "Détecter erreurs fréquentes et risques en douane"
+      ],
+      "metadata": {
+        "createdDate": "2025-12-15",
+        "lastUpdated": "2025-12-15",
+        "version": "1.0",
+        "status": "complete",
+        "totalExercises": 40,
+        "totalCompetencies": 5,
+        "portfolioSwipeCount": 5,
+        "loadFromExternalFile": true
+      },
+      "etapes": [
+        {
+          "id": "101BT_01_diagnostic",
+          "numero": 1,
+          "titre": "📋 Pré-test",
+          "type": "exercise_group",
+          "duree": "8 min",
+          "contenu": "Diagnostic 101.AB",
+          "completed": false,
+          "points": 50,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_02_videos",
+          "numero": 2,
+          "titre": "🎬 Révision Vidéos",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "Révisions vidéos",
+          "completed": false,
+          "points": 75,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_03_cas_simples",
+          "numero": 3,
+          "titre": "📦 Cas Simples",
+          "type": "exercise_group",
+          "duree": "12 min",
+          "contenu": "Cas simples",
+          "completed": false,
+          "points": 75,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_04_processus_guide",
+          "numero": 4,
+          "titre": "⚙️ Cas Guidé",
+          "type": "exercise_group",
+          "duree": "12 min",
+          "contenu": "Cas guidé",
+          "completed": false,
+          "points": 100,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_05_documents",
+          "numero": 5,
+          "titre": "📄 Documents",
+          "type": "exercise_group",
+          "duree": "12 min",
+          "contenu": "Documents",
+          "completed": false,
+          "points": 75,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_06_cas_complexes",
+          "numero": 6,
+          "titre": "🔴 Cas Complexes",
+          "type": "exercise_group",
+          "duree": "12 min",
+          "contenu": "Cas complexes",
+          "completed": false,
+          "points": 100,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_07_revision",
+          "numero": 7,
+          "titre": "🔄 Révision",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "Révision globale",
+          "completed": false,
+          "points": 75,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "101BT_08_portfolio",
+          "numero": 8,
+          "titre": "🎖️ Portfolio",
+          "type": "portfolio_swipe",
+          "duree": "5 min",
+          "contenu": "Portfolio et ancrage",
+          "completed": false,
+          "points": 25,
+          "exercices": [],
+          "consultation": true,
+          "validation": false
+        }
+      ],
+      "badge": {
+        "id": "badge_101bt",
+        "titre": "Expert en Mise en Pratique",
+        "emoji": "🏆",
+        "description": "Vous avez maîtrisé marchandises, processus et déclarations!"
+      },
+      "niveau": "N1"
+    },
+    {
+      "id": "ch2",
+      "numero": 3,
+      "titre": "Législation Douanière",
+      "description": "Les cadres légaux et régulations",
+      "couleur": "#C77DFF",
+      "emoji": "📜",
+      "progression": 0,
+      "objectifs": [
+        "Analyser les sources du droit douanier (Constitution, lois, ordonnances, traités)",
+        "Classer les marchandises selon la nomenclature tarifaire",
+        "Calculer les droits et taxes applicables",
+        "Évaluer la validité des documents douaniers"
+      ],
+      "etapes": [
+        {
+          "id": "ch2_step1",
+          "numero": 1,
+          "titre": "Sources du droit douanier",
+          "type": "exercise_group",
+          "duree": "8 min",
+          "contenu": "Les sources légales du droit douanier suisse",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch2_ex_001",
+              "type": "lecture",
+              "titre": "[EX 1] Lecture: Hiérarchie des sources du droit douanier",
+              "description": "Lire le texte explicatif sur les sources du droit",
+              "content": {
+                "text": "Le droit douanier suisse s'appuie sur plusieurs sources:\n\n1. LA CONSTITUTION FEDERALE (loi suprême)\n   - Article 101: Autorité fédérale pour les douanes\n\n2. LES LOIS FEDERALES\n   - Loi sur les douanes (LD)\n   - Loi sur les tarifs des douanes\n\n3. LES ORDONNANCES\n   - Ordonnance du 7 octobre 2015 sur les douanes\n   - Ordonnance tarifaire\n\n4. LES TRAITES INTERNATIONAUX\n   - Accords bilatéraux\n   - Accords de l'OMC\n   - Conventions douanières\n\n5. LES DIRECTIVES ADMINISTRATIVES\n   - Manuels de la douane\n   - Circulaires\n\nCette hiérarchie garantit une cohérence et une légalité du système douanier."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch2_step2",
+          "numero": 2,
+          "titre": "Traités internationaux",
+          "type": "exercise_group",
+          "duree": "6 min",
+          "contenu": "Quiz sur les accords internationaux",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch2_ex_002",
+              "type": "qcm",
+              "titre": "[EX 2] QCM: Adhésion de la Suisse à l'UE",
+              "description": "Question sur l'adhésion de la Suisse à l'Union Européenne",
+              "content": {
+                "question": "La Suisse est-elle membre de l'UE?",
+                "options": [
+                  "Oui, depuis 1995",
+                  "Oui, depuis 1986",
+                  "Non, la Suisse n'est pas membre de l'UE",
+                  "Oui, depuis 2004"
+                ],
+                "correctAnswer": 2,
+                "explanation": "La Suisse n'est pas membre de l'Union Européenne. Elle maintient son indépendance tout en ayant des accords bilatéraux avec l'UE."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "ch2_step3",
+          "numero": 3,
+          "titre": "Classification tarifaire",
+          "type": "exercise_group",
+          "duree": "15 min",
+          "contenu": "Codes HS et nomenclature douanière",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch2_ex_003",
+              "type": "flashcards",
+              "titre": "[EX 3] Flashcards: Nomenclature tarifaire",
+              "description": "Mémoriser les codes HS et la nomenclature",
+              "content": {
+                "cards": [
+                  {
+                    "id": "card1",
+                    "recto": "Qu'est-ce que le système HS?",
+                    "verso": "Le Système Harmonisé de désignation et de codification des marchandises (6 chiffres minimum)"
+                  },
+                  {
+                    "id": "card2",
+                    "recto": "Combien de chiffres a un tarif douanier suisse complet?",
+                    "verso": "10 chiffres: 6 du SH + 2 pour la nomenclature tarifaire + 2 supplémentaires suisses"
+                  },
+                  {
+                    "id": "card3",
+                    "recto": "Quel est le code HS pour les pommes fraîches?",
+                    "verso": "0808.30 (la position 8 signifie fruits, le reste précise le type)"
+                  }
+                ]
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch2_step4",
+          "numero": 4,
+          "titre": "Droits et taxes",
+          "type": "exercise_group",
+          "duree": "5 min",
+          "contenu": "Video explicative sur les calculs de droits",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch2_ex_004",
+              "type": "video",
+              "titre": "[EX 4] Vidéo: Calcul des droits de douane",
+              "description": "Apprenez comment calculer les droits de douane applicables",
+              "content": {
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "description": "Apprenez comment calculer les droits de douane applicables",
+                "videoType": "youtube"
+              },
+              "points": 10,
+              "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch2_step5",
+          "numero": 5,
+          "titre": "Quiz Législation",
+          "type": "exercise_group",
+          "duree": "15 min",
+          "contenu": "Évaluation complète du chapitre",
+          "completed": false,
+          "points": 20,
+          "exercices": [
+            {
+              "id": "ch2_ex_005",
+              "type": "quiz",
+              "titre": "[EX 5] Quiz: Législation Douanière",
+              "description": "3 questions pour valider vos connaissances",
+              "content": {
+                "questions": [
+                  {
+                    "id": "q1",
+                    "question": "Quel document régit les douanes en Suisse?",
+                    "options": [
+                      "La Loi sur les douanes",
+                      "La Loi fédérale des finances",
+                      "La Constitution seulement",
+                      "Des ordonnances locales"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "La Loi sur les douanes (LD) est le document principal qui régit l'activité des douanes en Suisse."
+                  },
+                  {
+                    "id": "q2",
+                    "question": "Le système HS a combien de chiffres minimums?",
+                    "options": [
+                      "4 chiffres",
+                      "6 chiffres",
+                      "8 chiffres",
+                      "10 chiffres"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Le Système Harmonisé utilise un code de 6 chiffres minimums pour classifier les marchandises."
+                  },
+                  {
+                    "id": "q3",
+                    "question": "La Suisse applique les traités de l'OMC?",
+                    "options": [
+                      "Non, jamais",
+                      "Oui, partiellement",
+                      "Oui, complètement",
+                      "Seulement pour l'UE"
+                    ],
+                    "correctAnswer": 2,
+                    "explanation": "La Suisse applique complètement les traités et accords de l'Organisation Mondiale du Commerce."
+                  }
+                ],
+                "scoreMin": 2
+              },
+              "points": 20
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        }
+      ],
+      "badge": {
+        "id": "badge_ch2",
+        "titre": "Expert Légal",
+        "emoji": "⚖️",
+        "description": "Législation maîtrisée!"
+      },
+      "niveau": "N1"
+    },
+    {
+      "id": "ch3",
+      "numero": 4,
+      "titre": "Procédures Douanières",
+      "description": "Dédouanement, déclaration et vérification",
+      "couleur": "#A78BFA",
+      "emoji": "📋",
+      "progression": 0,
+      "objectifs": [
+        "Exécuter le processus de déclaration en douane",
+        "Effectuer les contrôles formels de manière systématique",
+        "Analyser les situations de recours et de contestation",
+        "Justifier les décisions administratives"
+      ],
+      "etapes": [
+        {
+          "id": "ch3_step1",
+          "numero": 1,
+          "titre": "Déclaration en douane",
+          "type": "exercise_group",
+          "duree": "8 min",
+          "contenu": "Processus et exigences de déclaration",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch3_ex_001",
+              "type": "lecture",
+              "titre": "[EX 1] Lecture: Les étapes de la déclaration en douane",
+              "description": "Lire le texte sur les étapes de la déclaration",
+              "content": {
+                "text": "La déclaration en douane est une démarche essentielle:\n\nEtape 1: PREPARATION\n- Rassembler tous les documents\n- Facture commerciale\n- Bon de livraison\n- Certificat d'origine\n- Documents spécialisés si nécessaire\n\nEtape 2: DECLARATION\n- Effectuer la déclaration en douane\n- Présentation directe ou électronique\n- Détail complet des marchandises\n- Valeur en douane\n\nEtape 3: VERIFICATION\n- Examen documentaire\n- Examen physique si nécessaire\n- Classement tarifaire\n- Calcul des droits\n\nEtape 4: PAIEMENT\n- Paiement des droits et taxes\n- Obtention de quittances\n\nEtape 5: DÉDOUANEMENT\n- Libération des marchandises\n- Livraison au destinataire\n\nLe délai moyen est de 24-48 heures pour les déclarations simples."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch3_step2",
+          "numero": 2,
+          "titre": "Dédouanement simple",
+          "type": "exercise_group",
+          "duree": "6 min",
+          "contenu": "Cas de dédouanement standard",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch3_ex_002",
+              "type": "video",
+              "titre": "[EX 2] Vidéo: Procédure de dédouanement simple",
+              "description": "Suivez un cas pratique de dédouanement",
+              "content": {
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "description": "Suivez un cas pratique de dédouanement",
+                "videoType": "youtube"
+              },
+              "points": 10,
+              "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch3_step3",
+          "numero": 3,
+          "titre": "Contrôle et vérification",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "Quiz sur les vérifications douanières",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch3_ex_003",
+              "type": "qcm",
+              "titre": "[EX 3] QCM: Taux de vérification douanière",
+              "description": "Question sur les vérifications physiques",
+              "content": {
+                "question": "Quel est le taux de vérification physique à la douane suisse?",
+                "options": [
+                  "100% des envois",
+                  "Entre 5% et 15%",
+                  "Seulement les cas suspects",
+                  "Aucun contrôle physique"
+                ],
+                "correctAnswer": 1,
+                "explanation": "La douane suisse applique une vérification physique de 5% à 15% des envois, basée sur l'analyse des risques."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "ch3_step4",
+          "numero": 4,
+          "titre": "Recours et contestation",
+          "type": "exercise_group",
+          "duree": "12 min",
+          "contenu": "Procédures de recours disponibles",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch3_ex_004",
+              "type": "flashcards",
+              "titre": "[EX 4] Flashcards: Procédures de recours",
+              "description": "Mémoriser les procédures de recours",
+              "content": {
+                "cards": [
+                  {
+                    "id": "card1",
+                    "recto": "Quel est le premier recours possible?",
+                    "verso": "La demande de réexamen auprès de l'administration douanière"
+                  },
+                  {
+                    "id": "card2",
+                    "recto": "Vers quel organe faire appel après le refus de réexamen?",
+                    "verso": "La Commission de recours douaniers (organe indépendant)"
+                  },
+                  {
+                    "id": "card3",
+                    "recto": "Quel est le dernier recours juridique?",
+                    "verso": "Le Tribunal fédéral de la Confédération suisse"
+                  }
+                ]
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch3_step5",
+          "numero": 5,
+          "titre": "Quiz Procédures",
+          "type": "exercise_group",
+          "duree": "15 min",
+          "contenu": "Évaluation pratique du chapitre",
+          "completed": false,
+          "points": 20,
+          "exercices": [
+            {
+              "id": "ch3_ex_005",
+              "type": "quiz",
+              "titre": "[EX 5] Quiz: Procédures Douanières",
+              "description": "3 questions pour valider ce chapitre",
+              "content": {
+                "questions": [
+                  {
+                    "id": "q1",
+                    "question": "Combien de temps dure généralement un dédouanement simple?",
+                    "options": [
+                      "1-2 heures",
+                      "24-48 heures",
+                      "1 semaine",
+                      "1 mois"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Un dédouanement simple prend généralement 24 à 48 heures selon la complexité et la charge de travail."
+                  },
+                  {
+                    "id": "q2",
+                    "question": "Quel document est OBLIGATOIRE pour une déclaration?",
+                    "options": [
+                      "La facture commerciale",
+                      "Le passeport du transporteur",
+                      "Une assurance spéciale",
+                      "Un permis d'importation"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "La facture commerciale est le document obligatoire pour effectuer une déclaration en douane."
+                  },
+                  {
+                    "id": "q3",
+                    "question": "Si vous contestez une décision douanière, vers quel organe allez-vous?",
+                    "options": [
+                      "Le canton",
+                      "La police",
+                      "La Commission de recours douaniers",
+                      "Un notaire"
+                    ],
+                    "correctAnswer": 2,
+                    "explanation": "En cas de contestation, vous devez saisir la Commission de recours douaniers, organe indépendant."
+                  }
+                ],
+                "scoreMin": 2
+              },
+              "points": 20
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        }
+      ],
+      "badge": {
+        "id": "badge_ch3",
+        "titre": "Agent Confirmé",
+        "emoji": "🏢",
+        "description": "Procédures maîtrisées!"
+      },
+      "niveau": "N1"
+    },
+    {
+      "id": "ch4",
+      "numero": 5,
+      "titre": "Commerce International",
+      "description": "Échanges commerciaux et douane",
+      "couleur": "#93C5FD",
+      "emoji": "🌍",
+      "progression": 0,
+      "objectifs": [
+        "Comprendre les Incoterms et conditions commerciales",
+        "Classifier les documents commerciaux (factures, lettres de crédit, etc.)",
+        "Évaluer la valeur en douane",
+        "Appliquer les règles d'origine des marchandises"
+      ],
+      "etapes": [
+        {
+          "id": "ch4_step1",
+          "numero": 1,
+          "titre": "Incoterms et conditions",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "FOB, CIF, DAP et autres conditions",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch4_ex_001",
+              "type": "lecture",
+              "titre": "[EX 1] Lecture: Les principaux INCOTERMS",
+              "description": "Lire le texte sur les INCOTERMS",
+              "content": {
+                "text": "Les INCOTERMS définissent les responsabilités dans le transport:\n\nEXW (Ex Works - À l'usine)\n- Vendeur: Aucune responsabilité\n- Acheteur: Responsable dès le départ\n- Risque: Chez l'acheteur\n\nFOB (Free on Board - Franco à bord)\n- Vendeur: Paie transport jusqu'au navire\n- Acheteur: Paie à partir du navire\n- Risque: Passe à l'acheteur au navire\n- Douane: Importation payée par acheteur\n\nCIF (Cost, Insurance and Freight)\n- Vendeur: Paie tout jusqu'à destination\n- Assurance: Comprise\n- Risque: Chez l'acheteur après navire\n- Douane: Payée par acheteur\n\nDAP (Delivered at Place)\n- Vendeur: Paie jusqu'à lieu converti\n- Risque: Chez l'acheteur à l'arrivée\n- Douane: Payée par acheteur\n- Plus simple et moderne\n\nCes conditions impactent directement l'évaluation en douane."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch4_step2",
+          "numero": 2,
+          "titre": "Documents commerciaux",
+          "type": "exercise_group",
+          "duree": "12 min",
+          "contenu": "Factures, lettres de crédit et documents",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch4_ex_002",
+              "type": "flashcards",
+              "titre": "[EX 2] Flashcards: Documents commerciaux",
+              "description": "Mémoriser les documents commerciaux",
+              "content": {
+                "cards": [
+                  {
+                    "id": "card1",
+                    "recto": "Qu'est-ce qu'une facture commerciale?",
+                    "verso": "Document prouvant la transaction commerciale avec prix, quantités et conditions"
+                  },
+                  {
+                    "id": "card2",
+                    "recto": "Qu'est-ce qu'une lettre de crédit?",
+                    "verso": "Garantie bancaire de paiement émise par la banque de l'acheteur"
+                  },
+                  {
+                    "id": "card3",
+                    "recto": "Qu'est-ce qu'un connaissement?",
+                    "verso": "Document de transport attestant la prise en charge des marchandises par le transporteur"
+                  }
+                ]
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch4_step3",
+          "numero": 3,
+          "titre": "Évaluation douanière",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "Calcul de la valeur en douane",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch4_ex_003",
+              "type": "qcm",
+              "titre": "[EX 3] QCM: Évaluation douanière",
+              "description": "Question sur la valeur en douane",
+              "content": {
+                "question": "Quelle est la base de l'évaluation en douane suisse?",
+                "options": [
+                  "Le prix d'achat seul",
+                  "La valeur transactionnelle (facture + transport + assurance)",
+                  "Le prix au détail",
+                  "Une estimation arbitraire"
+                ],
+                "correctAnswer": 1,
+                "explanation": "La base de l'évaluation douanière suisse est la valeur transactionnelle, incluant la facture, le transport et l'assurance."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "ch4_step4",
+          "numero": 4,
+          "titre": "Origines des marchandises",
+          "type": "exercise_group",
+          "duree": "7 min",
+          "contenu": "Règles d'origine et certifications",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch4_ex_004",
+              "type": "video",
+              "titre": "[EX 4] Vidéo: Les règles d'origine douanière",
+              "description": "Comprendre les règles d'origine et leur importance",
+              "content": {
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "description": "Comprendre les règles d'origine et leur importance",
+                "videoType": "youtube"
+              },
+              "points": 10,
+              "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch4_step5",
+          "numero": 5,
+          "titre": "Quiz Commerce Int.",
+          "type": "exercise_group",
+          "duree": "15 min",
+          "contenu": "Évaluation finale du chapitre",
+          "completed": false,
+          "points": 20,
+          "exercices": [
+            {
+              "id": "ch4_ex_005",
+              "type": "quiz",
+              "titre": "[EX 5] Quiz: Commerce International",
+              "description": "3 questions pour valider ce chapitre",
+              "content": {
+                "questions": [
+                  {
+                    "id": "q1",
+                    "question": "FOB signifie?",
+                    "options": [
+                      "Free on Board",
+                      "Freight on Boat",
+                      "Federal on Border",
+                      "Free on Billing"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "FOB signifie 'Free on Board' (Franco à bord), une condition commerciale importante."
+                  },
+                  {
+                    "id": "q2",
+                    "question": "L'assurance est incluse dans quel INCOTERM?",
+                    "options": [
+                      "FOB",
+                      "EXW",
+                      "CIF",
+                      "DAP"
+                    ],
+                    "correctAnswer": 2,
+                    "explanation": "L'assurance est incluse dans CIF (Cost, Insurance and Freight)."
+                  },
+                  {
+                    "id": "q3",
+                    "question": "Qu'est-ce qu'un connaissement?",
+                    "options": [
+                      "Une facture",
+                      "Un document de transport",
+                      "Une assurance",
+                      "Un permis d'exportation"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Un connaissement est un document de transport attestant la prise en charge des marchandises."
+                  }
+                ],
+                "scoreMin": 2
+              },
+              "points": 20
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        }
+      ],
+      "badge": {
+        "id": "badge_ch4",
+        "titre": "Spécialiste Commerce",
+        "emoji": "🚢",
+        "description": "Commerce international maîtrisé!"
+      },
+      "niveau": "N1"
+    },
+    {
+      "id": "ch5",
+      "numero": 6,
+      "titre": "Douane et Sécurité",
+      "description": "Risques, fraude et contrôles",
+      "couleur": "#86EFAC",
+      "emoji": "🔒",
+      "progression": 0,
+      "objectifs": [
+        "Analyser les risques douaniers et profils de risque",
+        "Identifier les marchandises prohibées et restrictions",
+        "Appliquer les techniques de détection de fraude",
+        "Évaluer les mesures de prévention du blanchiment (AML)"
+      ],
+      "etapes": [
+        {
+          "id": "ch5_step1",
+          "numero": 1,
+          "titre": "Analyse de risque",
+          "type": "exercise_group",
+          "duree": "9 min",
+          "contenu": "Profils de risque douanier",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch5_ex_001",
+              "type": "lecture",
+              "titre": "[EX 1] Lecture: L'analyse de risque en douane",
+              "description": "Lire le texte sur l'analyse de risque",
+              "content": {
+                "text": "L'analyse de risque est un outil moderne pour optimiser les contrôles:\n\nOBJECTIFS\n- Détecter les fraudes efficacement\n- Sécuriser les chaînes logistiques\n- Faciliter le commerce légitime\n- Allouer les ressources de contrôle\n\nCRITERES DE RISQUE\n1. Pays d'origine (zones à risque)\n2. Type de marchandise (produits sensibles)\n3. Valeur déclarée (anomalies)\n4. Opérateur (historique douanier)\n5. Voie de transport (aérienne, maritime, terrestre)\n6. Saison ou période\n\nNIVEAUX DE RISQUE\nBAS: Expéditeur connu, marchandises standards, documentation complète\nMOYEN: Quelques doutes, vérification documentaire simple\nELEVE: Signaux d'alarme, inspection physique obligatoire\n\nAVANTAGES\n- Plus efficace que contrôle aléatoire\n- Réduit les délais pour les bons opérateurs\n- Améliore la sécurité\n- Utilise l'IA et les données"
+              },
+              "points": 10
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch5_step2",
+          "numero": 2,
+          "titre": "Lutte contre la fraude",
+          "type": "exercise_group",
+          "duree": "8 min",
+          "contenu": "Techniques de détection des fraudes",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch5_ex_002",
+              "type": "video",
+              "titre": "[EX 2] Vidéo: Techniques de fraude douanière et détection",
+              "description": "Découvrez les méthodes de fraude et comment les douaniers les détectent",
+              "content": {
+                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "description": "Découvrez les méthodes de fraude et comment les douaniers les détectent",
+                "videoType": "youtube"
+              },
+              "points": 10,
+              "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            }
+          ],
+          "consultation": true,
+          "validation": false
+        },
+        {
+          "id": "ch5_step3",
+          "numero": 3,
+          "titre": "Marchandises prohibées",
+          "type": "exercise_group",
+          "duree": "14 min",
+          "contenu": "Listes et restrictions d'importation",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch5_ex_003",
+              "type": "flashcards",
+              "titre": "[EX 3] Flashcards: Marchandises prohibées",
+              "description": "Mémoriser les marchandises prohibées",
+              "content": {
+                "cards": [
+                  {
+                    "id": "card1",
+                    "recto": "Quelles sont les marchandises PROHIBEES?",
+                    "verso": "Les armes, explosifs, drogues, contrefaçons, espèces protégées (interdiction absolue)"
+                  },
+                  {
+                    "id": "card2",
+                    "recto": "Que sont les marchandises REGLEMENTEES?",
+                    "verso": "Produits nécessitant permis ou licence: médicaments, alcool, produits chimiques"
+                  },
+                  {
+                    "id": "card3",
+                    "recto": "Qui fournit la liste officielle des marchandises prohibées?",
+                    "verso": "L'Administration fédérale des douanes suisses sur son site officiel"
+                  }
+                ]
+              },
+              "points": 10
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "ch5_step4",
+          "numero": 4,
+          "titre": "Prévention du blanchiment",
+          "type": "exercise_group",
+          "duree": "10 min",
+          "contenu": "AML (Anti-Money Laundering) et signalement",
+          "completed": false,
+          "points": 10,
+          "exercices": [
+            {
+              "id": "ch5_ex_004",
+              "type": "qcm",
+              "titre": "[EX 4] QCM: Prévention du blanchiment",
+              "description": "Question sur le rôle de la douane en AML",
+              "content": {
+                "question": "Quel est le rôle de la douane dans la prévention du blanchiment d'argent?",
+                "options": [
+                  "Aucun rôle",
+                  "Détecter et signaler les opérations suspectes",
+                  "Poursuivre les criminels",
+                  "Geler les comptes bancaires"
+                ],
+                "correctAnswer": 1,
+                "explanation": "La douane joue un rôle important en détectant et signalant les opérations douteuses suspectes de blanchiment."
+              },
+              "points": 10
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "ch5_step5",
+          "numero": 5,
+          "titre": "Quiz Sécurité",
+          "type": "exercise_group",
+          "duree": "15 min",
+          "contenu": "Évaluation finale du chapitre",
+          "completed": false,
+          "points": 20,
+          "exercices": [
+            {
+              "id": "ch5_ex_005",
+              "type": "quiz",
+              "titre": "[EX 5] Quiz: Douane et Sécurité",
+              "description": "3 questions pour valider ce chapitre",
+              "content": {
+                "questions": [
+                  {
+                    "id": "q1",
+                    "question": "L'analyse de risque permet de?",
+                    "options": [
+                      "Contrôler 100% des envois",
+                      "Cibler les contrôles sur les risques élevés",
+                      "Éviter tout contrôle",
+                      "Accélérer systématiquement"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "L'analyse de risque permet de cibler les contrôles sur les envois à risque élevé, optimisant ainsi les ressources."
+                  },
+                  {
+                    "id": "q2",
+                    "question": "Les armes sont-elles prohibées à l'importation en Suisse?",
+                    "options": [
+                      "Non, jamais",
+                      "Oui, toujours (interdiction absolue)",
+                      "Oui, sauf avec permis",
+                      "Dépend du type d'arme"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Les armes sont prohibées à l'importation en Suisse (interdiction absolue) sauf exceptions très limitées."
+                  },
+                  {
+                    "id": "q3",
+                    "question": "Qu'est-ce que MROS?",
+                    "options": [
+                      "Un service d'assurance",
+                      "L'organisme suisse de signalement des opérations suspectes",
+                      "Un groupe de douaniers",
+                      "Une banque suisse"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "MROS (Meldestelle für Geldwäscherei) est l'organisme suisse responsable du signalement des opérations suspectes."
+                  }
+                ],
+                "scoreMin": 2
+              },
+              "points": 20
+            }
+          ],
+          "consultation": false,
+          "validation": true
+        },
+        {
+          "id": "etape-1768662892488",
+          "titre": "kjhgf",
+          "type": "standard",
+          "description": "",
+          "duree": 30,
+          "exercices": [
+            {
+              "id": "ch5_ex_001",
+              "etapeId": "etape-1768662892488",
+              "type": "qcm_unique",
+              "titre": "egrg",
+              "points": 10,
+              "content": {
+                "question": "gereg",
+                "reponses": [
+                  "erg",
+                  "eg",
+                  "gerge",
+                  "getg"
+                ],
+                "bonneReponse": 1,
+                "explication": "",
+                "difficulte": "moyen"
+              },
+              "createdAt": "2026-01-17T15:15:24.426Z"
+            }
+          ],
+          "createdAt": "2026-01-17T15:14:52.488Z"
+        }
+      ],
+      "badge": {
+        "id": "badge_ch5",
+        "titre": "Expert Sécurité",
+        "emoji": "🛡️",
+        "description": "Sécurité douanière maîtrisée!"
+      },
+      "niveau": "N1"
+    },
+    {
+      "niveau": "N1",
+      "titre": "TestChapitre",
+      "id": "test1",
+      "description": "",
+      "etapes": []
+    }
+  ]
+};
+
+console.log('[DATA] chapitres.js chargé:', CHAPITRES_DATA.chapitres?.length || 0, 'chapitres');

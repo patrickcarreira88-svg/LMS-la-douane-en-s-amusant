@@ -1,0 +1,64 @@
+{
+  "exercises": [
+    {
+      "id": "ch1_ex_005",
+      "chapterId": "ch1",
+      "stepId": "ch1_step3",
+      "title": "[EX 5] Lecture: Les missions de la douane suisse",
+      "type": "lecture",
+      "points": 10,
+      "description": "Lire le texte explicatif sur les missions",
+      "content": {
+        "text": "La douane suisse remplit plusieurs missions essentielles:\n\n1. FISCALE: Perception des droits et taxes sur les marchandises importées\n\n2. PROTECTION: Lutte contre la contrebande et le trafic illicite\n\n3. SECURITE: Contrôle des marchandises dangereuses et prohibées\n\n4. STATISTIQUE: Collecte de données sur le commerce international\n\n5. ECONOMIQUE: Facilitation du commerce légitime\n\nCes missions font de la douane un acteur clé dans la gestion des frontières suisses."
+      }
+    },
+    {
+      "id": "ch2_ex_001",
+      "chapterId": "ch2",
+      "stepId": "ch2_step1",
+      "title": "[EX 1] Lecture: Sources du droit douanier",
+      "type": "lecture",
+      "points": 10,
+      "description": "Lire le texte sur les sources du droit douanier",
+      "content": {
+        "text": "Le droit douanier suisse repose sur plusieurs sources:\n\n1. CONSTITUTION FEDERALE\n- Autorité suprême\n- Confère compétences à la Confédération\n\n2. LOIS FEDERALES\n- Loi sur les douanes (LD)\n- Loi fédérale des douanes (LFD)\n\n3. ORDONNANCES\n- Ordonnance sur les douanes (OLdou)\n- Détaille les modalités d'exécution\n\n4. TRAITES INTERNATIONAUX\n- Convention HS (Système Harmonisé)\n- Accords bilatéraux\n- Conventions commerciales\n\n5. JURISPRUDENCE\n- Décisions des tribunaux\n- Principe du précédent"
+      }
+    },
+    {
+      "id": "ch3_ex_001",
+      "chapterId": "ch3",
+      "stepId": "ch3_step1",
+      "title": "[EX 1] Lecture: Les étapes de la déclaration en douane",
+      "type": "lecture",
+      "points": 10,
+      "description": "Lire le texte sur les étapes de la déclaration",
+      "content": {
+        "text": "La déclaration en douane est une démarche essentielle:\n\nEtape 1: PREPARATION\n- Rassembler tous les documents\n- Facture commerciale\n- Bon de livraison\n- Certificat d'origine\n- Documents spécialisés si nécessaire\n\nEtape 2: DECLARATION\n- Effectuer la déclaration en douane\n- Présentation directe ou électronique\n- Détail complet des marchandises\n- Valeur en douane\n\nEtape 3: VERIFICATION\n- Examen documentaire\n- Examen physique si nécessaire\n- Classement tarifaire\n- Calcul des droits\n\nEtape 4: PAIEMENT\n- Paiement des droits et taxes\n- Obtention de quittances\n\nEtape 5: DÉDOUANEMENT\n- Libération des marchandises\n- Livraison au destinataire\n\nLe délai moyen est de 24-48 heures pour les déclarations simples."
+      }
+    },
+    {
+      "id": "ch4_ex_001",
+      "chapterId": "ch4",
+      "stepId": "ch4_step1",
+      "title": "[EX 1] Lecture: Introduction au commerce international",
+      "type": "lecture",
+      "points": 10,
+      "description": "Lire le texte sur le commerce international",
+      "content": {
+        "text": "Le commerce international est régi par des règles complexes:\n\nACTEURS PRINCIPAUX\n- Exportateurs (pays d'origine)\n- Importateurs (pays de destination)\n- Douaniers (contrôle aux frontières)\n- Transporteurs (logistique)\n- Assureurs (couverture de risque)\n\nDOCUMENTS ESSENTIELS\n- Facture commerciale\n- Connaissement\n- Certificat d'origine\n- Déclaration en douane\n- Documents de transport\n\nINTERMOS (Conditions commerciales)\n- EXW: Départ usine\n- FOB: Franco à bord\n- CIF: Coût, assurance et fret\n- DAP: Livraison en place\n\nVALORISATION\n- Prix facturé\n- Plus frais de transport\n- Plus assurance\n- = Valeur en douane"
+      }
+    },
+    {
+      "id": "ch5_ex_001",
+      "chapterId": "ch5",
+      "stepId": "ch5_step1",
+      "title": "[EX 1] Lecture: L'analyse de risque en douane",
+      "type": "lecture",
+      "points": 10,
+      "description": "Lire le texte sur l'analyse de risque",
+      "content": {
+        "text": "L'analyse de risque est un outil moderne pour optimiser les contrôles:\n\nOBJECTIFS\n- Détecter les fraudes efficacement\n- Sécuriser les chaînes logistiques\n- Faciliter le commerce légitime\n- Allouer les ressources de contrôle\n\nCRITERES DE RISQUE\n1. Pays d'origine (zones à risque)\n2. Type de marchandise (produits sensibles)\n3. Valeur déclarée (anomalies)\n4. Opérateur (historique douanier)\n5. Voie de transport (aérienne, maritime, terrestre)\n6. Saison ou période\n\nNIVEAUX DE RISQUE\nBAS: Expéditeur connu, marchandises standards, documentation complète\nMOYEN: Quelques doutes, vérification documentaire simple\nELEVE: Signaux d'alarme, inspection physique obligatoire\n\nAVANTAGES\n- Plus efficace que contrôle aléatoire\n- Réduit les délais pour les bons opérateurs\n- Améliore la sécurité\n- Utilise l'IA et les données"
+      }
+    }
+  ]
+}

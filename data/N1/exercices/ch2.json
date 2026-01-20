@@ -1,0 +1,119 @@
+{
+  "exercices": [
+    {
+      "id": "ch2_ex_001",
+      "type": "lecture",
+      "titre": "[EX 1] Lecture: Hiérarchie des sources du droit douanier",
+      "description": "Lire le texte explicatif sur les sources du droit",
+      "content": {
+        "text": "Le droit douanier suisse s'appuie sur plusieurs sources:\n\n1. LA CONSTITUTION FEDERALE (loi suprême)\n   - Article 101: Autorité fédérale pour les douanes\n\n2. LES LOIS FEDERALES\n   - Loi sur les douanes (LD)\n   - Loi sur les tarifs des douanes\n\n3. LES ORDONNANCES\n   - Ordonnance du 7 octobre 2015 sur les douanes\n   - Ordonnance tarifaire\n\n4. LES TRAITES INTERNATIONAUX\n   - Accords bilatéraux\n   - Accords de l'OMC\n   - Conventions douanières\n\n5. LES DIRECTIVES ADMINISTRATIVES\n   - Manuels de la douane\n   - Circulaires\n\nCette hiérarchie garantit une cohérence et une légalité du système douanier."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch2_ex_002",
+      "type": "qcm",
+      "titre": "[EX 2] QCM: Adhésion de la Suisse à l'UE",
+      "description": "Question sur l'adhésion de la Suisse à l'Union Européenne",
+      "content": {
+        "question": "La Suisse est-elle membre de l'UE?",
+        "options": [
+          "Oui, depuis 1995",
+          "Oui, depuis 1986",
+          "Non, la Suisse n'est pas membre de l'UE",
+          "Oui, depuis 2004"
+        ],
+        "correctAnswer": 2,
+        "explanation": "La Suisse n'est pas membre de l'Union Européenne. Elle maintient son indépendance tout en ayant des accords bilatéraux avec l'UE."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch2_ex_003",
+      "type": "flashcards",
+      "titre": "[EX 3] Flashcards: Nomenclature tarifaire",
+      "description": "Mémoriser les codes HS et la nomenclature",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Qu'est-ce que le système HS?",
+            "verso": "Le Système Harmonisé de désignation et de codification des marchandises (6 chiffres minimum)"
+          },
+          {
+            "id": "card2",
+            "recto": "Combien de chiffres a un tarif douanier suisse complet?",
+            "verso": "10 chiffres: 6 du SH + 2 pour la nomenclature tarifaire + 2 supplémentaires suisses"
+          },
+          {
+            "id": "card3",
+            "recto": "Quel est le code HS pour les pommes fraîches?",
+            "verso": "0808.30 (la position 8 signifie fruits, le reste précise le type)"
+          }
+        ]
+      },
+      "points": 10
+    },
+    {
+      "id": "ch2_ex_004",
+      "type": "video",
+      "titre": "[EX 4] Vidéo: Calcul des droits de douane",
+      "description": "Apprenez comment calculer les droits de douane applicables",
+      "content": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "Apprenez comment calculer les droits de douane applicables",
+        "videoType": "youtube"
+      },
+      "points": 10,
+      "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "ch2_ex_005",
+      "type": "quiz",
+      "titre": "[EX 5] Quiz: Législation Douanière",
+      "description": "3 questions pour valider vos connaissances",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Quel document régit les douanes en Suisse?",
+            "options": [
+              "La Loi sur les douanes",
+              "La Loi fédérale des finances",
+              "La Constitution seulement",
+              "Des ordonnances locales"
+            ],
+            "correctAnswer": 0,
+            "explanation": "La Loi sur les douanes (LD) est le document principal qui régit l'activité des douanes en Suisse."
+          },
+          {
+            "id": "q2",
+            "question": "Le système HS a combien de chiffres minimums?",
+            "options": [
+              "4 chiffres",
+              "6 chiffres",
+              "8 chiffres",
+              "10 chiffres"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Le Système Harmonisé utilise un code de 6 chiffres minimums pour classifier les marchandises."
+          },
+          {
+            "id": "q3",
+            "question": "La Suisse applique les traités de l'OMC?",
+            "options": [
+              "Non, jamais",
+              "Oui, partiellement",
+              "Oui, complètement",
+              "Seulement pour l'UE"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La Suisse applique complètement les traités et accords de l'Organisation Mondiale du Commerce."
+          }
+        ],
+        "scoreMin": 2
+      },
+      "points": 20
+    }
+  ]
+}

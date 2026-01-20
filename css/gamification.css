@@ -1,0 +1,141 @@
+/* ═══════════════════════════════════════════════════════════════ */
+/* GAMIFICATION STYLES - À COMPLÉTER EN PHASE 3 */
+/* ═══════════════════════════════════════════════════════════════ */
+
+/* Chemin serpentin - J2 */
+.path-container {
+    display: none; /* À implémenter */
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.badge.locked {
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+/* Cartes exercices */
+.exercise-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Points animation */
+@keyframes popPoints {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.points-popup {
+    animation: popPoints 0.6s ease-out;
+}
+/* ═══════════════════════════════════════════════════════════════ */
+/* CHEMIN SERPENTIN - J2 */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.chapitre-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.chapitre-header {
+    padding: var(--spacing-lg);
+}
+
+.chapitre-header h2 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: 1.5rem;
+}
+
+.chapitre-header p {
+    margin: 0;
+    opacity: 0.95;
+}
+
+.chapitre-progress {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+}
+
+.progress-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.chapitre-path {
+    padding: var(--spacing-lg);
+    overflow-x: auto;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.path-svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.chapitre-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 4px;
+}

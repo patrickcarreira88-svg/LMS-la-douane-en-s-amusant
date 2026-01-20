@@ -1,0 +1,100 @@
+{
+  "chapitre": {
+    "id": "N1_ch04",
+    "niveauId": "N1",
+    "titre": "Test Chapitre 20260111_124348",
+    "description": "Chapitre de test",
+    "ordre": 4,
+    "createdAt": "2026-01-11T11:43:48.962Z",
+    "lastModified": "2026-01-11T11:43:57.891Z"
+  },
+  "etapes": [
+    {
+      "id": "N1_ch04_step01",
+      "chapterId": "N1_ch04",
+      "titre": "Diagnostic",
+      "description": "Étape de diagnostic initial",
+      "ordre": 1,
+      "type": "diagnostic",
+      "createdAt": "2026-01-11T11:43:48.962Z",
+      "exercices": [
+        {
+          "id": "N1_ch04_step01_ex001",
+          "etapeId": "N1_ch04_step01",
+          "type": "qcm",
+          "titre": "QCM Modifie",
+          "points": 15,
+          "content": {
+            "correctAnswer": 0,
+            "question": "Quelle est la capitale de la France? (MODIFIE)",
+            "explanation": "Paris est toujours la capitale!",
+            "options": [
+              {
+                "correct": true,
+                "label": "Paris"
+              },
+              {
+                "correct": false,
+                "label": "Londres"
+              },
+              {
+                "correct": false,
+                "label": "Berlin"
+              },
+              {
+                "correct": false,
+                "label": "Madrid"
+              }
+            ]
+          },
+          "createdAt": "2026-01-11T11:43:51.823Z",
+          "lastModified": "2026-01-11T11:43:57.891Z"
+        },
+        {
+          "id": "N1_ch04_step01_ex002",
+          "etapeId": "N1_ch04_step01",
+          "type": "vrai-faux",
+          "titre": "VF Test",
+          "points": 5,
+          "content": {
+            "correctAnswer": true,
+            "statement": "Paris est la capitale de la France",
+            "explanation": "Correct!"
+          },
+          "createdAt": "2026-01-11T11:43:55.170Z",
+          "lastModified": "2026-01-11T11:43:55.171Z"
+        }
+      ]
+    },
+    {
+      "id": "N1_ch04_step02",
+      "chapterId": "N1_ch04",
+      "titre": "Apprentissage",
+      "description": "Étape d'apprentissage et contenus",
+      "ordre": 2,
+      "type": "apprentissage",
+      "createdAt": "2026-01-11T11:43:48.962Z",
+      "exercices": []
+    },
+    {
+      "id": "N1_ch04_step03",
+      "chapterId": "N1_ch04",
+      "titre": "Entraînement",
+      "description": "Étape d'entraînement et pratique",
+      "ordre": 3,
+      "type": "entrainement",
+      "createdAt": "2026-01-11T11:43:48.962Z",
+      "exercices": []
+    },
+    {
+      "id": "N1_ch04_step04",
+      "chapterId": "N1_ch04",
+      "titre": "Évaluation",
+      "description": "Étape d'évaluation et validation",
+      "ordre": 4,
+      "type": "evaluation",
+      "createdAt": "2026-01-11T11:43:48.962Z",
+      "exercices": []
+    }
+  ]
+}

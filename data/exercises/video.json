@@ -1,0 +1,95 @@
+{
+  "exercises": [
+    {
+      "id": "ch1_ex_001",
+      "chapterId": "ch1",
+      "stepId": "ch1_step1",
+      "title": "[EX 1] Vidéo: Histoire de la Douane suisse",
+      "type": "video",
+      "points": 10,
+      "description": "Regardez la vidéo pour comprendre l'histoire de la douane",
+      "content": {
+        "url": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+        "description": "Première vidéo YouTube - Me at the zoo (1ere video YouTube de l'histoire)"
+      }
+    },
+    {
+      "id": "ch1_ex_003",
+      "chapterId": "ch1",
+      "stepId": "ch1_video1",
+      "title": "[EX 3] Vidéo: Qu'est-ce qu'une marchandise commerciale?",
+      "type": "video",
+      "points": 10,
+      "description": "Regardez la vidéo pour comprendre la différence entre marchandises commerciales et biens personnels",
+      "content": {
+        "description": "Regardez la vidéo pour comprendre la différence entre marchandises commerciales et biens personnels",
+        "videoId": "video_101_marchandises"
+      }
+    },
+    {
+      "id": "ch1_ex_004",
+      "chapterId": "ch1",
+      "stepId": "ch1_video2",
+      "title": "[EX 4] Vidéo: Les 5 étapes du processus de dédouanement",
+      "type": "video",
+      "points": 10,
+      "description": "Regardez la vidéo pour comprendre le flux complet du dédouanement à l'importation suisse",
+      "content": {
+        "description": "Regardez la vidéo pour comprendre le flux complet du dédouanement à l'importation suisse",
+        "videoId": "video_101_processus"
+      }
+    },
+    {
+      "id": "ch2_ex_004",
+      "chapterId": "ch2",
+      "stepId": "ch2_step4",
+      "title": "[EX 4] Vidéo: Calcul des droits de douane",
+      "type": "video",
+      "points": 10,
+      "description": "Apprenez comment calculer les droits de douane applicables",
+      "content": {
+        "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "description": "Apprenez comment calculer les droits de douane applicables"
+      }
+    },
+    {
+      "id": "ch3_ex_002",
+      "chapterId": "ch3",
+      "stepId": "ch3_step2",
+      "title": "[EX 2] Vidéo: Procédure de dédouanement simple",
+      "type": "video",
+      "points": 10,
+      "description": "Suivez un cas pratique de dédouanement",
+      "content": {
+        "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "description": "Suivez un cas pratique de dédouanement"
+      }
+    },
+    {
+      "id": "ch4_ex_004",
+      "chapterId": "ch4",
+      "stepId": "ch4_step4",
+      "title": "[EX 4] Vidéo: Les règles d'origine douanière",
+      "type": "video",
+      "points": 10,
+      "description": "Comprendre les règles d'origine et leur importance",
+      "content": {
+        "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "description": "Comprendre les règles d'origine et leur importance"
+      }
+    },
+    {
+      "id": "ch5_ex_002",
+      "chapterId": "ch5",
+      "stepId": "ch5_step2",
+      "title": "[EX 2] Vidéo: Techniques de fraude douanière et détection",
+      "type": "video",
+      "points": 10,
+      "description": "Découvrez les méthodes de fraude et comment les douaniers les détectent",
+      "content": {
+        "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "description": "Découvrez les méthodes de fraude et comment les douaniers les détectent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "module": "101AB",
+    "title": "Introduction à la Douane Suisse",
+    "createdDate": "2025-12-13",
+    "lastUpdated": "2025-12-13",
+    "version": "1.0"
+  },
+  "videos": [
+    {
+      "id": "video_101_marchandises",
+      "title": "Qu'est-ce qu'une marchandise commerciale?",
+      "description": "Différencier marchandises commerciales des biens personnels",
+      "module": "101AB",
+      "stepId": "101_video_marchandises",
+      "duration": 35,
+      "bloomLevels": ["remember", "understand"],
+      "keywords": ["marchandise", "commercial", "quantité", "revente", "personnel"],
+      "sources": {
+        "720p": "../Marchandise_Commerciale_-_35s.mp4",
+        "480p": "../Marchandise_Commerciale_-_35s.mp4",
+        "360p": "../Marchandise_Commerciale_-_35s.mp4"
+      },
+      "subtitles": "marchandises_fr.vtt",
+      "transcript": "../texts/101ab_marchandises_transcript.txt",
+      "relatedExercises": ["ex_101_001", "ex_101_002", "ex_101_003"],
+      "relatedPortfolio": ["competency_definition_marchandise"],
+      "estimatedFileSize": {
+        "720p": "?",
+        "480p": "?",
+        "360p": "?"
+      },
+      "captions": {
+        "fr": "marchandises_fr.vtt"
+      }
+    },
+    {
+      "id": "video_101_processus",
+      "title": "Les 5 étapes du processus de dédouanement",
+      "description": "Comprendre le flux complet du dédouanement à l'importation suisse",
+      "module": "101AB",
+      "stepId": "101_video_processus",
+      "duration": 55,
+      "bloomLevels": ["understand", "apply"],
+      "keywords": ["présentation", "déclaration", "contrôle", "taxation", "libération", "processus"],
+      "sources": {
+        "720p": "../Dédouanement_Suisse_Expliqué.mp4",
+        "480p": "../Dédouanement_Suisse_Expliqué.mp4",
+        "360p": "../Dédouanement_Suisse_Expliqué.mp4"
+      },
+      "subtitles": "processus_fr.vtt",
+      "transcript": "../texts/101ab_processus_transcript.txt",
+      "relatedExercises": ["ex_101_004", "ex_101_005", "ex_101_006"],
+      "relatedPortfolio": ["competency_5steps", "competency_apply_process"],
+      "estimatedFileSize": {
+        "720p": "5 MB",
+        "480p": "2.5 MB",
+        "360p": "1.2 MB"
+      },
+      "captions": {
+        "fr": "processus_fr.vtt"
+      }
+    }
+  ]
+}

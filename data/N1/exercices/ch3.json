@@ -1,0 +1,119 @@
+{
+  "exercices": [
+    {
+      "id": "ch3_ex_001",
+      "type": "lecture",
+      "titre": "[EX 1] Lecture: Les étapes de la déclaration en douane",
+      "description": "Lire le texte sur les étapes de la déclaration",
+      "content": {
+        "text": "La déclaration en douane est une démarche essentielle:\n\nEtape 1: PREPARATION\n- Rassembler tous les documents\n- Facture commerciale\n- Bon de livraison\n- Certificat d'origine\n- Documents spécialisés si nécessaire\n\nEtape 2: DECLARATION\n- Effectuer la déclaration en douane\n- Présentation directe ou électronique\n- Détail complet des marchandises\n- Valeur en douane\n\nEtape 3: VERIFICATION\n- Examen documentaire\n- Examen physique si nécessaire\n- Classement tarifaire\n- Calcul des droits\n\nEtape 4: PAIEMENT\n- Paiement des droits et taxes\n- Obtention de quittances\n\nEtape 5: DÉDOUANEMENT\n- Libération des marchandises\n- Livraison au destinataire\n\nLe délai moyen est de 24-48 heures pour les déclarations simples."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch3_ex_002",
+      "type": "video",
+      "titre": "[EX 2] Vidéo: Procédure de dédouanement simple",
+      "description": "Suivez un cas pratique de dédouanement",
+      "content": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "Suivez un cas pratique de dédouanement",
+        "videoType": "youtube"
+      },
+      "points": 10,
+      "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "ch3_ex_003",
+      "type": "qcm",
+      "titre": "[EX 3] QCM: Taux de vérification douanière",
+      "description": "Question sur les vérifications physiques",
+      "content": {
+        "question": "Quel est le taux de vérification physique à la douane suisse?",
+        "options": [
+          "100% des envois",
+          "Entre 5% et 15%",
+          "Seulement les cas suspects",
+          "Aucun contrôle physique"
+        ],
+        "correctAnswer": 1,
+        "explanation": "La douane suisse applique une vérification physique de 5% à 15% des envois, basée sur l'analyse des risques."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch3_ex_004",
+      "type": "flashcards",
+      "titre": "[EX 4] Flashcards: Procédures de recours",
+      "description": "Mémoriser les procédures de recours",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Quel est le premier recours possible?",
+            "verso": "La demande de réexamen auprès de l'administration douanière"
+          },
+          {
+            "id": "card2",
+            "recto": "Vers quel organe faire appel après le refus de réexamen?",
+            "verso": "La Commission de recours douaniers (organe indépendant)"
+          },
+          {
+            "id": "card3",
+            "recto": "Quel est le dernier recours juridique?",
+            "verso": "Le Tribunal fédéral de la Confédération suisse"
+          }
+        ]
+      },
+      "points": 10
+    },
+    {
+      "id": "ch3_ex_005",
+      "type": "quiz",
+      "titre": "[EX 5] Quiz: Procédures Douanières",
+      "description": "3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Combien de temps dure généralement un dédouanement simple?",
+            "options": [
+              "1-2 heures",
+              "24-48 heures",
+              "1 semaine",
+              "1 mois"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Un dédouanement simple prend généralement 24 à 48 heures selon la complexité et la charge de travail."
+          },
+          {
+            "id": "q2",
+            "question": "Quel document est OBLIGATOIRE pour une déclaration?",
+            "options": [
+              "La facture commerciale",
+              "Le passeport du transporteur",
+              "Une assurance spéciale",
+              "Un permis d'importation"
+            ],
+            "correctAnswer": 0,
+            "explanation": "La facture commerciale est le document obligatoire pour effectuer une déclaration en douane."
+          },
+          {
+            "id": "q3",
+            "question": "Si vous contestez une décision douanière, vers quel organe allez-vous?",
+            "options": [
+              "Le canton",
+              "La police",
+              "La Commission de recours douaniers",
+              "Un notaire"
+            ],
+            "correctAnswer": 2,
+            "explanation": "En cas de contestation, vous devez saisir la Commission de recours douaniers, organe indépendant."
+          }
+        ],
+        "scoreMin": 2
+      },
+      "points": 20
+    }
+  ]
+}

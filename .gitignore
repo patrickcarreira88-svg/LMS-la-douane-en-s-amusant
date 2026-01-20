@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+npm-debug.log
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.log
+
+# Temporaires
+*.tmp
+temp/

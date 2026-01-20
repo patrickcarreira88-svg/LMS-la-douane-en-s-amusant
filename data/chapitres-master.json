@@ -1,0 +1,35 @@
+{
+  "niveaux": [
+    {
+      "id": "N1",
+      "titre": "Niveau 1 - Fondamentaux",
+      "description": "Introduction aux concepts de base",
+      "ordre": 1,
+      "chapitres": []
+    },
+    {
+      "id": "N2",
+      "titre": "Niveau 2 - Intermédiaire",
+      "description": "Approfondissement des connaissances",
+      "ordre": 2,
+      "chapitres": []
+    },
+    {
+      "id": "N3",
+      "titre": "Niveau 3 - Avancé",
+      "description": "Concepts avancés et applications",
+      "ordre": 3,
+      "chapitres": []
+    },
+    {
+      "id": "N4",
+      "titre": "Niveau 4 - Expert",
+      "description": "Maîtrise et expertise complète",
+      "ordre": 4,
+      "chapitres": []
+    }
+  ],
+  "createdAt": "2026-01-11T09:53:00.000Z",
+  "lastModified": "2026-01-11T09:53:00.000Z",
+  "version": "1.0.0"
+}

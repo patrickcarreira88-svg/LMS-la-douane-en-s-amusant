@@ -1,0 +1,119 @@
+/* ═══════════════════════════════════════════════════════════════ */
+/* RESPONSIVE GRID SYSTEM */
+/* ═══════════════════════════════════════════════════════════════ */
+
+/* Utilitaires Grid */
+.grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Flexbox utilitaires */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-gap-sm {
+    gap: var(--spacing-sm);
+}
+
+.flex-gap-md {
+    gap: var(--spacing-md);
+}
+
+.flex-gap-lg {
+    gap: var(--spacing-lg);
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* MOBILE FIRST (320px) */
+/* ═══════════════════════════════════════════════════════════════ */
+
+.app-content {
+    padding: var(--spacing-md);
+    padding-bottom: 100px;
+}
+
+.grid-cols-1,
+.grid-cols-2,
+.grid-cols-3 {
+    grid-template-columns: 1fr;
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* TABLET (768px) */
+/* ═══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-stats {
+        gap: var(--spacing-xl);
+    }
+    
+    .app-content {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* DESKTOP (1024px) */
+/* ═══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1024px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .app-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--spacing-xl);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* ACCESSIBILITÉ */
+/* ═══════════════════════════════════════════════════════════════ */
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

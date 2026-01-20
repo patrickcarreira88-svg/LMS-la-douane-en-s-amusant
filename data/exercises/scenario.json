@@ -1,0 +1,94 @@
+{
+  "exercises": [
+    {
+      "id": "101BT_ex_011",
+      "chapterId": "101BT",
+      "stepId": "101BT_03_cas_simples",
+      "title": "[EX 11] Scénarios Courts: Touriste à Frontière (3 cas)",
+      "type": "scenario",
+      "points": 75,
+      "description": "3 scénarios courts + choix statut (personnel/touristique/commercial)",
+      "difficulty": 2,
+      "duree": "5 min",
+      "bloomLevel": "apply",
+      "content": {
+        "scenario": {
+          "title": "🛫 Scénario: Classement Douanier selon Marchandises",
+          "description": "Vous travaillez à la douane et devez classifier des marchandises selon leur statut douanier (Personnel, Touristique, Commercial).",
+          "background_color": "#e3f2fd",
+          "icon": "🛫"
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Une touriste française revient de vacances en Suisse avec 1 kg de chocolat Lindt, 3 montres suisses et des vêtements. Quel est le statut ?",
+            "type": "single",
+            "points": 25,
+            "options": [
+              { "id": "opt1", "text": "Personnel", "correct": false, "explanation": "Quantité limitée, mais pas seulement pour consommation personnelle (3 montres)." },
+              { "id": "opt2", "text": "Touristique", "correct": true, "explanation": "Biens en quantité limitée pour consommation personnelle lors d'un voyage. C'est du trafic touristique." },
+              { "id": "opt3", "text": "Commercial", "correct": false, "explanation": "Non, il n'y a pas intention de revente professionnelle." }
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Un commerçant génois importe 500 kg de fromage pour sa fromagerie. Quel est le statut ?",
+            "type": "single",
+            "points": 25,
+            "options": [
+              { "id": "opt1", "text": "Personnel", "correct": false, "explanation": "Quantité beaucoup trop importante pour être personnelle." },
+              { "id": "opt2", "text": "Touristique", "correct": false, "explanation": "Non, quantité trop importante et contexte professionnel." },
+              { "id": "opt3", "text": "Commercial", "correct": true, "explanation": "Quantité importante (500kg), intention claire de revente, usage professionnel." }
+            ]
+          },
+          {
+            "id": "q3",
+            "question": "Un homme en déplacement professionnel importe son ordinateur portable et son téléphone. Quel est le statut ?",
+            "type": "single",
+            "points": 25,
+            "options": [
+              { "id": "opt1", "text": "Personnel", "correct": true, "explanation": "Effets personnels d'un voyageur en déplacement, pas pour revente. Outils de travail personnels." },
+              { "id": "opt2", "text": "Touristique", "correct": false, "explanation": "Pas du tourisme, mais outils professionnels personnels." },
+              { "id": "opt3", "text": "Commercial", "correct": false, "explanation": "Non, ce sont des effets personnels, pas une importation pour revente." }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "101BTex011",
+      "chapterId": "101BT",
+      "stepId": "101BT03cassimples",
+      "title": "Scenario Classement",
+      "type": "scenario",
+      "points": 75,
+      "content": {
+        "scenario": {
+          "title": "Classement Douanier",
+          "description": "Vous travaillez a la douane...",
+          "icon": "qcm"
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "number": 1,
+            "question": "Touriste avec chocolat, montres, vetements?",
+            "options": ["Personnel", "Touristique", "Commercial"],
+            "correctAnswer": 1,
+            "explanation": "Quantite limitee = touristique",
+            "points": 25
+          },
+          {
+            "id": "q2",
+            "number": 2,
+            "question": "Commerant avec 500kg fromage?",
+            "options": ["Personnel", "Touristique", "Commercial"],
+            "correctAnswer": 2,
+            "explanation": "Quantite importante = commercial",
+            "points": 25
+          }
+        ]
+      }
+    }
+  ]
+}

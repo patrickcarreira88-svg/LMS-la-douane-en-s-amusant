@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A3F87">
+    <meta name="description" content="Plateforme LMS gamifiée pour formation Brevet Fédéral. Apprentissage ludique avec chemin serpentin, badges et répétition espacée.">
+    <title>Douane LMS - Et si on jouait? La Douane en s'amusant!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🎓</text></svg>">
+
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/gamification.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/portfolio-swipe.css">
+    <link rel="stylesheet" href="css/video-player.css">
+    <link rel="stylesheet" href="css/journal-avance.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Vérifier jsPDF au chargement -->
+    <script>
+      window.addEventListener('load', () => {
+        if (window.jspdf && window.jspdf.jsPDF) {
+          Logger.debug('✅ jsPDF trouvé: window.jspdf.jsPDF');
+        } else if (window.jsPDF) {
+          Logger.debug('✅ jsPDF trouvé: window.jsPDF');
+        } else {
+          Logger.warn('⚠️ jsPDF non trouvé - utilisation fallback HTML/CSS');
+        }
+      });
+    </script>
+</head>
+<!-- Modal Étape -->
+<div id="etape-modal" class="modal">
+    <div class="modal-overlay" onclick="App.fermerModal()"></div>
+    <div class="modal-content">
+        <button class="modal-close" onclick="App.fermerModal()">✕</button>
+        <div id="etape-detail"></div>
+    </div>
+</div>
+
+<!-- Modal Objectifs du Chapitre -->
+<div id="objectives-modal" class="modal-overlay hidden">
+    <div class="modal-content" style="background: white; border-radius: 0; display: flex; flex-direction: column; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; margin: 0; padding: 0;">
+        
+        <!-- HEADER FIXE -->
+        <div class="exercise-modal-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1001; background: linear-gradient(135deg, #4A3F87, #6B5B95); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h2 style="margin: 0; font-size: 1.3em;">📋 Objectifs de ce chapitre</h2>
+                <p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9em;">Découvrez les objectifs pédagogiques</p>
+            </div>
+            <button class="btn-close" onclick="App.fermerModalObjectives()" style="background: rgba(255,255,255,0.2); border: none; color: white; font-size: 1.5em; cursor: pointer; padding: 5px 10px; border-radius: 4px;">✕</button>
+        </div>
+        
+        <!-- CONTENU SCROLLABLE -->
+        <div class="modal-body" style="padding: 30px; padding-top: 100px; overflow-y: auto; flex: 1; margin-bottom: 80px;">
+            <div id="objectives-list" class="objectives-container">
+                <!-- Générés dynamiquement par JS -->
+            </div>
+        </div>
+        
+        <!-- FOOTER FIXE -->
+        <div class="modal-footer" style="background: white; padding: 15px 20px; display: flex; gap: 12px; justify-content: space-between; align-items: center; border-top: 1px solid #ddd; flex-shrink: 0; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1001;">
+            <button class="btn btn--secondary" onclick="App.fermerModalObjectivesSansValider()" style="padding: 12px 20px; border: 1px solid #ddd; border-radius: 6px; background: white; cursor: pointer;">
+                ← Fermer
+            </button>
+            <div style="display: flex; gap: 12px;">
+                <button class="btn btn--primary" onclick="App.fermerModalObjectives()" style="padding: 12px 20px; background: #4A3F87; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">
+                    ✅ Marquer comme terminé
+                </button>
+                <button class="btn btn--primary" onclick="if (typeof openTutoringModal !== 'undefined') { openTutoringModal(); } else if (typeof TutoringModule !== 'undefined' && TutoringModule.showModal) { TutoringModule.showModal(); } else { alert('Module tutoring non chargé'); }" style="padding: 12px 20px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">
+                    ❓ Demander aide
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Création Profil - Premier Démarrage -->
+<div id="profile-creation-modal" class="modal-overlay hidden">
+    <div class="modal-content modal-profile-creation">
+        <div class="modal-header">
+            <h2>👤 Créer votre profil</h2>
+            <p class="modal-subtitle">Bienvenue! Créez votre profil pour commencer</p>
+        </div>
+        <div class="modal-body">
+            <form id="profile-form" class="profile-form">
+                <div class="form-group">
+                    <label for="profile-nom">Nom *</label>
+                    <input type="text" id="profile-nom" class="form-input" placeholder="Ex: Dupont" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-prenom">Prénom *</label>
+                    <input type="text" id="profile-prenom" class="form-input" placeholder="Ex: Jean" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-matricule">Numéro de Matricule *</label>
+                    <input type="text" id="profile-matricule" class="form-input" placeholder="Ex: 2024-001" required>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn--primary" onclick="App.saveProfile()">Créer le profil</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Portfolio Swipe - Fin de Chapitre -->
+<div id="portfolio-modal" class="modal-overlay hidden">
+    <div class="modal-content" style="background: white; border-radius: 0; display: flex; flex-direction: column; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; margin: 0; padding: 0;">
+        
+        <!-- HEADER FIXE -->
+        <div class="exercise-modal-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1001; background: linear-gradient(135deg, #FF6B9D, #C44569); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h2 style="margin: 0; font-size: 1.3em;">🎯 Plan de révision</h2>
+                <p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9em;">Swipez pour noter votre maîtrise</p>
+            </div>
+            <button class="btn-close" onclick="App.fermerPortfolioModal()" style="background: rgba(255,255,255,0.2); border: none; color: white; font-size: 1.5em; cursor: pointer; padding: 5px 10px; border-radius: 4px;">✕</button>
+        </div>
+        
+        <!-- CONTENU SCROLLABLE -->
+        <div class="modal-body" style="padding: 20px; padding-top: 100px; overflow-y: auto; flex: 1; margin-bottom: 160px;">
+            <div id="portfolio-swipe-container" class="portfolio-swipe">
+                <!-- Rempli dynamiquement par JS -->
+            </div>
+        </div>
+
+        <!-- CONTRÔLES SWIPE -->
+        <div class="portfolio-controls" id="portfolio-controls" style="position: fixed; bottom: 80px; left: 0; right: 0; display: flex; justify-content: center; gap: 15px; padding: 15px; background: #f5f5f5; border-top: 1px solid #ddd; z-index: 1001;">
+            <button class="btn-swipe-action" id="btn-portfolio-left" title="Pas maîtrisé" style="padding: 12px 18px; border-radius: 8px; border: 2px solid #dc3545; background: white; color: #dc3545; font-weight: 600; cursor: pointer;">❌ Pas maîtrisé</button>
+            <button class="btn-swipe-action" id="btn-portfolio-up" title="À approfondir" style="padding: 12px 18px; border-radius: 8px; border: 2px solid #ffc107; background: white; color: #856404; font-weight: 600; cursor: pointer;">⚠️ À approfondir</button>
+            <button class="btn-swipe-action" id="btn-portfolio-right" title="Maîtrisé" style="padding: 12px 18px; border-radius: 8px; border: 2px solid #28a745; background: white; color: #28a745; font-weight: 600; cursor: pointer;">✅ Maîtrisé</button>
+        </div>
+
+        <!-- FOOTER FIXE -->
+        <div class="modal-footer" style="background: white; padding: 15px 20px; display: flex; gap: 12px; justify-content: space-between; align-items: center; border-top: 1px solid #ddd; flex-shrink: 0; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1001;">
+            <button class="btn btn--secondary" onclick="App.fermerPortfolioModalSansValider()" style="padding: 12px 20px; border: 1px solid #ddd; border-radius: 6px; background: white; cursor: pointer;">
+                ← Fermer
+            </button>
+            <div style="display: flex; gap: 12px;">
+                <button class="btn btn--primary" onclick="App.validerPortfolioEtFermer()" style="padding: 12px 20px; background: #FF6B9D; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">
+                    ✅ Marquer comme terminé
+                </button>
+                <button class="btn btn--primary" onclick="if (typeof openTutoringModal !== 'undefined') { openTutoringModal(); } else if (typeof TutoringModule !== 'undefined' && TutoringModule.showModal) { TutoringModule.showModal(); } else { alert('Module tutoring non chargé'); }" style="padding: 12px 20px; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">
+                    ❓ Demander aide
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <!-- 🔧 Mode Auteur Button - PROFIL PAGE ONLY (Bottom-Right) -->
+    <div id="admin-mode-container" style="
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        z-index: 9998;
+        display: none;
+    ">
+        <button 
+            id="admin-toggle-btn"
+            onclick="openAdminMode()"
+            title="Accéder au mode auteur (création de contenu)"
+            style="
+                padding: 12px 18px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 13px;
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+                transition: all 0.3s ease;
+                white-space: nowrap;
+            "
+            onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 16px rgba(102, 126, 234, 0.5)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(102, 126, 234, 0.4)';"
+        >
+            ⚙️ Mode Auteur
+        </button>
+    </div>
+
+    <script>
+    /**
+     * Affiche/Masque le bouton Mode Auteur selon la page courante
+     * Visible UNIQUEMENT sur page PROFIL
+     */
+    function updateAdminButtonVisibility() {
+        const adminContainer = document.getElementById('admin-mode-container');
+        if (!adminContainer) return;
+        
+        // Afficher SEULEMENT si on est sur la page profil
+        if (window.currentPageName === 'profil') {
+            adminContainer.style.display = 'block';
+        } else {
+            adminContainer.style.display = 'none';
+        }
+    }
+
+    /**
+     * Ouvre le mode auteur (admin.html)
+     */
+    function openAdminMode() {
+        Logger.debug('🔧 Ouverture mode auteur...');
+        if (confirm('Passer en mode auteur?\nVous pourrez créer et modifier le contenu.')) {
+            window.location.href = 'admin.html';
+        }
+    }
+
+    /**
+     * Initialise le bouton au chargement
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+        updateAdminButtonVisibility();
+    });
+    </script>
+
+    <!-- Header avec stats -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>🎓 Douane LMS <span class="version">v2.0</span></h1>
+                <span class="header-subtitle">Apprendre en s'amusant</span>
+            </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-value" id="pointsDisplay">0</span>
+                    <span class="stat-label">Points</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-value" id="daysDisplay">0</span>
+                    <span class="stat-label">Jours</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🏆</span>
+                    <span class="stat-value" id="badgesDisplay">0</span>
+                    <span class="stat-label">Badges</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area (changera selon onglet actif) -->
+    <main id="app-content" class="app-content" style="padding-bottom: 100px;">
+        <!-- Les pages seront injectées ici dynamiquement -->
+    </main>
+
+    <!-- Navigation Bottom Bar (5 onglets) -->
+    <nav class="bottom-nav" style="display: flex !important; flex-direction: row !important; position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; height: 80px !important; justify-content: space-around !important; align-items: center !important; background: white !important; z-index: 9999 !important;">
+        <button class="nav-item active" data-page="accueil" aria-label="Accueil">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Accueil</span>
+        </button>
+        <button class="nav-item" data-page="chapitres" aria-label="Mes Chapitres">
+            <span class="nav-icon">📚</span>
+            <span class="nav-label">Chapitres</span>
+        </button>
+        <button class="nav-item" data-page="pratique" aria-label="Pratique Libre">
+            <span class="nav-icon">🎯</span>
+            <span class="nav-label">Pratique</span>
+        </button>
+        <button class="nav-item" data-page="journal" aria-label="Mon Journal">
+            <span class="nav-icon">📔</span>
+            <span class="nav-label">Journal</span>
+        </button>
+        <button class="nav-item" data-page="profil" aria-label="Mon Profil">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Profil</span>
+        </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/logger.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/VideoPlayer.js"></script>
+    <script src="js/portfolio-swipe.js"></script>
+    
+    <!-- ⭐ TUTORING MODULE (doit charger AVANT app.js) ⭐ -->
+    <script src="js/tutoring-module.js"></script>
+    
+    <!-- ⭐ JOURNAL AVANCÉ MODULE ⭐ -->
+    <script src="js/journal-avance.js"></script>
+    <script src="js/journal-avance-ui.js"></script>
+    
+    <!-- 🔄 STORAGE SYNC: Cross-tab synchronization -->
+    <script src="js/storage-sync.js"></script>
+    
+    <!-- 📦 MODE LOCAL: Données embarquées pour fonctionnement sans serveur -->
+    <script src="data/chapitres.js?v=2"></script>
+    
+    <script src="js/app.js"></script>
+    
+    <!-- ⭐ TUTORING MODAL HTML + CSS ⭐ -->
+    <!-- Modal HTML + CSS -->
+<style>
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - ANIMATIONS */
+/* ═══════════════════════════════════════════════════════════ */
+
+@keyframes tutoring-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tutoring-slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - LAYOUT */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: tutoring-fadeIn 0.3s ease-out;
+}
+
+.tutoring-modal.hidden {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - OVERLAY */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - CONTENT */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-content {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  padding: 48px 40px;
+  animation: tutoring-slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10000;
+}
+
+/* Close button */
+.tutoring-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.tutoring-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.tutoring-close:focus {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - HEADER */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.tutoring-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.tutoring-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.tutoring-subtitle {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - BODY */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-body {
+  margin-bottom: 28px;
+}
+
+.tutoring-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.tutoring-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - FORM */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-form {
+  margin-bottom: 24px;
+}
+
+.tutoring-form-group {
+  margin-bottom: 16px;
+}
+
+.tutoring-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tutoring-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #333;
+  background: #f9f9f9;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tutoring-input:hover {
+  border-color: #d0d0d0;
+  background: #fbfbfb;
+}
+
+.tutoring-input:focus {
+  outline: none;
+  border-color: #8B5CF6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.tutoring-input::placeholder {
+  color: #999;
+}
+
+.tutoring-input:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - ERROR */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-error {
+  display: none;
+  padding: 12px 14px;
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
+  border-radius: 6px;
+  color: #991B1B;
+  font-size: 13px;
+  margin-bottom: 16px;
+  animation: tutoring-slideUp 0.2s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - FOOTER */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tutoring-footer {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.tutoring-btn {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutoring-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tutoring-btn--primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.tutoring-btn--primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.tutoring-btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.tutoring-btn--primary:focus {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+.tutoring-btn--secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: 1.5px solid #e0e0e0;
+}
+
+.tutoring-btn--secondary:hover:not(:disabled) {
+  background: #e6e6e6;
+  border-color: #d0d0d0;
+}
+
+.tutoring-btn--secondary:active:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.tutoring-btn--secondary:focus {
+  outline: 2px solid #666;
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TUTORING MODAL - RESPONSIVE */
+/* ═══════════════════════════════════════════════════════════ */
+
+/* Tablet: 768px */
+@media (max-width: 768px) {
+  .tutoring-content {
+    padding: 40px 32px;
+    max-width: 90vw;
+  }
+  
+  .tutoring-title {
+    font-size: 24px;
+  }
+  
+  .tutoring-btn {
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  .tutoring-content {
+    padding: 32px 24px;
+    width: 95%;
+    max-width: 100%;
+    border-radius: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .tutoring-close {
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .tutoring-icon {
+    font-size: 40px;
+  }
+  
+  .tutoring-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .tutoring-subtitle {
+    font-size: 13px;
+  }
+  
+  .tutoring-text {
+    font-size: 14px;
+  }
+  
+  .tutoring-label {
+    font-size: 12px;
+  }
+  
+  .tutoring-input {
+    padding: 10px 12px;
+    font-size: 16px; /* Prevents iOS zoom on input focus */
+  }
+  
+  .tutoring-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+    height: 40px;
+  }
+  
+  .tutoring-footer {
+    gap: 10px;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .tutoring-content {
+    background: #1a1a1a;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tutoring-title {
+    color: #f0f0f0;
+  }
+  
+  .tutoring-text {
+    color: #ccc;
+  }
+  
+  .tutoring-close {
+    color: #999;
+  }
+  
+  .tutoring-close:hover {
+    background: #333;
+    color: #f0f0f0;
+  }
+  
+  .tutoring-input {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #f0f0f0;
+  }
+  
+  .tutoring-input:focus {
+    border-color: #9D4EDD;
+    background: #1f1f1f;
+    box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.15);
+  }
+  
+  .tutoring-btn--secondary {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    border-color: #444;
+  }
+  
+  .tutoring-btn--secondary:hover:not(:disabled) {
+    background: #3a3a3a;
+  }
+}
+</style>
+
+<!-- Modal HTML Structure -->
+<div id="tutoring-modal" class="tutoring-modal hidden">
+  <!-- Overlay (click to close) -->
+  <div class="tutoring-overlay"></div>
+  
+  <!-- Modal Content -->
+  <div class="tutoring-content">
+    <!-- Close Button -->
+    <button 
+      class="tutoring-close" 
+      aria-label="Fermer le tutoriel"
+      type="button"
+    >
+      ✕
+    </button>
+    
+    <!-- Header -->
+    <div class="tutoring-header">
+      <div class="tutoring-icon">👋</div>
+      <h1 class="tutoring-title">Bienvenue!</h1>
+      <p class="tutoring-subtitle">Guidage complet pour maîtriser le système</p>
+    </div>
+    
+    <!-- Body -->
+    <div class="tutoring-body">
+      <p class="tutoring-text">
+        Nous sommes heureux de vous accueillir dans notre plateforme de formation. Parcourez les 4 niveaux progressifs et développez vos compétences douanières.
+      </p>
+      <p class="tutoring-text">
+        📚 <strong>Niveau 1 (Fondations)</strong> - Démarrez ici avec les bases<br/>
+        📊 <strong>Niveau 2 (Applications)</strong> - Appliquez vos connaissances<br/>
+        🎯 <strong>Niveau 3 (Cas pratiques)</strong> - Résolvez des cas réels<br/>
+        ⭐ <strong>Niveau 4 (Maîtrise)</strong> - Démontrez votre expertise
+      </p>
+    </div>
+    
+    <!-- Form (Optional email) -->
+    <form class="tutoring-form" onsubmit="event.preventDefault(); TutoringModule && TutoringModule.state;">
+      <!-- Error message -->
+      <div class="tutoring-error"></div>
+      
+      <!-- Email input -->
+      <div class="tutoring-form-group">
+        <label for="tutoring-email" class="tutoring-label">Email (optionnel)</label>
+        <input
+          id="tutoring-email"
+          class="tutoring-input"
+          type="email"
+          placeholder="exemple@email.com"
+          aria-label="Adresse email"
+          autocomplete="email"
+        />
+      </div>
+    </form>
+    
+    <!-- Footer Buttons -->
+    <div class="tutoring-footer">
+      <!-- Primary: Continue -->
+      <button 
+        class="tutoring-btn tutoring-btn--primary"
+        type="button"
+        aria-label="Continuer vers la plateforme"
+      >
+        ➜ Continuer
+      </button>
+      
+      <!-- Secondary: Close -->
+      <button 
+        class="tutoring-btn tutoring-btn--secondary"
+        type="button"
+        aria-label="Ignorer le tutoriel et continuer"
+      >
+        Ignorer
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

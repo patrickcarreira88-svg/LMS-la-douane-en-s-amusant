@@ -1,0 +1,119 @@
+{
+  "exercices": [
+    {
+      "id": "ch4_ex_001",
+      "type": "lecture",
+      "titre": "[EX 1] Lecture: Les principaux INCOTERMS",
+      "description": "Lire le texte sur les INCOTERMS",
+      "content": {
+        "text": "Les INCOTERMS définissent les responsabilités dans le transport:\n\nEXW (Ex Works - À l'usine)\n- Vendeur: Aucune responsabilité\n- Acheteur: Responsable dès le départ\n- Risque: Chez l'acheteur\n\nFOB (Free on Board - Franco à bord)\n- Vendeur: Paie transport jusqu'au navire\n- Acheteur: Paie à partir du navire\n- Risque: Passe à l'acheteur au navire\n- Douane: Importation payée par acheteur\n\nCIF (Cost, Insurance and Freight)\n- Vendeur: Paie tout jusqu'à destination\n- Assurance: Comprise\n- Risque: Chez l'acheteur après navire\n- Douane: Payée par acheteur\n\nDAP (Delivered at Place)\n- Vendeur: Paie jusqu'à lieu converti\n- Risque: Chez l'acheteur à l'arrivée\n- Douane: Payée par acheteur\n- Plus simple et moderne\n\nCes conditions impactent directement l'évaluation en douane."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch4_ex_002",
+      "type": "flashcards",
+      "titre": "[EX 2] Flashcards: Documents commerciaux",
+      "description": "Mémoriser les documents commerciaux",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Qu'est-ce qu'une facture commerciale?",
+            "verso": "Document prouvant la transaction commerciale avec prix, quantités et conditions"
+          },
+          {
+            "id": "card2",
+            "recto": "Qu'est-ce qu'une lettre de crédit?",
+            "verso": "Garantie bancaire de paiement émise par la banque de l'acheteur"
+          },
+          {
+            "id": "card3",
+            "recto": "Qu'est-ce qu'un connaissement?",
+            "verso": "Document de transport attestant la prise en charge des marchandises par le transporteur"
+          }
+        ]
+      },
+      "points": 10
+    },
+    {
+      "id": "ch4_ex_003",
+      "type": "qcm",
+      "titre": "[EX 3] QCM: Évaluation douanière",
+      "description": "Question sur la valeur en douane",
+      "content": {
+        "question": "Quelle est la base de l'évaluation en douane suisse?",
+        "options": [
+          "Le prix d'achat seul",
+          "La valeur transactionnelle (facture + transport + assurance)",
+          "Le prix au détail",
+          "Une estimation arbitraire"
+        ],
+        "correctAnswer": 1,
+        "explanation": "La base de l'évaluation douanière suisse est la valeur transactionnelle, incluant la facture, le transport et l'assurance."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch4_ex_004",
+      "type": "video",
+      "titre": "[EX 4] Vidéo: Les règles d'origine douanière",
+      "description": "Comprendre les règles d'origine et leur importance",
+      "content": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "Comprendre les règles d'origine et leur importance",
+        "videoType": "youtube"
+      },
+      "points": 10,
+      "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "ch4_ex_005",
+      "type": "quiz",
+      "titre": "[EX 5] Quiz: Commerce International",
+      "description": "3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "FOB signifie?",
+            "options": [
+              "Free on Board",
+              "Freight on Boat",
+              "Federal on Border",
+              "Free on Billing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "FOB signifie 'Free on Board' (Franco à bord), une condition commerciale importante."
+          },
+          {
+            "id": "q2",
+            "question": "L'assurance est incluse dans quel INCOTERM?",
+            "options": [
+              "FOB",
+              "EXW",
+              "CIF",
+              "DAP"
+            ],
+            "correctAnswer": 2,
+            "explanation": "L'assurance est incluse dans CIF (Cost, Insurance and Freight)."
+          },
+          {
+            "id": "q3",
+            "question": "Qu'est-ce qu'un connaissement?",
+            "options": [
+              "Une facture",
+              "Un document de transport",
+              "Une assurance",
+              "Un permis d'exportation"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Un connaissement est un document de transport attestant la prise en charge des marchandises."
+          }
+        ],
+        "scoreMin": 2
+      },
+      "points": 20
+    }
+  ]
+}

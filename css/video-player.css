@@ -1,0 +1,293 @@
+/* ═════════════════════════════════════════════════════════════════
+   VIDEO PLAYER STYLES
+   ═════════════════════════════════════════════════════════════════ */
+
+/* Container vidéo avec responsive */
+video-player {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Wrapper pour section vidéo dans chapitre */
+.video-section {
+    background: linear-gradient(135deg, rgba(107, 78, 154, 0.05) 0%, rgba(199, 125, 255, 0.05) 100%);
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 4px solid var(--color-accent);
+}
+
+.video-section h3 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-section p {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Transcript section */
+.transcript-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--color-surface);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.transcript-section h4 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transcript-content {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-text);
+    border-left: 3px solid var(--color-accent);
+}
+
+.transcript-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.transcript-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.transcript-content::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 3px;
+}
+
+.transcript-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-dark);
+}
+
+/* Timestamps in transcript */
+.transcript-timestamp {
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+/* Video metadata info */
+.video-metadata {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.metadata-item {
+    background: var(--color-surface);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid var(--color-accent);
+}
+
+.metadata-item strong {
+    display: block;
+    color: var(--color-accent);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.metadata-item span {
+    color: var(--color-text-light);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Related exercises after video */
+.video-exercises {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, rgba(52, 211, 153, 0.05) 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-success);
+}
+
+.video-exercises h4 {
+    color: var(--color-success);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exercises-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.exercise-card {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-success);
+}
+
+.exercise-card strong {
+    color: var(--color-text);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.exercise-card small {
+    color: var(--color-text-light);
+    display: block;
+}
+
+/* Progress indicator after video */
+.video-progress {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--color-surface);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.progress-bar-wrapper {
+    flex: 1;
+}
+
+.progress-label {
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ECC71, #34D399);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-percentage {
+    font-weight: 600;
+    color: var(--color-success);
+    min-width: 50px;
+    text-align: right;
+}
+
+/* Completion badge */
+.video-completion-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-success) 0%, #34D399 100%);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .video-section {
+        padding: 20px 15px;
+    }
+
+    .video-metadata {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .transcript-content {
+        max-height: 250px;
+        font-size: 12px;
+    }
+
+    .exercises-list {
+        grid-template-columns: 1fr;
+    }
+
+    video-player {
+        margin: 20px auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .transcript-content {
+        background: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .exercise-card {
+        background: #1e1e1e;
+        border-color: #333;
+    }
+
+    .exercise-card:hover {
+        border-color: var(--color-success);
+    }
+}
+
+/* Print styles */
+@media print {
+    video-player {
+        display: none;
+    }
+
+    .transcript-content {
+        max-height: none;
+        page-break-inside: avoid;
+    }
+}

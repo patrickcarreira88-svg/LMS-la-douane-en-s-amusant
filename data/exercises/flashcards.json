@@ -1,0 +1,144 @@
+{
+  "exercises": [
+    {
+      "id": "ch1_ex_006",
+      "chapterId": "ch1",
+      "stepId": "ch1_step4",
+      "title": "[EX 6] Flashcards: Les 3 domaines douaniers",
+      "type": "flashcards",
+      "points": 10,
+      "description": "Mémoriser avec les cartes flashcard",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Quel est le domaine FISCAL de la douane?",
+            "verso": "La perception des droits de douane et des taxes sur les marchandises importées"
+          },
+          {
+            "id": "card2",
+            "recto": "Quel est le domaine de PROTECTION?",
+            "verso": "La lutte contre la contrebande, le trafic et la fraude douanière"
+          },
+          {
+            "id": "card3",
+            "recto": "Quel est le domaine de SECURITE?",
+            "verso": "Le contrôle des marchandises dangereuses et prohibées pour protéger la population"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ch2_ex_003",
+      "chapterId": "ch2",
+      "stepId": "ch2_step3",
+      "title": "[EX 3] Flashcards: Nomenclature tarifaire",
+      "type": "flashcards",
+      "points": 10,
+      "description": "Mémoriser les codes HS et la nomenclature",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Qu'est-ce que le système HS?",
+            "verso": "Le Système Harmonisé de désignation et de codification des marchandises (6 chiffres minimum)"
+          },
+          {
+            "id": "card2",
+            "recto": "Combien de chiffres a un tarif douanier suisse complet?",
+            "verso": "10 chiffres: 6 du SH + 2 pour la nomenclature tarifaire + 2 supplémentaires suisses"
+          },
+          {
+            "id": "card3",
+            "recto": "Quel est le code HS pour les pommes fraîches?",
+            "verso": "0808.30 (la position 8 signifie fruits, le reste précise le type)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ch3_ex_004",
+      "chapterId": "ch3",
+      "stepId": "ch3_step4",
+      "title": "[EX 4] Flashcards: Procédures de recours",
+      "type": "flashcards",
+      "points": 10,
+      "description": "Mémoriser les procédures de recours",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Quel est le premier recours possible?",
+            "verso": "La demande de réexamen auprès de l'administration douanière"
+          },
+          {
+            "id": "card2",
+            "recto": "Vers quel organe faire appel après le refus de réexamen?",
+            "verso": "La Commission de recours douaniers (organe indépendant)"
+          },
+          {
+            "id": "card3",
+            "recto": "Quel est le dernier recours juridique?",
+            "verso": "Le Tribunal fédéral de la Confédération suisse"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ch4_ex_002",
+      "chapterId": "ch4",
+      "stepId": "ch4_step2",
+      "title": "[EX 2] Flashcards: Documents commerciaux",
+      "type": "flashcards",
+      "points": 10,
+      "description": "Mémoriser les documents commerciaux",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Qu'est-ce qu'une facture commerciale?",
+            "verso": "Document prouvant la transaction commerciale avec prix, quantités et conditions"
+          },
+          {
+            "id": "card2",
+            "recto": "Qu'est-ce qu'une lettre de crédit?",
+            "verso": "Garantie bancaire de paiement émise par la banque de l'acheteur"
+          },
+          {
+            "id": "card3",
+            "recto": "Qu'est-ce qu'un connaissement?",
+            "verso": "Document de transport attestant la prise en charge des marchandises par le transporteur"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ch5_ex_003",
+      "chapterId": "ch5",
+      "stepId": "ch5_step3",
+      "title": "[EX 3] Flashcards: Marchandises prohibées",
+      "type": "flashcards",
+      "points": 10,
+      "description": "Mémoriser les marchandises prohibées",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Quelles sont les marchandises PROHIBEES?",
+            "verso": "Les armes, explosifs, drogues, contrefaçons, espèces protégées (interdiction absolue)"
+          },
+          {
+            "id": "card2",
+            "recto": "Que sont les marchandises REGLEMENTEES?",
+            "verso": "Produits nécessitant permis ou licence: médicaments, alcool, produits chimiques"
+          },
+          {
+            "id": "card3",
+            "recto": "Qui fournit la liste officielle des marchandises prohibées?",
+            "verso": "L'Administration fédérale des douanes suisses sur son site officiel"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "exercices": [
+    {
+      "id": "ch5_ex_001",
+      "type": "lecture",
+      "titre": "[EX 1] Lecture: L'analyse de risque en douane",
+      "description": "Lire le texte sur l'analyse de risque",
+      "content": {
+        "text": "L'analyse de risque est un outil moderne pour optimiser les contrôles:\n\nOBJECTIFS\n- Détecter les fraudes efficacement\n- Sécuriser les chaînes logistiques\n- Faciliter le commerce légitime\n- Allouer les ressources de contrôle\n\nCRITERES DE RISQUE\n1. Pays d'origine (zones à risque)\n2. Type de marchandise (produits sensibles)\n3. Valeur déclarée (anomalies)\n4. Opérateur (historique douanier)\n5. Voie de transport (aérienne, maritime, terrestre)\n6. Saison ou période\n\nNIVEAUX DE RISQUE\nBAS: Expéditeur connu, marchandises standards, documentation complète\nMOYEN: Quelques doutes, vérification documentaire simple\nELEVE: Signaux d'alarme, inspection physique obligatoire\n\nAVANTAGES\n- Plus efficace que contrôle aléatoire\n- Réduit les délais pour les bons opérateurs\n- Améliore la sécurité\n- Utilise l'IA et les données"
+      },
+      "points": 10
+    },
+    {
+      "id": "ch5_ex_002",
+      "type": "video",
+      "titre": "[EX 2] Vidéo: Techniques de fraude douanière et détection",
+      "description": "Découvrez les méthodes de fraude et comment les douaniers les détectent",
+      "content": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "description": "Découvrez les méthodes de fraude et comment les douaniers les détectent",
+        "videoType": "youtube"
+      },
+      "points": 10,
+      "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "ch5_ex_003",
+      "type": "flashcards",
+      "titre": "[EX 3] Flashcards: Marchandises prohibées",
+      "description": "Mémoriser les marchandises prohibées",
+      "content": {
+        "cards": [
+          {
+            "id": "card1",
+            "recto": "Quelles sont les marchandises PROHIBEES?",
+            "verso": "Les armes, explosifs, drogues, contrefaçons, espèces protégées (interdiction absolue)"
+          },
+          {
+            "id": "card2",
+            "recto": "Que sont les marchandises REGLEMENTEES?",
+            "verso": "Produits nécessitant permis ou licence: médicaments, alcool, produits chimiques"
+          },
+          {
+            "id": "card3",
+            "recto": "Qui fournit la liste officielle des marchandises prohibées?",
+            "verso": "L'Administration fédérale des douanes suisses sur son site officiel"
+          }
+        ]
+      },
+      "points": 10
+    },
+    {
+      "id": "ch5_ex_004",
+      "type": "qcm",
+      "titre": "[EX 4] QCM: Prévention du blanchiment",
+      "description": "Question sur le rôle de la douane en AML",
+      "content": {
+        "question": "Quel est le rôle de la douane dans la prévention du blanchiment d'argent?",
+        "options": [
+          "Aucun rôle",
+          "Détecter et signaler les opérations suspectes",
+          "Poursuivre les criminels",
+          "Geler les comptes bancaires"
+        ],
+        "correctAnswer": 1,
+        "explanation": "La douane joue un rôle important en détectant et signalant les opérations douteuses suspectes de blanchiment."
+      },
+      "points": 10
+    },
+    {
+      "id": "ch5_ex_005",
+      "type": "quiz",
+      "titre": "[EX 5] Quiz: Douane et Sécurité",
+      "description": "3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "L'analyse de risque permet de?",
+            "options": [
+              "Contrôler 100% des envois",
+              "Cibler les contrôles sur les risques élevés",
+              "Éviter tout contrôle",
+              "Accélérer systématiquement"
+            ],
+            "correctAnswer": 1,
+            "explanation": "L'analyse de risque permet de cibler les contrôles sur les envois à risque élevé, optimisant ainsi les ressources."
+          },
+          {
+            "id": "q2",
+            "question": "Les armes sont-elles prohibées à l'importation en Suisse?",
+            "options": [
+              "Non, jamais",
+              "Oui, toujours (interdiction absolue)",
+              "Oui, sauf avec permis",
+              "Dépend du type d'arme"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Les armes sont prohibées à l'importation en Suisse (interdiction absolue) sauf exceptions très limitées."
+          },
+          {
+            "id": "q3",
+            "question": "Qu'est-ce que MROS?",
+            "options": [
+              "Un service d'assurance",
+              "L'organisme suisse de signalement des opérations suspectes",
+              "Un groupe de douaniers",
+              "Une banque suisse"
+            ],
+            "correctAnswer": 1,
+            "explanation": "MROS (Meldestelle für Geldwäscherei) est l'organisme suisse responsable du signalement des opérations suspectes."
+          }
+        ],
+        "scoreMin": 2
+      },
+      "points": 20
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+/**
+ * Journal Avancé (Bloom) - CSS Styles
+ * 
+ * Styles pour le mode avancé du journal d'apprentissage
+ * Cohérent avec le design existant du LMS Douane
+ */
+
+/* ═══════════════════════════════════════════════════════════ */
+/* MODE TOGGLE */
+/* ═══════════════════════════════════════════════════════════ */
+
+.journal-mode-toggle {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 10px 20px;
+  border: 2px solid #d1d5db;
+  background: white;
+  color: #6b7280;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.mode-btn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border-color: #6d28d9;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* ADVANCED JOURNAL CONTAINER */
+/* ═══════════════════════════════════════════════════════════ */
+
+.journal-advanced {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+@media (max-width: 1024px) {
+  .journal-advanced {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* ENTRY FORM */
+/* ═══════════════════════════════════════════════════════════ */
+
+.journal-entry-form {
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.journal-entry-form h3 {
+  margin-top: 0;
+  color: #1f2937;
+  font-size: 18px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #7c3aed;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* JOURNAL SECTIONS */
+/* ─────────────────────────────────────────────────────────── */
+
+.journal-section {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.journal-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.section-header {
+  margin-bottom: 12px;
+}
+
+.section-header h4 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-description {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* TEXTAREA */
+/* ─────────────────────────────────────────────────────────── */
+
+.journal-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  transition: all 0.2s ease;
+  background: white;
+  color: #1f2937;
+}
+
+.journal-textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.journal-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* BLOOM VERBS SECTION */
+/* ─────────────────────────────────────────────────────────── */
+
+.bloom-verbs-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.bloom-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.bloom-verbs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bloom-level-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bloom-level-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.verb-buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.verb-btn {
+  padding: 8px 14px;
+  border: 1.5px solid #d1d5db;
+  background: white;
+  color: #4b5563;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.verb-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+.verb-btn.selected {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border-color: #6d28d9;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* BLOOM SUGGESTION */
+/* ─────────────────────────────────────────────────────────── */
+
+.bloom-suggestion {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-left: 4px solid #f59e0b;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.4;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* CHAPTER LINKING */
+/* ─────────────────────────────────────────────────────────── */
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.journal-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #7c3aed;
+}
+
+.chapter-info {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1e40af;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* ACTION BUTTONS */
+/* ─────────────────────────────────────────────────────────── */
+
+.journal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .journal-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* HISTORY SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+
+.journal-history {
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.journal-history h3 {
+  margin-top: 0;
+  color: #1f2937;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #7c3aed;
+}
+
+.journal-entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 30px 20px;
+  color: #9ca3af;
+  font-style: italic;
+  background: white;
+  border: 2px dashed #e5e7eb;
+  border-radius: 8px;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* ENTRY CARD */
+/* ─────────────────────────────────────────────────────────── */
+
+.journal-entry-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 18px;
+  transition: all 0.2s ease;
+}
+
+.journal-entry-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.entry-date {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.btn-delete-entry {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.btn-delete-entry:hover {
+  background: #fee2e2;
+  transform: scale(1.1);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* ENTRY CONTENT */
+/* ─────────────────────────────────────────────────────────── */
+
+.entry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.entry-section {
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border-left: 4px solid #7c3aed;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.verb-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #7c3aed;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.bloom-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.entry-section p {
+  margin: 0;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.linked-chapter {
+  margin-top: 10px;
+  padding: 8px;
+  background: #dbeafe;
+  border-left: 3px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #1e40af;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* EMAIL MODAL */
+/* ═══════════════════════════════════════════════════════════ */
+
+.email-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.email-modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.email-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.email-modal-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: all 0.2s ease;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #374151;
+}
+
+.email-modal-body {
+  padding: 20px;
+}
+
+.email-modal-body label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.email-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+
+.email-textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.email-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border-radius: 0 0 12px 12px;
+}
+
+.email-modal-footer .btn {
+  flex: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* RESPONSIVE */
+/* ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .journal-advanced {
+    gap: 20px;
+  }
+  
+  .journal-entry-form,
+  .journal-history {
+    padding: 15px;
+  }
+  
+  .journal-mode-toggle {
+    flex-direction: column;
+  }
+  
+  .mode-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+  
+  .verb-buttons-group {
+    gap: 6px;
+  }
+  
+  .verb-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

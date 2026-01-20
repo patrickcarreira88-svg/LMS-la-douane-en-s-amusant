@@ -1,0 +1,17 @@
+{
+  "exercices": [
+    {
+      "id": "N1_ch8_step01_ex001",
+      "etapeId": "N1_ch8_step01",
+      "type": "vrai-faux",
+      "titre": "test",
+      "points": 10,
+      "content": {
+        "statement": "Est-ce vrai",
+        "correctAnswer": true,
+        "explanation": "en effet"
+      },
+      "createdAt": "2026-01-11T21:03:23.897Z"
+    }
+  ]
+}

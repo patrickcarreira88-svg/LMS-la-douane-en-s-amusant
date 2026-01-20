@@ -1,0 +1,254 @@
+{
+  "exercises": [
+    {
+      "id": "ch1_ex_007",
+      "chapterId": "ch1",
+      "stepId": "ch1_step5",
+      "title": "[EX 7] Quiz: Introduction à la Douane",
+      "type": "quiz",
+      "points": 20,
+      "description": "Répondez aux 3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "La douane suisse dépend de quel département?",
+            "points": 7,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "Département de la Justice", "correct": false, "explanation": "Incorrecte. La douane dépend des Finances." },
+              { "id": "opt2", "text": "Département des Finances", "correct": true, "explanation": "Correcte. La douane suisse est sous l'autorité du Département fédéral des finances (DFF)." },
+              { "id": "opt3", "text": "Département de l'Intérieur", "correct": false, "explanation": "Incorrecte. La douane dépend des Finances." },
+              { "id": "opt4", "text": "Département de la Défense", "correct": false, "explanation": "Incorrecte. La douane dépend des Finances." }
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Quel est le rôle PRINCIPAL de la douane?",
+            "points": 7,
+            "correctAnswer": 0,
+            "options": [
+              { "id": "opt1", "text": "Collecter les taxes et protéger les frontières", "correct": true, "explanation": "Correcte. La douane a pour mission principale de collecter les droits et taxes, et de protéger les frontières suisses." },
+              { "id": "opt2", "text": "Gérer les prisons", "correct": false, "explanation": "Incorrecte. La douane ne gère pas les prisons." },
+              { "id": "opt3", "text": "Émettre les passeports", "correct": false, "explanation": "Incorrecte. Les passeports relèvent d'un autre service." },
+              { "id": "opt4", "text": "Gérer les aéroports", "correct": false, "explanation": "Incorrecte. Les aéroports ont leur propre gestion." }
+            ]
+          },
+          {
+            "id": "q3",
+            "question": "En quelle année la Suisse a-t-elle créé le 26ème canton?",
+            "points": 6,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "1975", "correct": false, "explanation": "Incorrecte. Le 26ème canton a été créé en 1978." },
+              { "id": "opt2", "text": "1978", "correct": true, "explanation": "Correcte. Le Jura, 26ème canton de la Suisse, a été créé en 1978 par la scission d'une partie du canton de Berne." },
+              { "id": "opt3", "text": "1980", "correct": false, "explanation": "Incorrecte. Le 26ème canton a été créé en 1978." },
+              { "id": "opt4", "text": "1985", "correct": false, "explanation": "Incorrecte. Le 26ème canton a été créé en 1978." }
+            ]
+          }
+        ],
+        "scoreMin": 2
+      }
+    },
+    {
+      "id": "ch2_ex_005",
+      "chapterId": "ch2",
+      "stepId": "ch2_step5",
+      "title": "[EX 5] Quiz: Législation Douanière",
+      "type": "quiz",
+      "points": 20,
+      "description": "3 questions pour valider vos connaissances",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Quel document régit les douanes en Suisse?",
+            "points": 7,
+            "correctAnswer": 0,
+            "options": [
+              { "id": "opt1", "text": "La Loi sur les douanes", "correct": true, "explanation": "Correcte. La Loi sur les douanes (LD) est le document principal qui régit l'activité des douanes en Suisse." },
+              { "id": "opt2", "text": "La Loi fédérale des finances", "correct": false, "explanation": "Incorrecte. C'est la Loi sur les douanes qui régit les douanes." },
+              { "id": "opt3", "text": "La Constitution seulement", "correct": false, "explanation": "Incorrecte. Il y a une loi spécifique: la Loi sur les douanes." },
+              { "id": "opt4", "text": "Des ordonnances locales", "correct": false, "explanation": "Incorrecte. C'est une loi fédérale qui régit les douanes." }
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Le système HS a combien de chiffres minimums?",
+            "points": 7,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "4 chiffres", "correct": false, "explanation": "Incorrecte. Le système HS utilise 6 chiffres minimums." },
+              { "id": "opt2", "text": "6 chiffres", "correct": true, "explanation": "Correcte. Le Système Harmonisé utilise un code de 6 chiffres minimums pour classifier les marchandises." },
+              { "id": "opt3", "text": "8 chiffres", "correct": false, "explanation": "Incorrecte. Le système HS utilise 6 chiffres minimums." },
+              { "id": "opt4", "text": "10 chiffres", "correct": false, "explanation": "Incorrecte. Le système HS utilise 6 chiffres minimums." }
+            ]
+          },
+          {
+            "id": "q3",
+            "question": "Qu'est-ce que les Incoterms?",
+            "points": 6,
+            "correctAnswer": 0,
+            "options": [
+              { "id": "opt1", "text": "Clauses commerciales internationales", "correct": true, "explanation": "Correcte. Les Incoterms sont des clauses commerciales internationales définissant les responsabilités." },
+              { "id": "opt2", "text": "Les taxes douanières", "correct": false, "explanation": "Incorrecte. Les Incoterms ne sont pas des taxes." },
+              { "id": "opt3", "text": "Des assurances", "correct": false, "explanation": "Incorrecte. Les Incoterms ne sont pas des assurances." },
+              { "id": "opt4", "text": "Des droits de douane", "correct": false, "explanation": "Incorrecte. Les Incoterms ne sont pas des droits." }
+            ]
+          }
+        ],
+        "scoreMin": 2
+      }
+    },
+    {
+      "id": "ch3_ex_005",
+      "chapterId": "ch3",
+      "stepId": "ch3_step5",
+      "title": "[EX 5] Quiz: Procédures Douanières",
+      "type": "quiz",
+      "points": 20,
+      "description": "3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Combien de temps dure généralement un dédouanement simple?",
+            "points": 7,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "1-2 heures", "correct": false, "explanation": "Incorrecte. Le délai est plus long." },
+              { "id": "opt2", "text": "24-48 heures", "correct": true, "explanation": "Correcte. Un dédouanement simple prend généralement 24 à 48 heures selon la complexité et la charge de travail." },
+              { "id": "opt3", "text": "1 semaine", "correct": false, "explanation": "Incorrecte. Le dédouanement simple est plus rapide." },
+              { "id": "opt4", "text": "1 mois", "correct": false, "explanation": "Incorrecte. Le dédouanement simple est beaucoup plus rapide." }
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Quel document est OBLIGATOIRE pour une déclaration?",
+            "points": 7,
+            "correctAnswer": 0,
+            "options": [
+              { "id": "opt1", "text": "La facture commerciale", "correct": true, "explanation": "Correcte. La facture commerciale est le document obligatoire pour effectuer une déclaration en douane." },
+              { "id": "opt2", "text": "Le passeport du transporteur", "correct": false, "explanation": "Incorrecte. Le passeport n'est pas un document douanier." },
+              { "id": "opt3", "text": "Une assurance spéciale", "correct": false, "explanation": "Incorrecte. L'assurance n'est pas obligatoire pour la déclaration." },
+              { "id": "opt4", "text": "Un permis d'importation", "correct": false, "explanation": "Incorrecte. La facture est le document principal." }
+            ]
+          },
+          {
+            "id": "q3",
+            "question": "Si vous contestez une décision douanière, vers quel organe allez-vous?",
+            "points": 6,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "Le canton", "correct": false, "explanation": "Incorrecte. Il existe un organe spécialisé: la Commission de recours douaniers." },
+              { "id": "opt2", "text": "La Commission de recours douaniers", "correct": true, "explanation": "Correcte. La Commission de recours douaniers (indépendante) entend les contestations." },
+              { "id": "opt3", "text": "Le gouvernement", "correct": false, "explanation": "Incorrecte. C'est la Commission de recours douaniers qui entend les recours." },
+              { "id": "opt4", "text": "La douane elle-même", "correct": false, "explanation": "Incorrecte. Il faut un organe impartial: la Commission de recours douaniers." }
+            ]
+          }
+        ],
+        "scoreMin": 2
+      }
+    },
+    {
+      "id": "ch4_ex_005",
+      "chapterId": "ch4",
+      "stepId": "ch4_step5",
+      "title": "[EX 5] Quiz: Commerce International",
+      "type": "quiz",
+      "points": 20,
+      "description": "3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "FOB signifie?",
+            "points": 7,
+            "correctAnswer": 0,
+            "options": [
+              { "id": "opt1", "text": "Free on Board", "correct": true, "explanation": "Correcte. FOB signifie 'Free on Board' (Franco à bord), une condition commerciale importante." },
+              { "id": "opt2", "text": "Freight on Boat", "correct": false, "explanation": "Incorrecte. FOB signifie 'Free on Board'." },
+              { "id": "opt3", "text": "Federal on Border", "correct": false, "explanation": "Incorrecte. FOB signifie 'Free on Board'." },
+              { "id": "opt4", "text": "Free on Billing", "correct": false, "explanation": "Incorrecte. FOB signifie 'Free on Board'." }
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "L'assurance est incluse dans quel INCOTERM?",
+            "points": 7,
+            "correctAnswer": 2,
+            "options": [
+              { "id": "opt1", "text": "FOB", "correct": false, "explanation": "Incorrecte. L'assurance n'est pas incluse en FOB." },
+              { "id": "opt2", "text": "EXW", "correct": false, "explanation": "Incorrecte. EXW est le moins coûteux. L'assurance n'y est pas incluse." },
+              { "id": "opt3", "text": "CIF", "correct": true, "explanation": "Correcte. L'assurance est incluse dans CIF (Cost, Insurance and Freight)." },
+              { "id": "opt4", "text": "DAP", "correct": false, "explanation": "Incorrecte. L'assurance est incluse en CIF." }
+            ]
+          },
+          {
+            "id": "q3",
+            "question": "Qu'est-ce qu'un connaissement?",
+            "points": 6,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "Une facture", "correct": false, "explanation": "Incorrecte. Le connaissement est un document de transport, pas une facture." },
+              { "id": "opt2", "text": "Un document de transport", "correct": true, "explanation": "Correcte. Un connaissement est un document de transport attestant la prise en charge des marchandises." },
+              { "id": "opt3", "text": "Une assurance", "correct": false, "explanation": "Incorrecte. Le connaissement est un document de transport." },
+              { "id": "opt4", "text": "Un permis d'exportation", "correct": false, "explanation": "Incorrecte. Le connaissement est un document de transport." }
+            ]
+          }
+        ],
+        "scoreMin": 2
+      }
+    },
+    {
+      "id": "ch5_ex_005",
+      "chapterId": "ch5",
+      "stepId": "ch5_step5",
+      "title": "[EX 5] Quiz: Douane et Sécurité",
+      "type": "quiz",
+      "points": 20,
+      "description": "3 questions pour valider ce chapitre",
+      "content": {
+        "questions": [
+          {
+            "id": "q1",
+            "question": "L'analyse de risque permet de?",
+            "points": 7,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "Contrôler 100% des envois", "correct": false, "explanation": "Incorrecte. L'analyse de risque cible les risques élevés, pas 100%." },
+              { "id": "opt2", "text": "Cibler les contrôles sur les risques élevés", "correct": true, "explanation": "Correcte. L'analyse de risque permet de cibler les contrôles sur les envois à risque élevé, optimisant ainsi les ressources." },
+              { "id": "opt3", "text": "Éviter tout contrôle", "correct": false, "explanation": "Incorrecte. L'analyse de risque cible les risques, mais ne supprime pas les contrôles." },
+              { "id": "opt4", "text": "Accélérer systématiquement", "correct": false, "explanation": "Incorrecte. L'analyse de risque cible les contrôles, elle n'accélère pas systématiquement." }
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Les armes sont-elles prohibées à l'importation en Suisse?",
+            "points": 7,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "Non, jamais", "correct": false, "explanation": "Incorrecte. Les armes sont prohibées à l'importation." },
+              { "id": "opt2", "text": "Oui, toujours (interdiction absolue)", "correct": true, "explanation": "Correcte. Les armes sont prohibées à l'importation en Suisse (interdiction absolue) sauf exceptions très limitées." },
+              { "id": "opt3", "text": "Oui, sauf avec permis", "correct": false, "explanation": "Incorrecte. C'est une interdiction absolue, même avec permis, sauf exceptions." },
+              { "id": "opt4", "text": "Dépend du type d'arme", "correct": false, "explanation": "Incorrecte. C'est une interdiction absolue pour les armes." }
+            ]
+          },
+          {
+            "id": "q3",
+            "question": "Qu'est-ce que MROS?",
+            "points": 6,
+            "correctAnswer": 1,
+            "options": [
+              { "id": "opt1", "text": "Un service d'assurance", "correct": false, "explanation": "Incorrecte. MROS n'est pas un service d'assurance." },
+              { "id": "opt2", "text": "L'organisme suisse de signalement des opérations suspectes", "correct": true, "explanation": "Correcte. MROS (Meldestelle für Geldwäscherei) est l'organisme suisse responsable du signalement des opérations suspectes." },
+              { "id": "opt3", "text": "Un groupe de douaniers", "correct": false, "explanation": "Incorrecte. MROS est un organisme de signalement." },
+              { "id": "opt4", "text": "Une banque suisse", "correct": false, "explanation": "Incorrecte. MROS est l'organisme de signalement des opérations suspectes." }
+            ]
+          }
+        ],
+        "scoreMin": 2
+      }
+    }
+  ]
+}

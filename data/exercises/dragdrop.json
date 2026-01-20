@@ -1,0 +1,130 @@
+{
+  "exercises": [
+    {
+      "id": "ch1_ex_dd001",
+      "chapterId": "ch1",
+      "stepId": "ch1_step2",
+      "title": "[TEMPLATE] Drag & Drop: Rôles douaniers",
+      "type": "dragdrop",
+      "points": 15,
+      "description": "Associez les rôles aux responsabilités douanières",
+      "content": {
+        "items": [
+          { "id": "item1", "text": "Agent de contrôle" },
+          { "id": "item2", "text": "Agent administratif" },
+          { "id": "item3", "text": "Chef de douane" }
+        ],
+        "targets": [
+          { "id": "target1", "text": "Inspection physique des marchandises", "correctItem": "item1" },
+          { "id": "target2", "text": "Traitement des déclarations", "correctItem": "item2" },
+          { "id": "target3", "text": "Supervision et gestion", "correctItem": "item3" }
+        ]
+      }
+    },
+    {
+      "id": "ch2_ex_dd001",
+      "chapterId": "ch2",
+      "stepId": "ch2_step3",
+      "title": "[TEMPLATE] Drag & Drop: Codes HS",
+      "type": "dragdrop",
+      "points": 15,
+      "description": "Associez les produits aux codes HS",
+      "content": {
+        "items": [
+          { "id": "item1", "text": "Pommes fraîches" },
+          { "id": "item2", "text": "Coton brut" },
+          { "id": "item3", "text": "Électronique" }
+        ],
+        "targets": [
+          { "id": "target1", "text": "0808.30", "correctItem": "item1" },
+          { "id": "target2", "text": "5201.00", "correctItem": "item2" },
+          { "id": "target3", "text": "8471.30", "correctItem": "item3" }
+        ]
+      }
+    },
+    {
+      "id": "ch3_ex_dd001",
+      "chapterId": "ch3",
+      "stepId": "ch3_step3",
+      "title": "[TEMPLATE] Drag & Drop: Types de vérification",
+      "type": "dragdrop",
+      "points": 15,
+      "description": "Appliquez le type de vérification approprié",
+      "content": {
+        "items": [
+          { "id": "item1", "text": "Vérification documentaire" },
+          { "id": "item2", "text": "Vérification physique" },
+          { "id": "item3", "text": "Analyse de risque" }
+        ],
+        "targets": [
+          { "id": "target1", "text": "Examen papier/données", "correctItem": "item1" },
+          { "id": "target2", "text": "Inspection concrète", "correctItem": "item2" },
+          { "id": "target3", "text": "Évaluation préalable", "correctItem": "item3" }
+        ]
+      }
+    },
+    {
+      "id": "ch4_ex_dd001",
+      "chapterId": "ch4",
+      "stepId": "ch4_step2",
+      "title": "[TEMPLATE] Drag & Drop: Documents commerciaux",
+      "type": "dragdrop",
+      "points": 15,
+      "description": "Liez les documents à leurs descriptions",
+      "content": {
+        "items": [
+          { "id": "item1", "text": "Facture" },
+          { "id": "item2", "text": "Connaissement" },
+          { "id": "item3", "text": "Certificat d'origine" }
+        ],
+        "targets": [
+          { "id": "target1", "text": "Preuve de transaction", "correctItem": "item1" },
+          { "id": "target2", "text": "Transport des marchandises", "correctItem": "item2" },
+          { "id": "target3", "text": "Provenance du bien", "correctItem": "item3" }
+        ]
+      }
+    },
+    {
+      "id": "ch5_ex_dd001",
+      "chapterId": "ch5",
+      "stepId": "ch5_step3",
+      "title": "[TEMPLATE] Drag & Drop: Marchandises prohibées",
+      "type": "dragdrop",
+      "points": 15,
+      "description": "Catégorisez les marchandises",
+      "content": {
+        "items": [
+          { "id": "item1", "text": "Armes" },
+          { "id": "item2", "text": "Alcool" },
+          { "id": "item3", "text": "Contrefaçons" }
+        ],
+        "targets": [
+          { "id": "target1", "text": "Interdiction absolue", "correctItem": "item1" },
+          { "id": "target2", "text": "Réglementé", "correctItem": "item2" },
+          { "id": "target3", "text": "Interdiction absolue", "correctItem": "item3" }
+        ]
+      }
+    },
+    {
+      "id": "ch3ex010",
+      "chapterId": "ch3",
+      "stepId": "ch3_step2",
+      "title": "[TEMPLATE] Drag & Drop: Organiser étapes douanières",
+      "type": "dragdrop",
+      "points": 15,
+      "description": "Classez les étapes de la procédure douanière dans le bon ordre",
+      "content": {
+        "items": [
+          { "id": "item1", "text": "Présentation" },
+          { "id": "item2", "text": "Déclaration" },
+          { "id": "item3", "text": "Vérification" }
+        ],
+        "targets": [
+          { "id": "target1", "text": "1ère étape: Dépôt de la marchandise", "correctItem": "item1" },
+          { "id": "target2", "text": "2ème étape: Remplissage du formulaire", "correctItem": "item2" },
+          { "id": "target3", "text": "3ème étape: Inspection et validation", "correctItem": "item3" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapitre": {
+    "id": "N1_ch01",
+    "niveauId": "N1",
+    "titre": "Chapitre 1 - À renommer",
+    "description": "Description du chapitre à compléter",
+    "ordre": 1,
+    "createdAt": "2026-01-11T09:53:00.000Z",
+    "lastModified": "2026-01-11T09:53:00.000Z"
+  },
+  "etapes": [
+    {
+      "id": "N1_ch01_step01",
+      "chapterId": "N1_ch01",
+      "titre": "Diagnostic",
+      "description": "Étape de diagnostic initial",
+      "ordre": 1,
+      "type": "diagnostic",
+      "createdAt": "2026-01-11T09:53:00.000Z",
+      "exercices": []
+    },
+    {
+      "id": "N1_ch01_step02",
+      "chapterId": "N1_ch01",
+      "titre": "Apprentissage",
+      "description": "Étape d'apprentissage et contenus",
+      "ordre": 2,
+      "type": "apprentissage",
+      "createdAt": "2026-01-11T09:53:00.000Z",
+      "exercices": []
+    },
+    {
+      "id": "N1_ch01_step03",
+      "chapterId": "N1_ch01",
+      "titre": "Entraînement",
+      "description": "Étape d'entraînement et pratique",
+      "ordre": 3,
+      "type": "entrainement",
+      "createdAt": "2026-01-11T09:53:00.000Z",
+      "exercices": []
+    },
+    {
+      "id": "N1_ch01_step04",
+      "chapterId": "N1_ch01",
+      "titre": "Évaluation",
+      "description": "Étape d'évaluation et validation",
+      "ordre": 4,
+      "type": "evaluation",
+      "createdAt": "2026-01-11T09:53:00.000Z",
+      "exercices": []
+    }
+  ]
+}

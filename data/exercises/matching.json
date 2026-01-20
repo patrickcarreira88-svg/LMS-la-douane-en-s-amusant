@@ -1,0 +1,82 @@
+{
+  "exercises": [
+    {
+      "id": "ch1_ex_match001",
+      "chapterId": "ch1",
+      "stepId": "ch1_step4",
+      "title": "[TEMPLATE] Matching: Domaines douaniers",
+      "type": "matching",
+      "points": 15,
+      "description": "Appariez les domaines aux responsabilités",
+      "content": {
+        "leftItems": [
+          { "id": "left1", "text": "Domaine fiscal" },
+          { "id": "left2", "text": "Domaine de sécurité" },
+          { "id": "left3", "text": "Domaine de protection" }
+        ],
+        "rightItems": [
+          { "id": "right1", "text": "Percevoir les droits et taxes" },
+          { "id": "right2", "text": "Protéger contre les marchandises dangereuses" },
+          { "id": "right3", "text": "Lutter contre la fraude" }
+        ],
+        "pairs": [
+          { "left": "left1", "right": "right1" },
+          { "left": "left2", "right": "right2" },
+          { "left": "left3", "right": "right3" }
+        ]
+      }
+    },
+    {
+      "id": "ch2_ex_match001",
+      "chapterId": "ch2",
+      "stepId": "ch2_step2",
+      "title": "[TEMPLATE] Matching: Législation douanière",
+      "type": "matching",
+      "points": 15,
+      "description": "Appariez les lois aux domaines",
+      "content": {
+        "leftItems": [
+          { "id": "left1", "text": "LDou" },
+          { "id": "left2", "text": "OLdou" },
+          { "id": "left3", "text": "Convention HS" }
+        ],
+        "rightItems": [
+          { "id": "right1", "text": "Loi fédérale sur les douanes" },
+          { "id": "right2", "text": "Ordonnance d'exécution" },
+          { "id": "right3", "text": "Classification des marchandises" }
+        ],
+        "pairs": [
+          { "left": "left1", "right": "right1" },
+          { "left": "left2", "right": "right2" },
+          { "left": "left3", "right": "right3" }
+        ]
+      }
+    },
+    {
+      "id": "ch4_ex_match001",
+      "chapterId": "ch4",
+      "stepId": "ch4_step3",
+      "title": "[TEMPLATE] Matching: Termes commerciaux",
+      "type": "matching",
+      "points": 15,
+      "description": "Appariez les Incoterms aux significations",
+      "content": {
+        "leftItems": [
+          { "id": "left1", "text": "FOB" },
+          { "id": "left2", "text": "CIF" },
+          { "id": "left3", "text": "DDP" }
+        ],
+        "rightItems": [
+          { "id": "right1", "text": "Livraison droits acquittés" },
+          { "id": "right2", "text": "Franco à bord" },
+          { "id": "right3", "text": "Coût, assurance et fret" }
+        ],
+        "pairs": [
+          { "left": "left1", "right": "right2" },
+          { "left": "left2", "right": "right3" },
+          { "left": "left3", "right": "right1" }
+        ]
+      }
+    }
+  ]
+}
