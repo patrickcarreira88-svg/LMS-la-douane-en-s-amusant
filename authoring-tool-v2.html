@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil Auteur Universel v2.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 300px;
+            background: #1e1e1e;
+            color: #fff;
+            overflow-y: auto;
+            padding: 20px;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .niveau {
+            margin-bottom: 15px;
+        }
+
+        .niveau-header {
+            padding: 12px;
+            background: #2a2a2a;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s;
+        }
+
+        .niveau-header:hover {
+            background: #333;
+        }
+
+        .niveau-header.active {
+            background: #4CAF50;
+            color: #fff;
+        }
+
+        .niveau-header .toggle {
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .chapitre-list {
+            margin-left: 10px;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+
+        .chapitre-list.visible {
+            max-height: 500px;
+        }
+
+        .chapitre-item {
+            padding: 10px 12px;
+            background: #2a2a2a;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .chapitre-item:hover {
+            background: #333;
+        }
+
+        .chapitre-item.active {
+            background: #4CAF50;
+            color: #fff;
+        }
+
+        .chapitre-actions {
+            display: flex;
+            gap: 4px;
+        }
+
+        .chapitre-actions button {
+            padding: 3px 6px;
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+
+        .chapitre-actions button:hover {
+            background: #555;
+        }
+
+        .btn-new-chapitre {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .btn-new-chapitre:hover {
+            background: #45a049;
+        }
+
+        /* MAIN CONTENT */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f9f9f9;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .form-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        .btn-secondary {
+            background: #999;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #888;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background: #da190b;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tab {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: #4CAF50;
+            border-bottom-color: #4CAF50;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+
+        .view {
+            display: none;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 40px;
+            color: #999;
+        }
+
+        .empty-state h2 {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .items-list {
+            background: #f0f0f0;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            padding: 12px;
+            background: #fff;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .item-info {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .item-actions button {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4CAF50;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .qcm-option-group {
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>📚 Navigation</h2>
+            <div id="niveaux-container"></div>
+            <button class="btn-new-chapitre" onclick="showCreateChapitreModal()">
+                + Nouveau Chapitre
+            </button>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+            <div class="header">
+                <h1>Outil Auteur Universel v2.0</h1>
+                <div class="breadcrumb" id="breadcrumb">Sélectionnez un chapitre pour commencer</div>
+            </div>
+
+            <div class="content">
+                <div id="alert-container"></div>
+
+                <!-- VIEW: SELECTION -->
+                <div id="view-selection" class="view active">
+                    <div class="form-section empty-state">
+                        <h2>Bienvenue! 👋</h2>
+                        <p>Sélectionnez un chapitre dans la barre latérale pour commencer à éditer.</p>
+                    </div>
+                </div>
+
+                <!-- VIEW: CHAPITRE -->
+                <div id="view-chapitre" class="view">
+                    <div class="form-section">
+                        <div class="tabs">
+                            <button class="tab active" onclick="switchTab('chapitre-info', this)">
+                                📝 Informations
+                            </button>
+                            <button class="tab" onclick="switchTab('etapes', this)">
+                                ⚡ Étapes
+                            </button>
+                        </div>
+
+                        <!-- TAB: CHAPITRE INFO -->
+                        <div id="chapitre-info" class="tab-content active">
+                            <form id="chapitre-form" onsubmit="saveChapitre(event)">
+                                <div class="form-group">
+                                    <label>Titre du Chapitre</label>
+                                    <input type="text" id="chapitre-titre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea id="chapitre-description"></textarea>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">
+                                        💾 Sauvegarder
+                                    </button>
+                                    <button type="button" class="btn btn-danger" onclick="deleteChapiter()">
+                                        🗑️ Supprimer
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- TAB: ÉTAPES -->
+                        <div id="etapes" class="tab-content">
+                            <div class="items-list" id="etapes-list"></div>
+                            <button class="btn btn-primary" onclick="showCreateEtapeModal()">
+                                + Nouvelle Étape
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW: ÉTAPE -->
+                <div id="view-etape" class="view">
+                    <div class="form-section">
+                        <div class="tabs">
+                            <button class="tab active" onclick="switchTab('etape-info', this)">
+                                ⚙️ Informations
+                            </button>
+                            <button class="tab" onclick="switchTab('exercices', this)">
+                                ✏️ Exercices
+                            </button>
+                        </div>
+
+                        <!-- TAB: ÉTAPE INFO -->
+                        <div id="etape-info" class="tab-content active">
+                            <form id="etape-form" onsubmit="saveEtape(event)">
+                                <div class="form-group">
+                                    <label>Titre de l'Étape</label>
+                                    <input type="text" id="etape-titre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Type d'Étape</label>
+                                    <select id="etape-type" required>
+                                        <option value="">-- Sélectionner --</option>
+                                        <option value="diagnostic">Diagnostic</option>
+                                        <option value="apprentissage">Apprentissage</option>
+                                        <option value="entrainement">Entraînement</option>
+                                        <option value="evaluation">Évaluation</option>
+                                        <option value="objectives">Objectifs</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea id="etape-description"></textarea>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">
+                                        💾 Sauvegarder
+                                    </button>
+                                    <button type="button" class="btn btn-danger" onclick="deleteEtape()">
+                                        🗑️ Supprimer
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- TAB: EXERCICES -->
+                        <div id="exercices" class="tab-content">
+                            <div class="items-list" id="exercices-list"></div>
+                            <button class="btn btn-primary" onclick="showCreateExerciceModal()">
+                                + Nouvel Exercice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW: EXERCICE -->
+                <div id="view-exercice" class="view">
+                    <div class="form-section">
+                        <form id="exercice-form" onsubmit="saveExercice(event)">
+                            <div class="form-group">
+                                <label>Titre de l'Exercice</label>
+                                <input type="text" id="exercice-titre" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Type d'Exercice</label>
+                                <select id="exercice-type" onchange="updateExerciceForm()" required>
+                                    <option value="">-- Sélectionner --</option>
+                                    <option value="qcm">QCM</option>
+                                    <option value="vrai-faux">Vrai/Faux</option>
+                                    <option value="dragdrop">Drag & Drop</option>
+                                    <option value="flashcards">Flashcards</option>
+                                    <option value="video">Vidéo</option>
+                                    <option value="lecture">Lecture</option>
+                                    <option value="scenario">Scénario</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Points</label>
+                                <input type="number" id="exercice-points" value="10" min="1">
+                            </div>
+
+                            <!-- CONTENT FIELDS (Dynamique selon type) -->
+                            <div id="exercice-content-fields"></div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    💾 Sauvegarder
+                                </button>
+                                <button type="button" class="btn btn-danger" onclick="deleteExercice()">
+                                    🗑️ Supprimer
+                                </button>
+                                <button type="button" class="btn btn-secondary" onclick="window.location.href='http://localhost:5000'">
+                                    🎓 Aller au LMS
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: CREATE CHAPITRE -->
+    <div id="modal-create-chapitre" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Créer un Nouveau Chapitre</h2>
+                <button class="modal-close" onclick="closeModal('modal-create-chapitre')">×</button>
+            </div>
+            <form onsubmit="createChapitre(event)">
+                <div class="form-group">
+                    <label>Sélectionner le Niveau</label>
+                    <select id="new-chapitre-niveau" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="N1">N1 - Niveau 1</option>
+                        <option value="N2">N2 - Niveau 2</option>
+                        <option value="N3">N3 - Niveau 3</option>
+                        <option value="N4">N4 - Niveau 4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Titre du Chapitre</label>
+                    <input type="text" id="new-chapitre-titre" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="new-chapitre-description"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Créer</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modal-create-chapitre')">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: CREATE ÉTAPE -->
+    <div id="modal-create-etape" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Créer une Nouvelle Étape</h2>
+                <button class="modal-close" onclick="closeModal('modal-create-etape')">×</button>
+            </div>
+            <form onsubmit="createEtape(event)">
+                <div class="form-group">
+                    <label>Titre de l'Étape</label>
+                    <input type="text" id="new-etape-titre" required>
+                </div>
+                <div class="form-group">
+                    <label>Type d'Étape</label>
+                    <select id="new-etape-type" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="diagnostic">Diagnostic</option>
+                        <option value="apprentissage">Apprentissage</option>
+                        <option value="entrainement">Entraînement</option>
+                        <option value="evaluation">Évaluation</option>
+                        <option value="objectives">Objectifs</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="new-etape-description"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Créer</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modal-create-etape')">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: CREATE EXERCICE -->
+    <div id="modal-create-exercice" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Créer un Nouvel Exercice</h2>
+                <button class="modal-close" onclick="closeModal('modal-create-exercice')">×</button>
+            </div>
+            <form onsubmit="createExercice(event)">
+                <div class="form-group">
+                    <label>Titre de l'Exercice</label>
+                    <input type="text" id="new-exercice-titre" required>
+                </div>
+                <div class="form-group">
+                    <label>Type d'Exercice</label>
+                    <select id="new-exercice-type" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="qcm">QCM</option>
+                        <option value="vrai-faux">Vrai/Faux</option>
+                        <option value="dragdrop">Drag & Drop</option>
+                        <option value="flashcards">Flashcards</option>
+                        <option value="video">Vidéo</option>
+                        <option value="lecture">Lecture</option>
+                        <option value="scenario">Scénario</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Points</label>
+                    <input type="number" id="new-exercice-points" value="10" min="1">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Créer</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modal-create-exercice')">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // ========================================
+        // CONSTANTES & STATE
+        // ========================================
+        
+        const API_URL = 'http://localhost:5000/api';
+        
+        let state = {
+            niveaux: ['N1', 'N2', 'N3', 'N4'],
+            chapterId: null,
+            etapeId: null,
+            exerciceId: null,
+            chapitre: null,
+            etape: null,
+            exercice: null,
+            etapes: [],
+            exercices: []
+        };
+
+        // ========================================
+        // INITIALIZATION
+        // ========================================
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('🚀 Chargement outil auteur v2...');
+            displayNiveaux();
+        });
+
+        // ========================================
+        // NIVEAUX - Display
+        // ========================================
+
+        function displayNiveaux() {
+            const container = document.getElementById('niveaux-container');
+            container.innerHTML = '';
+
+            state.niveaux.forEach(niveau => {
+                const niveauEl = document.createElement('div');
+                niveauEl.className = 'niveau';
+                
+                const headerEl = document.createElement('div');
+                headerEl.className = 'niveau-header';
+                headerEl.innerHTML = `
+                    <span class="toggle">▶</span>
+                    <span>${niveau}</span>
+                `;
+                headerEl.onclick = () => toggleNiveauChapitres(niveau, headerEl);
+                
+                const chapitresEl = document.createElement('div');
+                chapitresEl.className = 'chapitre-list';
+                chapitresEl.id = `chapitres-${niveau}`;
+                
+                niveauEl.appendChild(headerEl);
+                niveauEl.appendChild(chapitresEl);
+                container.appendChild(niveauEl);
+            });
+        }
+
+        async function toggleNiveauChapitres(niveauId, headerEl) {
+            const chapitresEl = document.getElementById(`chapitres-${niveauId}`);
+            const toggle = headerEl.querySelector('.toggle');
+            
+            if (chapitresEl.classList.contains('visible')) {
+                chapitresEl.classList.remove('visible');
+                headerEl.classList.remove('active');
+                toggle.textContent = '▶';
+            } else {
+                chapitresEl.classList.add('visible');
+                headerEl.classList.add('active');
+                toggle.textContent = '▼';
+                await loadChapitres(niveauId);
+            }
+        }
+
+        async function loadChapitres(niveauId) {
+            try {
+                const res = await fetch(`${API_URL}/niveaux/${niveauId}/chapitres`);
+                const data = await res.json();
+                
+                if (data.success) {
+                    displayChapitres(niveauId, data.chapitres);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        function displayChapitres(niveauId, chapitres) {
+            const container = document.getElementById(`chapitres-${niveauId}`);
+            container.innerHTML = '';
+
+            if (chapitres.length === 0) {
+                const msg = document.createElement('div');
+                msg.style.cssText = 'padding: 10px; color: #999; font-size: 12px;';
+                msg.textContent = '(Aucun chapitre)';
+                container.appendChild(msg);
+                return;
+            }
+
+            chapitres.forEach(chapitre => {
+                const el = document.createElement('div');
+                el.className = 'chapitre-item';
+                el.innerHTML = `
+                    <div class="item-info" onclick="loadChapitre('${chapitre.id}')">
+                        📖 ${chapitre.titre}
+                    </div>
+                    <div class="chapitre-actions">
+                        <button onclick="editChapitre('${chapitre.id}'); event.stopPropagation();">✏️</button>
+                        <button onclick="deleteChapitre('${chapitre.id}'); event.stopPropagation();">🗑️</button>
+                    </div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        // ========================================
+        // CHAPITRE - Load & Edit
+        // ========================================
+
+        async function loadChapitre(chapterId) {
+            try {
+                const res = await fetch(`${API_URL}/chapitre/${chapterId}`);
+                const data = await res.json();
+                
+                if (data.success) {
+                    state.chapterId = chapterId;
+                    state.chapitre = data.chapitre;
+                    state.etapes = data.etapes || [];
+                    displayChapitre();
+                    showAlert('✅ Chapitre chargé', 'success');
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau', 'error');
+            }
+        }
+
+        function displayChapitre() {
+            updateBreadcrumb(`📖 ${state.chapitre.titre}`);
+            
+            document.getElementById('chapitre-titre').value = state.chapitre.titre;
+            document.getElementById('chapitre-description').value = state.chapitre.description || '';
+            
+            const etapesContainer = document.getElementById('etapes-list');
+            etapesContainer.innerHTML = '';
+            
+            if (state.etapes.length === 0) {
+                etapesContainer.innerHTML = '<div style="color: #999; text-align: center; padding: 20px;">Aucune étape</div>';
+            } else {
+                state.etapes.forEach(etape => {
+                    const el = document.createElement('div');
+                    el.className = 'item';
+                    el.innerHTML = `
+                        <div class="item-info" onclick="loadEtape('${etape.id}')">
+                            <strong>⚡ ${etape.titre}</strong>
+                            <div style="font-size: 12px; color: #999;">Type: ${etape.type}</div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn btn-secondary" onclick="loadEtape('${etape.id}'); event.stopPropagation();">✏️ Edit</button>
+                            <button class="btn btn-danger" onclick="deleteEtapeById('${etape.id}'); event.stopPropagation();">🗑️</button>
+                        </div>
+                    `;
+                    etapesContainer.appendChild(el);
+                });
+            }
+            
+            showView('view-chapitre');
+        }
+
+        async function saveChapitre(event) {
+            event.preventDefault();
+            
+            const titre = document.getElementById('chapitre-titre').value.trim();
+            const description = document.getElementById('chapitre-description').value.trim();
+            
+            if (!titre) {
+                showAlert('❌ Titre requis', 'error');
+                return;
+            }
+            
+            try {
+                const res = await fetch(`${API_URL}/chapitre/${state.chapterId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titre, description })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    state.chapitre = data.chapitre;
+                    showAlert('✅ Chapitre sauvegardé', 'success');
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        async function deleteChapiter() {
+            if (!confirm('🚨 Êtes-vous sûr? Cette action est irréversible.')) return;
+            
+            try {
+                const res = await fetch(`${API_URL}/chapitre/${state.chapterId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Chapitre supprimé', 'success');
+                    setTimeout(() => {
+                        state.chapterId = null;
+                        state.chapitre = null;
+                        displayNiveaux();
+                        showView('view-selection');
+                    }, 1500);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        async function deleteChapitre(chapterId) {
+            if (!confirm('🚨 Êtes-vous sûr?')) return;
+            
+            try {
+                const res = await fetch(`${API_URL}/chapitre/${chapterId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Chapitre supprimé', 'success');
+                    setTimeout(() => {
+                        displayNiveaux();
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau', 'error');
+            }
+        }
+
+        function editChapitre(chapterId) {
+            loadChapitre(chapterId);
+        }
+
+        async function createChapitre(event) {
+            event.preventDefault();
+            
+            const niveauId = document.getElementById('new-chapitre-niveau').value;
+            const titre = document.getElementById('new-chapitre-titre').value.trim();
+            const description = document.getElementById('new-chapitre-description').value.trim();
+            
+            if (!niveauId || !titre) {
+                showAlert('❌ Niveau et titre requis', 'error');
+                return;
+            }
+            
+            try {
+                const res = await fetch(`${API_URL}/niveaux/${niveauId}/chapitres`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titre, description })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Chapitre créé avec succès', 'success');
+                    closeModal('modal-create-chapitre');
+                    setTimeout(() => {
+                        loadChapitres(niveauId);
+                        loadChapitre(data.chapterId);
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        // ========================================
+        // ÉTAPE - Load & Edit
+        // ========================================
+
+        async function loadEtape(etapeId) {
+            try {
+                const res = await fetch(`${API_URL}/etape/${etapeId}`);
+                const data = await res.json();
+                
+                if (data.success) {
+                    state.etapeId = etapeId;
+                    state.etape = data.etape;
+                    state.exercices = data.exercices || [];
+                    displayEtape();
+                    showAlert('✅ Étape chargée', 'success');
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        function displayEtape() {
+            const chapTitre = state.chapitre?.titre || 'Chapitre';
+            updateBreadcrumb(`📖 ${chapTitre} > ⚡ ${state.etape.titre}`);
+            
+            document.getElementById('etape-titre').value = state.etape.titre;
+            document.getElementById('etape-type').value = state.etape.type;
+            document.getElementById('etape-description').value = state.etape.description || '';
+            
+            const exercicesContainer = document.getElementById('exercices-list');
+            exercicesContainer.innerHTML = '';
+            
+            if (state.exercices.length === 0) {
+                exercicesContainer.innerHTML = '<div style="color: #999; text-align: center; padding: 20px;">Aucun exercice</div>';
+            } else {
+                state.exercices.forEach(exercice => {
+                    const el = document.createElement('div');
+                    el.className = 'item';
+                    el.innerHTML = `
+                        <div class="item-info" onclick="loadExercice('${exercice.id}')">
+                            <strong>✏️ ${exercice.titre}</strong>
+                            <div style="font-size: 12px; color: #999;">Type: ${exercice.type} | Points: ${exercice.points}</div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn btn-secondary" onclick="loadExercice('${exercice.id}'); event.stopPropagation();">✏️ Edit</button>
+                            <button class="btn btn-danger" onclick="deleteExerciceById('${exercice.id}'); event.stopPropagation();">🗑️</button>
+                        </div>
+                    `;
+                    exercicesContainer.appendChild(el);
+                });
+            }
+            
+            showView('view-etape');
+        }
+
+        async function saveEtape(event) {
+            event.preventDefault();
+            
+            const titre = document.getElementById('etape-titre').value.trim();
+            const type = document.getElementById('etape-type').value;
+            const description = document.getElementById('etape-description').value.trim();
+            
+            if (!titre || !type) {
+                showAlert('❌ Titre et type requis', 'error');
+                return;
+            }
+            
+            try {
+                const res = await fetch(`${API_URL}/etape/${state.etapeId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titre, type, description })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    state.etape = data.etape;
+                    showAlert('✅ Étape sauvegardée', 'success');
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        async function deleteEtape() {
+            if (!confirm('🚨 Êtes-vous sûr? Cette action est irréversible.')) return;
+            
+            try {
+                const res = await fetch(`${API_URL}/etape/${state.etapeId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Étape supprimée', 'success');
+                    setTimeout(() => {
+                        state.etapeId = null;
+                        state.etape = null;
+                        loadChapitre(state.chapterId);
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        async function deleteEtapeById(etapeId) {
+            if (!confirm('🚨 Êtes-vous sûr?')) return;
+            
+            try {
+                const res = await fetch(`${API_URL}/etape/${etapeId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Étape supprimée', 'success');
+                    setTimeout(() => {
+                        loadChapitre(state.chapterId);
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau', 'error');
+            }
+        }
+
+        async function createEtape(event) {
+            event.preventDefault();
+            
+            const titre = document.getElementById('new-etape-titre').value.trim();
+            const type = document.getElementById('new-etape-type').value;
+            const description = document.getElementById('new-etape-description').value.trim();
+            
+            if (!titre || !type) {
+                showAlert('❌ Titre et type requis', 'error');
+                return;
+            }
+            
+            try {
+                const res = await fetch(`${API_URL}/chapitre/${state.chapterId}/etape`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titre, type, description })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Étape créée avec succès', 'success');
+                    closeModal('modal-create-etape');
+                    setTimeout(() => {
+                        loadChapitre(state.chapterId);
+                        loadEtape(data.etape.id);
+                        showCreateExerciceModal();
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        // ========================================
+        // EXERCICE - Load & Edit
+        // ========================================
+
+        async function loadExercice(exerciceId) {
+            try {
+                const res = await fetch(`${API_URL}/exercice/${exerciceId}`);
+                const data = await res.json();
+                
+                if (data.success) {
+                    state.exerciceId = exerciceId;
+                    state.exercice = data.exercice;
+                    displayExercice();
+                    showAlert('✅ Exercice chargé', 'success');
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        function displayExercice() {
+            const chapTitre = state.chapitre?.titre || 'Chapitre';
+            const etapeTitre = state.etape?.titre || 'Étape';
+            updateBreadcrumb(`📖 ${chapTitre} > ⚡ ${etapeTitre} > ✏️ ${state.exercice.titre}`);
+            
+            document.getElementById('exercice-titre').value = state.exercice.titre;
+            document.getElementById('exercice-type').value = state.exercice.type;
+            document.getElementById('exercice-points').value = state.exercice.points || 10;
+            
+            updateExerciceForm();
+            populateExerciceContent();
+            
+            showView('view-exercice');
+        }
+
+        function updateExerciceForm() {
+            const type = document.getElementById('exercice-type').value;
+            const fieldsContainer = document.getElementById('exercice-content-fields');
+            fieldsContainer.innerHTML = '';
+            
+            if (type === 'qcm') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>Question</label>
+                        <input type="text" id="qcm-question" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Options (Sélectionnez la bonne réponse avec un radio)</label>
+                        <div id="qcm-options-container" style="display:flex; flex-direction:column; gap:12px;"></div>
+                        <button type="button" class="btn btn-secondary" style="margin-top:15px;" onclick="addQCMOption()">+ Ajouter une option</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Explication</label>
+                        <textarea id="qcm-explanation"></textarea>
+                    </div>
+                `;
+                // Initialiser avec 3 options vides
+                setTimeout(() => {
+                    for (let i = 0; i < 3; i++) {
+                        addQCMOption();
+                    }
+                }, 0);
+            } else if (type === 'vrai-faux') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>Énoncé</label>
+                        <textarea id="vf-statement" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Réponse Correcte</label>
+                        <select id="vf-correct" required>
+                            <option value="">-- Sélectionner --</option>
+                            <option value="true">Vrai</option>
+                            <option value="false">Faux</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Explication</label>
+                        <textarea id="vf-explanation"></textarea>
+                    </div>
+                `;
+            } else if (type === 'flashcards') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>Cartes (format: Recto | Verso - une par ligne)</label>
+                        <textarea id="fc-cards" placeholder="Recto 1 | Verso 1&#10;Recto 2 | Verso 2" required></textarea>
+                    </div>
+                `;
+            } else if (type === 'video') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>URL Vidéo</label>
+                        <input type="url" id="video-url" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Transcript (optionnel)</label>
+                        <textarea id="video-transcript"></textarea>
+                    </div>
+                `;
+            } else if (type === 'lecture') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>Contenu (Markdown)</label>
+                        <textarea id="lecture-content" required></textarea>
+                    </div>
+                `;
+            } else if (type === 'dragdrop') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>Instruction</label>
+                        <textarea id="dd-instruction" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Éléments (une par ligne)</label>
+                        <textarea id="dd-items" required></textarea>
+                    </div>
+                `;
+            } else if (type === 'scenario') {
+                fieldsContainer.innerHTML = `
+                    <div class="form-group">
+                        <label>Scénario</label>
+                        <textarea id="scenario-text" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Questions (format JSON)</label>
+                        <textarea id="scenario-questions" required></textarea>
+                    </div>
+                `;
+            }
+        }
+
+        function populateExerciceContent() {
+            const ex = state.exercice;
+            const type = ex.type;
+            
+            if (type === 'qcm' && ex.content) {
+                document.getElementById('qcm-question').value = ex.content.question || '';
+                document.getElementById('qcm-explanation').value = ex.content.explanation || '';
+                
+                // Remplir les options avec radios
+                const container = document.getElementById('qcm-options-container');
+                if (container) {
+                    container.innerHTML = '';
+                    (ex.content.options || []).forEach((option, index) => {
+                        const optionEl = createQCMOptionElement(index, option.label || option, option.correct);
+                        container.appendChild(optionEl);
+                    });
+                }
+            } else if (type === 'vrai-faux' && ex.content) {
+                document.getElementById('vf-statement').value = ex.content.statement || '';
+                document.getElementById('vf-correct').value = ex.content.correctAnswer === true ? 'true' : 'false';
+                document.getElementById('vf-explanation').value = ex.content.explanation || '';
+            } else if (type === 'flashcards' && ex.content) {
+                const cards = (ex.content.cards || []).map(c => `${c.recto}|${c.verso}`).join('\n');
+                document.getElementById('fc-cards').value = cards;
+            } else if (type === 'video' && ex.content) {
+                document.getElementById('video-url').value = ex.content.url || '';
+                document.getElementById('video-transcript').value = ex.content.transcript || '';
+            } else if (type === 'lecture' && ex.content) {
+                document.getElementById('lecture-content').value = ex.content.markdown || '';
+            } else if (type === 'dragdrop' && ex.content) {
+                document.getElementById('dd-instruction').value = ex.content.instruction || '';
+                document.getElementById('dd-items').value = (ex.content.items || []).join('\n');
+            } else if (type === 'scenario' && ex.content) {
+                document.getElementById('scenario-text').value = ex.content.scenario || '';
+                document.getElementById('scenario-questions').value = JSON.stringify(ex.content.questions || [], null, 2);
+            }
+        }
+
+        async function saveExercice(event) {
+            event.preventDefault();
+            
+            const titre = document.getElementById('exercice-titre').value.trim();
+            const type = document.getElementById('exercice-type').value;
+            const points = parseInt(document.getElementById('exercice-points').value);
+            
+            if (!titre || !type) {
+                showAlert('❌ Titre et type requis', 'error');
+                return;
+            }
+            
+            let content = {};
+            
+            if (type === 'qcm') {
+                const question = document.getElementById('qcm-question').value.trim();
+                const optionInputs = document.querySelectorAll('.qcm-option-input');
+                const correctRadio = document.querySelector('input[name="qcm-correct-option"]:checked');
+                const explanation = document.getElementById('qcm-explanation').value.trim();
+                
+                if (!question) {
+                    showAlert('❌ Question requise', 'error');
+                    return;
+                }
+                
+                if (optionInputs.length < 2) {
+                    showAlert('❌ Au moins 2 options requises', 'error');
+                    return;
+                }
+                
+                if (!correctRadio) {
+                    showAlert('❌ Sélectionnez quelle option est correcte', 'error');
+                    return;
+                }
+                
+                const correctIndex = parseInt(correctRadio.value);
+                
+                // Transformer en format {label, correct}
+                const options = Array.from(optionInputs).map((input, index) => ({
+                    label: input.value.trim(),
+                    correct: index === correctIndex
+                }));
+                
+                // Valider que toutes les options ont du texte
+                if (options.some(o => !o.label)) {
+                    showAlert('❌ Toutes les options doivent avoir du texte', 'error');
+                    return;
+                }
+                
+                content = {
+                    question,
+                    options,
+                    correctAnswer: correctIndex,
+                    explanation
+                };
+            } else if (type === 'vrai-faux') {
+                content = {
+                    statement: document.getElementById('vf-statement').value,
+                    correctAnswer: document.getElementById('vf-correct').value === 'true',
+                    explanation: document.getElementById('vf-explanation').value
+                };
+            } else if (type === 'flashcards') {
+                const lines = document.getElementById('fc-cards').value.split('\n');
+                content.cards = lines
+                    .filter(l => l.includes('|'))
+                    .map(l => {
+                        const [recto, verso] = l.split('|');
+                        return { recto: recto.trim(), verso: verso.trim() };
+                    });
+            } else if (type === 'video') {
+                content = {
+                    url: document.getElementById('video-url').value,
+                    transcript: document.getElementById('video-transcript').value
+                };
+            } else if (type === 'lecture') {
+                content = {
+                    markdown: document.getElementById('lecture-content').value
+                };
+            } else if (type === 'dragdrop') {
+                content = {
+                    instruction: document.getElementById('dd-instruction').value,
+                    items: document.getElementById('dd-items').value.split('\n').filter(i => i.trim())
+                };
+            } else if (type === 'scenario') {
+                try {
+                    content = {
+                        scenario: document.getElementById('scenario-text').value,
+                        questions: JSON.parse(document.getElementById('scenario-questions').value)
+                    };
+                } catch (e) {
+                    showAlert('❌ JSON invalide pour les questions', 'error');
+                    return;
+                }
+            }
+            
+            try {
+                const res = await fetch(`${API_URL}/exercice/${state.exerciceId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titre, type, points, content })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    state.exercice = data.exercice;
+                    showAlert('✅ Exercice sauvegardé → Redirection vers LMS...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'http://localhost:5000';
+                    }, 1500);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        async function deleteExercice() {
+            if (!confirm('🚨 Êtes-vous sûr? Cette action est irréversible.')) return;
+            
+            try {
+                const res = await fetch(`${API_URL}/exercice/${state.exerciceId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Exercice supprimé', 'success');
+                    setTimeout(() => {
+                        state.exerciceId = null;
+                        state.exercice = null;
+                        loadEtape(state.etapeId);
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        async function deleteExerciceById(exerciceId) {
+            if (!confirm('🚨 Êtes-vous sûr?')) return;
+            
+            try {
+                const res = await fetch(`${API_URL}/exercice/${exerciceId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Exercice supprimé', 'success');
+                    setTimeout(() => {
+                        loadEtape(state.etapeId);
+                    }, 1000);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau', 'error');
+            }
+        }
+
+        async function createExercice(event) {
+            event.preventDefault();
+            
+            const titre = document.getElementById('new-exercice-titre').value.trim();
+            const type = document.getElementById('new-exercice-type').value;
+            const points = parseInt(document.getElementById('new-exercice-points').value);
+            
+            if (!titre || !type) {
+                showAlert('❌ Titre et type requis', 'error');
+                return;
+            }
+            
+            // Initialiser avec structure minimale selon le type
+            let content = {};
+            
+            if (type === 'qcm') {
+                content = {
+                    question: '',
+                    options: [
+                        { label: 'Option 1', correct: true },
+                        { label: 'Option 2', correct: false }
+                    ],
+                    correctAnswer: 0,
+                    explanation: ''
+                };
+            } else if (type === 'vrai-faux') {
+                content = {
+                    statement: '',
+                    correctAnswer: true,
+                    explanation: ''
+                };
+            } else if (type === 'flashcards') {
+                content = {
+                    cards: [
+                        { recto: 'Recto 1', verso: 'Verso 1' },
+                        { recto: 'Recto 2', verso: 'Verso 2' }
+                    ]
+                };
+            } else if (type === 'video') {
+                content = {
+                    url: '',
+                    transcript: ''
+                };
+            } else if (type === 'lecture') {
+                content = {
+                    markdown: '# Titre\n\nContenu de la lecture...'
+                };
+            } else if (type === 'dragdrop') {
+                content = {
+                    instruction: 'Glissez les éléments dans le bon ordre',
+                    items: ['Élément 1', 'Élément 2', 'Élément 3']
+                };
+            } else if (type === 'scenario') {
+                content = {
+                    scenario: 'Description du scénario...',
+                    questions: [
+                        { question: 'Question 1?', options: ['A', 'B', 'C'], correct: 0 }
+                    ]
+                };
+            }
+            
+            try {
+                const res = await fetch(`${API_URL}/etape/${state.etapeId}/exercice`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titre, type, points, content })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    showAlert('✅ Exercice créé avec succès', 'success');
+                    closeModal('modal-create-exercice');
+                    // Attendre que loadEtape termine avant loadExercice
+                    setTimeout(async () => {
+                        await loadEtape(state.etapeId);
+                        await loadExercice(data.exercice.id);
+                    }, 500);
+                } else {
+                    showAlert('❌ Erreur: ' + data.error, 'error');
+                }
+            } catch (error) {
+                console.error('❌ Erreur:', error);
+                showAlert('❌ Erreur réseau: ' + error.message, 'error');
+            }
+        }
+
+        // ========================================
+        // UI HELPERS
+        // ========================================
+
+        function showView(viewId) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+        }
+
+        function switchTab(tabId, tabEl) {
+            const parent = tabEl.closest('.tabs').parentElement;
+            parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            parent.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            tabEl.classList.add('active');
+            parent.querySelector(`#${tabId}`).classList.add('active');
+        }
+
+        function updateBreadcrumb(text) {
+            document.getElementById('breadcrumb').textContent = text;
+        }
+
+        function showAlert(message, type = 'info') {
+            const container = document.getElementById('alert-container');
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type} show`;
+            alert.textContent = message;
+            container.appendChild(alert);
+            
+            setTimeout(() => {
+                alert.classList.remove('show');
+                setTimeout(() => alert.remove(), 300);
+            }, 5000);
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+        function showCreateChapitreModal() {
+            if (state.chapterId) {
+                showAlert('⚠️ Fermez d\'abord le chapitre en cours', 'info');
+            } else {
+                showModal('modal-create-chapitre');
+            }
+        }
+
+        function showCreateEtapeModal() {
+            if (!state.chapterId) {
+                showAlert('⚠️ Sélectionnez d\'abord un chapitre', 'info');
+            } else {
+                showModal('modal-create-etape');
+            }
+        }
+
+        function showCreateExerciceModal() {
+            if (!state.etapeId) {
+                showAlert('⚠️ Sélectionnez d\'abord une étape', 'info');
+            } else {
+                // Réinitialiser le formulaire de création
+                document.getElementById('new-exercice-titre').value = '';
+                document.getElementById('new-exercice-type').value = '';
+                document.getElementById('new-exercice-points').value = '10';
+                
+                showModal('modal-create-exercice');
+            }
+        }
+
+        // ========================================
+        // HELPERS QCM
+        // ========================================
+
+        function createQCMOptionElement(index, label = '', isCorrect = false) {
+            const container = document.createElement('div');
+            container.className = 'qcm-option-group';
+            container.style.cssText = 'display:flex; gap:12px; align-items:center; padding:12px; background:#f0f0f0; border-radius:4px;';
+            container.id = `qcm-option-${index}`;
+            
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'qcm-option-input';
+            input.placeholder = `Option ${index + 1}`;
+            input.value = label;
+            input.style.flex = '1';
+            
+            const radioLabel = document.createElement('label');
+            radioLabel.style.cssText = 'display:flex; align-items:center; gap:8px; white-space:nowrap; margin:0;';
+            
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.name = 'qcm-correct-option';
+            radio.value = index;
+            radio.checked = isCorrect;
+            
+            const radioText = document.createElement('span');
+            radioText.textContent = '✓ Bonne réponse';
+            radioText.style.fontSize = '12px';
+            
+            const deleteBtn = document.createElement('button');
+            deleteBtn.type = 'button';
+            deleteBtn.textContent = '🗑️';
+            deleteBtn.style.cssText = 'padding:4px 8px; background:#f44336; color:white; border:none; border-radius:2px; cursor:pointer; font-size:12px;';
+            deleteBtn.onclick = (e) => {
+                e.preventDefault();
+                container.remove();
+                // Réinitialiser les indices des radios
+                updateQCMRadioIndices();
+            };
+            
+            radioLabel.appendChild(radio);
+            radioLabel.appendChild(radioText);
+            
+            container.appendChild(input);
+            container.appendChild(radioLabel);
+            container.appendChild(deleteBtn);
+            
+            return container;
+        }
+
+        function addQCMOption() {
+            const container = document.getElementById('qcm-options-container');
+            if (!container) return;
+            
+            const index = container.querySelectorAll('.qcm-option-group').length;
+            const optionEl = createQCMOptionElement(index);
+            container.appendChild(optionEl);
+        }
+
+        function updateQCMRadioIndices() {
+            const container = document.getElementById('qcm-options-container');
+            if (!container) return;
+            
+            const groups = container.querySelectorAll('.qcm-option-group');
+            groups.forEach((group, index) => {
+                const radio = group.querySelector('input[type="radio"]');
+                const input = group.querySelector('.qcm-option-input');
+                if (radio) radio.value = index;
+                if (input) input.placeholder = `Option ${index + 1}`;
+            });
+        }
+
+        // Fermer modal au clic en dehors
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        };
+    </script>
+</body>
+</html>

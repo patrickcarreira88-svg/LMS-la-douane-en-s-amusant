@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Panel Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .auth-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .auth-box h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #667eea;
+        }
+        
+        .auth-box input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .auth-box button {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .auth-box button:hover {
+            background: #764ba2;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            text-align: center;
+            display: none;
+        }
+        
+        .admin-container {
+            display: none;
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+        
+        .admin-header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .admin-header h1 {
+            color: #667eea;
+        }
+        
+        .admin-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .admin-actions .btn {
+            font-size: 14px;
+            padding: 8px 14px;
+        }
+        
+        .logout-btn {
+            padding: 8px 16px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .admin-nav {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 0;
+            display: flex;
+            gap: 0;
+        }
+        
+        .admin-nav button {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            color: #666;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .admin-nav button.active {
+            border-bottom-color: #667eea;
+            color: #667eea;
+        }
+        
+        .admin-nav button:hover {
+            background: #f9f9f9;
+        }
+        
+        .admin-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #764ba2;
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        .message {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .list-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .list-item-info h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .list-item-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .list-item-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .list-item-actions button {
+            padding: 8px 12px;
+            font-size: 12px;
+        }
+        
+        /* Drag & Drop Styling */
+        .exercice-item {
+            transition: all 0.2s ease;
+            cursor: move;
+            display: flex !important;
+            align-items: center !important;
+        }
+        
+        .exercice-item.dragging {
+            opacity: 0.5;
+            background: #e3f2fd !important;
+            border: 2px dashed #667eea;
+        }
+        
+        .exercice-item.drag-over {
+            background: #e1f5fe !important;
+            border-top: 2px solid #667eea;
+            padding-top: 18px;
+        }
+        
+        .drag-handle {
+            cursor: grab;
+            color: #999;
+            margin-right: 15px;
+            font-size: 18px;
+            user-select: none;
+        }
+        
+        .drag-handle:active {
+            cursor: grabbing;
+        }
+        
+        /* Preview Modal Styling */
+        .preview-exercise {
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        .preview-question {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .preview-options {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 4px;
+        }
+        
+        .preview-option {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-left: 3px solid #667eea;
+            border-radius: 2px;
+        }
+        
+        .preview-instruction {
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        
+        .preview-textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+            background: white;
+            font-family: monospace;
+        }
+        
+        .preview-photos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .preview-photo-item {
+            text-align: center;
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .preview-photo-item img {
+            max-width: 100%;
+            max-height: 150px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        
+        .preview-photo-label {
+            color: #666;
+            font-size: 13px;
+        }
+        
+        .preview-explication {
+            background: #e8f5e9;
+            padding: 10px;
+            border-left: 3px solid #4caf50;
+            margin: 10px 0;
+            color: #2e7d32;
+            border-radius: 2px;
+        }
+        
+        .preview-meta {
+            color: #999;
+            font-size: 13px;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        
+        /* Form Styling */
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 3px solid #667eea;
+            padding: 12px;
+            border-radius: 4px;
+            color: #1565c0;
+            font-size: 13px;
+            margin: 15px 0;
+        }
+        
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+        
+        /* Templates & Themes CSS */
+        .template-card {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 200ms;
+            margin-bottom: 8px;
+            background: white;
+        }
+        
+        .template-card:hover {
+            background: #f0f0f0;
+            border-color: #667eea;
+        }
+        
+        .template-card.selected {
+            border: 2px solid #667eea;
+            background: #e3f2fd;
+        }
+        
+        .template-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #333;
+        }
+        
+        .template-type-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #667eea;
+            color: white;
+            border-radius: 3px;
+            font-size: 11px;
+            margin-right: 8px;
+        }
+        
+        .template-preview {
+            padding: 16px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .template-preview h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .template-preview-item {
+            padding: 8px;
+            margin: 6px 0;
+            background: white;
+            border-left: 3px solid #667eea;
+            border-radius: 2px;
+            font-size: 13px;
+        }
+        
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+        }
+        
+        .theme-card {
+            padding: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 200ms;
+            background: white;
+        }
+        
+        .theme-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .theme-card.selected {
+            border: 3px solid #667eea;
+            background: #e3f2fd;
+        }
+        
+        .theme-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #333;
+        }
+        
+        .theme-description {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .theme-stats {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .theme-stat {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .theme-preview-steps {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        .theme-preview-steps li {
+            padding: 8px;
+            margin: 4px 0;
+            background: white;
+            border-left: 3px solid #667eea;
+            border-radius: 2px;
+            font-size: 13px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .form-container {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .form-container h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 0;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .modal-header {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+        }
+        
+        .modal-close {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .modal-close:hover {
+            color: #f5f5f5;
+        }
+        
+        .modal-body {
+            padding: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .modal-footer {
+            padding: 20px;
+            background: #f9f9f9;
+            border-top: 1px solid #ddd;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Auth Section -->
+    <div id="authSection" class="auth-container">
+        <div class="auth-box">
+            <h1>🔐 Admin Panel</h1>
+            <div class="error-message" id="errorMessage"></div>
+            <input 
+                type="password" 
+                id="passwordInput" 
+                placeholder="Entrez le mot de passe"
+                onkeypress="if(event.key==='Enter') adminLogin()"
+            >
+            <button onclick="adminLogin()">Connexion</button>
+        </div>
+    </div>
+    
+    <!-- Admin Section -->
+    <div id="adminSection" class="admin-container">
+        <div class="admin-header">
+            <h1>📚 LMS Admin Panel</h1>
+            <div class="admin-actions">
+                <button class="btn btn-secondary" onclick="exportChapitres()" title="Télécharger les données">📥 Exporter</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()" title="Importer un fichier JSON">📤 Importer</button>
+                
+                <!-- 📚 Retour Apprenant Button -->
+                <button class="btn btn-info" onclick="returnToLearner()" title="Retour au mode apprenant" style="background: linear-gradient(135deg, #4A3F87 0%, #6B5B95 100%); color: white; margin-left: 10px;">
+                    ← Retour Apprenant
+                </button>
+                
+                <button class="logout-btn" onclick="adminLogout()">Déconnexion</button>
+            </div>
+        </div>
+        
+        <div class="admin-nav">
+            <button class="nav-btn active" onclick="switchTab('chapitres')">Chapitres</button>
+            <button class="nav-btn" onclick="switchTab('etapes')">Étapes</button>
+            <button class="nav-btn" onclick="switchTab('exercices')">Exercices</button>
+        </div>
+        
+        <div class="admin-content">
+            <!-- Messages -->
+            <div id="statusMessage" class="message"></div>
+            
+            <!-- 🎯 SÉLECTION HIÉRARCHIQUE - Niveau → Chapitre → Étape -->
+            <div id="hierarchical-selector" class="hierarchical-selector" style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3>📊 Sélectionner votre contexte de travail</h3>
+                <div class="selector-row">
+                    <div class="selector-group">
+                        <label for="selectNiveau">🎓 Niveau</label>
+                        <select id="selectNiveau" onchange="onNiveauChange(this.value)">
+                            <option value="">-- Choisir un niveau --</option>
+                            <option value="N1">N1 - Fondations</option>
+                            <option value="N2">N2 - Applications</option>
+                            <option value="N3">N3 - Cas Pratiques</option>
+                            <option value="N4">N4 - Maîtrise</option>
+                        </select>
+                    </div>
+                    
+                    <div class="selector-group">
+                        <label for="selectChapitre">📚 Chapitre</label>
+                        <select id="selectChapitre" onchange="onChapitreChange(this.value)" disabled>
+                            <option value="">-- Sélectionnez un niveau d'abord --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="selector-group">
+                        <label for="selectEtape">🃋 Étape</label>
+                        <select id="selectEtape" onchange="onEtapeChange(this.value)" disabled>
+                            <option value="">-- Sélectionnez un chapitre d'abord --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="selector-group">
+                        <label for="selectEtape">&nbsp;</label>
+                        <button class="btn btn-primary" id="createExerciceBtn" onclick="showCreateExerciceFromHierarchy()" disabled style="width: 100%;">
+                            ➕ Créer Exercice
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Affichage du contexte sélectionné -->
+                <div id="hierarchyInfo" style="margin-top: 15px; padding: 10px; background: #f0f7ff; border-left: 3px solid #667eea; display: none;">
+                    <strong>📍 Contexte:</strong> <span id="hierarchyText"></span>
+                </div>
+            </div>
+            
+            <!-- CSS pour la sélection hiérarchique -->
+            <style>
+                .hierarchical-selector {
+                    border: 1px solid #e0e0e0;
+                }
+                
+                .hierarchical-selector h3 {
+                    margin-bottom: 15px;
+                    color: #667eea;
+                }
+                
+                .selector-row {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 15px;
+                    align-items: flex-end;
+                }
+                
+                .selector-group {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .selector-group label {
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                    color: #333;
+                    font-size: 14px;
+                }
+                
+                .selector-group select {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    background: white;
+                    cursor: pointer;
+                    transition: border-color 0.3s;
+                }
+                
+                .selector-group select:hover:not(:disabled) {
+                    border-color: #667eea;
+                }
+                
+                .selector-group select:disabled {
+                    background: #f5f5f5;
+                    cursor: not-allowed;
+                    opacity: 0.6;
+                }
+                
+                .selector-group select:focus {
+                    outline: none;
+                    border-color: #667eea;
+                    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                }
+                
+                #hierarchyInfo {
+                    border-radius: 4px;
+                    font-size: 14px;
+                }
+            </style>
+            
+            <!-- Chapitres Section -->
+            <div id="chapitres-section" class="section active">
+                <h2>Gestion des Chapitres</h2>
+                <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" onclick="showCreateChapitreForm()">➕ Créer un Chapitre</button>
+                    <button class="btn btn-secondary" onclick="showChapterThemesModal()">🎨 Thèmes de chapitres</button>
+                    <button class="btn btn-info" id="pasteChapitreBtn" onclick="pasteChapitre()" style="display: none;">📍 Coller un Chapitre</button>
+                </div>
+                <div id="chapitresList"></div>
+            </div>
+            
+            <!-- Étapes Section -->
+            <div id="etapes-section" class="section">
+                <h2 id="etapesTitle">Gération des Étapes</h2>
+                <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" onclick="showCreateEtapeModal()">➕ Créer une Étape</button>
+                    <button class="btn btn-info" id="pasteEtapeBtn" onclick="pasteEtape(currentChapitreIndex)" style="display: none;">📍 Coller une Étape</button>
+                </div>
+                <div id="etapesList"></div>
+            </div>
+            
+            <!-- Exercices Section -->
+            <div id="exercices-section" class="section">
+                <h2 id="exercicesTitle">Gération des Exercices</h2>
+                
+                <!-- FILTER BAR -->
+                <div class="filter-bar">
+                    <label>🔍 Filtrer par type:</label>
+                    <select id="exerciceTypeFilter" onchange="filterExercicesByType(this.value)">
+                        <option value="all">✓ Tous</option>
+                        <option value="qcm_unique">QCM Unique</option>
+                        <option value="qcm_multiple">QCM Multiple</option>
+                        <option value="texte">Texte</option>
+                        <option value="photos">Photos</option>
+                    </select>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" onclick="showCreateExerciceModal()">➕ Créer un Exercice</button>
+                    <button class="btn btn-secondary" onclick="showTemplatesModal()">📋 Templates d'exercices</button>
+                    <button class="btn btn-info" id="pasteExerciceBtn" onclick="pasteExercice(currentChapitreIndex, currentEtapeIndex)" style="display: none;">📍 Coller un Exercice</button>
+                </div>
+                <div id="exercicesList"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Étapes -->
+    <div id="etapeModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="etapeModalTitle">🃋 Créer une Étape</h3>
+                <span class="modal-close" onclick="closeEtapeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>ID Étape*</label>
+                    <input type="text" id="etapeFormId" placeholder="Auto-généré si vide" />
+                </div>
+                <div class="form-group">
+                    <label>Titre*</label>
+                    <input type="text" id="etapeFormTitre" placeholder="Ex: Découverte" required />
+                </div>
+                <div class="form-group">
+                    <label>Type Étape</label>
+                    <select id="etapeFormType">
+                        <option value="diagnostic">Diagnostic</option>
+                        <option value="apprentissage">Apprentissage</option>
+                        <option value="entrainement">Entraînement</option>
+                        <option value="evaluation">Evaluation</option>
+                        <option value="standard" selected>Standard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Durée (minutes)</label>
+                    <input type="number" id="etapeFormDuree" value="30" min="1" />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="etapeFormDescription" placeholder="Description optionnelle"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="etapeModalButton" onclick="saveEtape(currentChapitreIndex, null)">💾 Créer</button>
+                <button class="btn btn-secondary" onclick="closeEtapeModal()">Annuler</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Exercice -->
+    <div id="exerciceModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3 id="exerciceModalTitle">📈 Créer un Exercice</h3>
+                <span class="modal-close" onclick="closeExerciceModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Type d'Exercice*</label>
+                    <select id="exerciceType" onchange="selectExerciceType(this.value)" required>
+                        <option value="">-- Choisir un type --</option>
+                        <optgroup label="Phase 1 - Base">
+                            <option value="qcm_unique">QCM Unique</option>
+                            <option value="qcm_multiple">QCM Multiple</option>
+                            <option value="texte">Réponse Texte</option>
+                            <option value="photos">Identifier Images</option>
+                        </optgroup>
+                        <optgroup label="Phase 2 - Avancé">
+                            <option value="flashcard">Flashcard</option>
+                            <option value="dragdrop_matching">Drag-Drop Matching</option>
+                            <option value="classement">Classement/Tri</option>
+                            <option value="tableau">Tableau/Grille</option>
+                            <option value="video_questions">Vidéo avec Questions</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div id="exerciceFormContainer">
+                    <!-- Sera remplaçé par selectExerciceType() -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeExerciceModal()">Annuler</button>
+                <button class="btn btn-primary" id="exerciceSaveBtn" onclick="saveExercice()">💾 Créer</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h3>🔍 Aperçu de l'exercice</h3>
+                <span class="modal-close" onclick="closePreviewModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="previewContent">
+                    <!-- Contenu généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- File Input pour Import (hidden) -->
+    <input type="file" id="importFile" accept=".json" onchange="handleImportFile(event)" hidden />
+    
+    <!-- Modal Templates d'Exercices -->
+    <div id="templatesModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 700px;">
+            <div class="modal-header">
+                <h2>📋 Templates d'Exercices</h2>
+                <span class="modal-close" onclick="closeTemplatesModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Filtrer par type:</label>
+                    <select id="templateTypeFilter" onchange="filterTemplates(this.value)" style="width: 100%;">
+                        <option value="all">Tous les types</option>
+                        <option value="qcm-unique">QCM Unique</option>
+                        <option value="qcm-vrai-faux">QCM Vrai/Faux</option>
+                        <option value="qcm-multiple">QCM Réponses Multiples</option>
+                        <option value="texte">Réponse Courte</option>
+                        <option value="flashcard">Flashcard</option>
+                        <option value="matching">Matching</option>
+                        <option value="classement">Classement</option>
+                        <option value="tableau">Tableau</option>
+                        <option value="video">Vidéo</option>
+                    </select>
+                </div>
+                
+                <div id="templatesContainer" style="max-height: 300px; overflow-y: auto; margin: 15px 0;"></div>
+                
+                <div id="templatePreview" style="margin-top: 20px; padding: 16px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; display: none; max-height: 250px; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeTemplatesModal()">Annuler</button>
+                <button class="btn btn-primary" id="useTemplateBtn" onclick="useSelectedTemplate()">✓ Utiliser ce template</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Thèmes de Chapitres -->
+    <div id="themesModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2>🎨 Thèmes de Chapitres</h2>
+                <span class="modal-close" onclick="closeThemesModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="themesContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; margin-bottom: 20px;"></div>
+                
+                <div id="themePreview" style="display: none; padding: 20px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; margin-top: 20px;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeThemesModal()">Annuler</button>
+                <button class="btn btn-primary" id="createThemeBtn" onclick="createChapterFromTheme()" disabled>✓ Créer ce chapitre</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 🔄 STORAGE SYNC: Cross-tab synchronization -->
+    <script src="js/storage-sync.js"></script>
+    
+    <!-- 📚 Return to Learner Navigation Script -->
+    <script>
+    /**
+     * Retourne à l'application apprenant (index.html)
+     */
+    function returnToLearner() {
+        console.log('📚 Retour à l\'application apprenant...');
+        if (confirm('Les données sont automatiquement sauvegardées.\nRetourner au mode apprenant?')) {
+            window.location.href = 'index.html';
+        }
+    }
+    </script>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
