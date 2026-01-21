@@ -89,7 +89,7 @@ const CHAPITRES_DATA = {
           "completed": false,
           "content": {
             "videoTitle": "Démo Live des 3 Techniques",
-            "videoUrl": "assets/videos/learning-tech-part1.mp4",
+            "videoUrl": "assets/videos/maitriseapprentissage.mp4",
             "duration": "4:30"
           }
         },
@@ -103,7 +103,7 @@ const CHAPITRES_DATA = {
           "completed": false,
           "content": {
             "title": "Comparaison Visuelle",
-            "imageUrl": "assets/infographics/learning-tech-part1-comparison.png"
+            "imageUrl": "assets/infographics/techs.png"
           }
         },
         {
@@ -143,15 +143,15 @@ const CHAPITRES_DATA = {
             "sections": [
               {
                 "heading": "🔄 Technique 4 : SPACED REPETITION (SM2)",
-                "text": "Révise le même concept à intervalles croissants : 1j, 3j, 7j, 14j, 30j.\n\n**Score : 9.5/10** (Le meilleur scientifiquement prouvé)"
+                "text": "**Qu'est-ce ?** Révise MÊME concept à intervalles croissants : 1j, 3j, 7j, 14j, 30j, 60j...\n**Pourquoi ?** (1) Courbe Ebbinghaus = oubli 70% en 24h → Spaced Rep réinitialise à 90%+ (2) Intervalles = consolidation neuronal progressive (3) Révision au BON moment = effort optimal\n**Douane :** J0 apprendre Ch10 (45min) → J1 révise (10min) → J3 révise (10min) → J7,14,30,60 → PERMANENTE rétention 91% même 1 an après\n**Score : 9.5/10** ⭐⭐⭐⭐⭐ (Le meilleur scientifiquement)"
               },
               {
                 "heading": "🎲 Technique 5 : INTERLEAVING (Mélange)",
-                "text": "Mélange les thèmes au lieu de réviser bloc par bloc.\n\n**Score : 8.9/10** (Mieux pour exams variés)"
+                "text": "**Qu'est-ce ?** Quiz aléatoire = questions mélangées (pas bloc par bloc).\n**Pourquoi ?** (1) Force reconnaissance TYPE de problème chaque fois (2) Encoding variabilité = liens neuronaux multiples (3) Transfer exams +45% (vs blocking)\n**Douane :** Quiz 20q = Q1 Questionnement + Q2 Tarification + Q3 Franchises + Q4 Questionnement + Q5 Tarif... MÉLANGE = Cerveau DISCRIMINE\n**Score : 8.9/10** (Meilleur pour exams imprévisibles)"
               },
               {
                 "heading": "🎓 Technique 6 : FEYNMAN (Explication Simple)",
-                "text": "Explique le concept à voix haute comme à un enfant.\n\n**Score : 9.2/10** (Exceptionnel pour compréhension)"
+                "text": "**Qu'est-ce ?** Explique à voix haute comme à enfant 10 ans (ZÉRO jargon).\n**Pourquoi ?** (1) Identifie vrais trous compréhension (pas illusion de savoir) (2) Simple = comprendre réellement (3) Enseignement = apprentissage ULTIME\n**Douane :** Abattement = \"5% qu'on enlève du prix pour poussière mélangée au cacao. C'est normal, donc forfaitaire.\"\n**Score : 9.2/10** (Exceptionnel pour compréhension)"
               }
             ]
           }
@@ -166,7 +166,7 @@ const CHAPITRES_DATA = {
           "completed": false,
           "content": {
             "videoTitle": "Démo des Techniques Avancées",
-            "videoUrl": "assets/videos/learning-tech-part2.mp4",
+            "videoUrl": "assets/videos/3_Techs.mp4",
             "duration": "5:45"
           }
         },
@@ -180,7 +180,7 @@ const CHAPITRES_DATA = {
           "completed": false,
           "content": {
             "title": "Calendrier Spaced Rep",
-            "imageUrl": "assets/infographics/learning-tech-part2-advanced.png"
+            "imageUrl": "assets/infographics/repespace.png"
           }
         },
         {
